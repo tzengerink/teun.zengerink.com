@@ -1,0 +1,47 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+a {
+	display: block;
+	float: left;
+	width: 80px;
+	height: 80px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	background-color: #c7c7c7;
+	color: #fff;
+	text-align: center;
+	-webkit-transition: background-color .75s;
+	transition: background-color .75s;
+}
+a:nth-child(odd) {
+	margin-bottom: 4px;
+	margin-left: 4px;
+}
+a.envelope:active,
+a.envelope:hover {
+	background-color: #dd472f;
+}
+a.github:active,
+a.github:hover {
+	background-color: #444;
+}
+a.linkedin:active,
+a.linkedin:hover {
+	background-color: #007db3;
+}
+a.stack-overflow:active,
+a.stack-overflow:hover {
+	background-color: #f67930;
+}
+div#content {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 58px;
+	padding-bottom: 58px;
+	width: 204px;
+}
