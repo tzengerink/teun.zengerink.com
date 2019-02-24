@@ -23,6 +23,12 @@ collections:
   work:
     output: true
 
+defaults:
+  - scope:
+      path: "assets/photos"
+    values:
+      image: true
+
 # Build settings
 markdown: kramdown
 theme: minima
