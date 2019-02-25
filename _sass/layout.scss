@@ -21,6 +21,14 @@ aside {
 }
 
 main {
-    margin-left: $sidebar-width;
-    background-color: red;
+    margin: 35px 35px 35px $sidebar-width;
+
+    p {
+        display: none;
+        text-align: center;
+
+        &:first-child {
+            display: block;
+        }
+    }
 }

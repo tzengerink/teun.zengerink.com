@@ -7,6 +7,8 @@ name: transhumanism
 {% assign photos = site.static_files %}
 {% for photo in photos %}
   {% if photo.image and photo.path contains page.name %}
-<img src="{{ photo.path }}" />
+<a data-fancybox="images" href="{{ photo.path }}">
+    <img src="{{ photo.path }}" alt="{{ page.title  }} {{ forloop.index }}">
+</a>
   {% endif %}
 {% endfor %}
