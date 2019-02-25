@@ -1,11 +1,30 @@
-html,
-body,
-aside,
-main {
-    margin: 0;
-    padding: 0;
+html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: $text-color;
 }
 
+h1 {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: .9em;
+    font-weight: 500;
+}
+
+a {
+    font-size: .8em;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* TODO */
 img {
     width: 100px;
 }

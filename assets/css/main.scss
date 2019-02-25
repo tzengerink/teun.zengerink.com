@@ -3,5 +3,10 @@
 
 @charset "utf-8";
 
+$sidebar-width: 220px;
+$sidebar-padding: 35px;
+
+$text-color: #444;
+
 @import 'base';
 @import 'layout';
