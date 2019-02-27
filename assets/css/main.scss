@@ -3,10 +3,15 @@
 
 @charset "utf-8";
 
-$sidebar-width: 220px;
+$sidebar-width: 210px;
 $sidebar-padding: 35px;
 
+$font-weight-normal: 300;
+$font-weight-bold: 500;
 $text-color: #444;
+
+$max-image-width: 100%;
+$max-image-height: 80vh;
 
 @import 'base';
 @import 'layout';

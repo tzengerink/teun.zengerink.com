@@ -1,33 +1,72 @@
 html {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    color: $text-color;
+  font-family: 'Roboto', sans-serif;
+  font-weight: $font-weight-normal;
+  color: $text-color;
 }
 
 h1 {
-    font-size: 1em;
-    font-weight: 500;
+  font-size: 1em;
+  font-weight: $font-weight-bold;
 }
 
 h2 {
-    font-size: .9em;
-    font-weight: 500;
+  font-size: .9em;
+  font-weight: $font-weight-bold;
 }
 
 a {
-    font-size: .8em;
-    color: $text-color;
-    text-decoration: none;
+  font-size: .8em;
+  color: $text-color;
+  text-decoration: none;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  font-size: .8em;
+  line-height: 1.4em;
 }
 
 img {
+
+  &.center {
     display: block;
     height: auto;
-    max-width: 100%;
-    max-height: 80vh;
-    margin: 0 auto;
+    max-width: $max-image-width;
+    max-height: $max-image-height;
+    margin: 0 auto 40px auto;
+  }
+}
+
+.profile {
+  float: left;
+  width: 47%;
+
+  img {
+    max-width: $max-image-width;
+    max-height: $max-image-height;
+  }
+}
+
+.about {
+  float: right;
+  width: 47%;
+  margin: 0 0 0 6%;
+}
+
+.social {
+  position: absolute;
+  bottom: 30px;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 28px;
+    height: 28px;
+    margin: 0 0 0 4px;
+  }
 }

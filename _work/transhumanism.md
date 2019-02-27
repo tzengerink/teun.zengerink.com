@@ -8,7 +8,7 @@ name: transhumanism
 {% for photo in photos %}
   {% if photo.image and photo.path contains page.name %}
 <a data-fancybox="images" href="{{ photo.path }}">
-    <img src="{{ photo.path }}" alt="{{ page.title  }} {{ forloop.index }}">
+    <img class="center" src="{{ photo.path }}" alt="{{ page.title  }} {{ forloop.index }}">
 </a>
   {% endif %}
 {% endfor %}

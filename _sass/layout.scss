@@ -1,28 +1,28 @@
 aside {
-    position: fixed;
-    top: 40px;
-    left: 0;
-    bottom: 0;
-    width: $sidebar-width - (2 * $sidebar-padding);
-    padding: 0 $sidebar-padding;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  bottom: 0;
+  width: $sidebar-width - (2 * $sidebar-padding);
+  padding: 0 $sidebar-padding;
 
-    h1 {
-        text-transform: uppercase;
-        margin-bottom: 25px;
-    }
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
 
-    h2 {
-        margin-top: 30px;
-        margin-bottom: 10px;
-    }
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
 
-    ul {
-        list-style: none;
-        margin: 0 0 0 -40px;
-    }
+  ul {
+    list-style: none;
+    margin: 0 0 0 -40px;
+  }
 }
 
 main {
-    margin: 35px 35px 35px $sidebar-width;
-    overflow-y: scroll;
+  margin: 35px 35px 35px $sidebar-width;
+  overflow-y: scroll;
 }

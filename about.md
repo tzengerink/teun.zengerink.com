@@ -4,15 +4,15 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<div class="profile">
+  <a data-fancybox="image" href="/assets/photos/transhumanism/01.jpg">
+    <img src="/assets/photos/transhumanism/01.jpg" alt="Teun Zengerink">
+  </a>
+</div>
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+<div class="about">
+  <h1>{{ page.title }}</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a diam vitae ipsum lacinia suscipit id id risus. Vestibulum non purus eget mauris commodo ultricies et quis orci. Mauris rutrum odio at mauris luctus, nec auctor felis pellentesque. Etiam non blandit dolor. Aenean et ex leo. Proin tempus, velit non varius porta, lorem lorem tempor tortor, viverra pulvinar lectus tortor sit amet augue. Duis posuere enim in ligula fermentum, quis convallis ipsum venenatis.
+  </p>
+</div>
