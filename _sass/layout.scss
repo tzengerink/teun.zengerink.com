@@ -1,21 +1,29 @@
 header {
-  float: left;
-  margin: 0 $outer-margin 0 $outer-margin;
-  width: $sidebar-width;
+  background-color: $background-color;
+
+  .menu-button,
+  .menu-checkbox {
+    display: none;
+    position: absolute;
+    top: $outer-margin;
+    right: $outer-margin;
+  }
+
+  h1 {
+    position: fixed;
+    top: $outer-margin;
+    left: $outer-margin;
+  }
 }
 
-aside {
+nav {
   position: fixed;
   top: 80px;
   left: 0;
   bottom: 0;
   width: $sidebar-width - (2 * $sidebar-padding);
   padding: 0 $sidebar-padding;
-
-  h1 {
-    text-transform: uppercase;
-    margin-bottom: 25px;
-  }
+  background: $background-color;
 
   h2 {
     margin-top: 30px;
@@ -24,8 +32,18 @@ aside {
 
   ul {
     list-style: none;
-    margin: 0 0 0 -40px;
+    margin: 0 0 $outer-margin -40px;
   }
+
+  a {
+    font-size: 0.8em;
+  }
+}
+
+.social {
+  position: absolute;
+  left: $outer-margin;
+  bottom: 30px;
 }
 
 main {
@@ -33,25 +51,40 @@ main {
   overflow-y: scroll;
 }
 
-footer {
-  position: absolute;
-  left: $outer-margin;
-  bottom: 30px;
-}
-
 @media (max-width: $phone-breakpoint) {
 
   header {
-    float: none;
-    margin: $outer-margin 0 0 $outer-margin;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+
+    h1 {
+      top: $outer-margin - 3;
+      left: $outer-margin;
+    }
+
+    .menu-button {
+      display: block;
+      top: $outer-margin;
+      right: $outer-margin;
+      cursor: pointer;
+    }
+
+    .menu-checkbox:checked ~ nav {
+      display: block;
+    }
   }
 
-  aside {
+  nav {
     display: none;
+    bottom: auto;
+    padding-bottom: $outer-margin;
+    width: 100%;
   }
 
   main {
-    margin: 20px $outer-margin $outer-margin $outer-margin;
+    margin: 80px $outer-margin $outer-margin $outer-margin;
   }
-
 }
