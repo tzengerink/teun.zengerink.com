@@ -13,8 +13,11 @@
   </head>
 
   <body>
-    <aside>
+    <header>
       <h1>Teun Zengerink</h1>
+    </header>
+
+    <aside>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -26,15 +29,6 @@
         <li><a href="/work/{{ item.name }}">{{ item.title }}</a></li>
       {% endfor %}
       </ul>
-
-      <div class="social">
-        <a href="https://instagram.com/t.zengerink/">
-          <img src="/assets/img/instagram.jpg">
-        </a>
-        <a href="https://pinterest.com/tzengerink/">
-          <img src="/assets/img/pinterest.jpg">
-        </a>
-      </div>
     </aside>
 
     <main class="page-content" aria-label="Content">
@@ -42,6 +36,15 @@
         {{ content }}
       </div>
     </main>
+
+    <footer>
+      <a class="social" href="https://instagram.com/t.zengerink/">
+        <img src="/assets/img/instagram.jpg">
+      </a>
+      <a class="social" href="https://pinterest.com/tzengerink/">
+        <img src="/assets/img/pinterest.jpg">
+      </a>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>

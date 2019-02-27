@@ -3,8 +3,11 @@
 
 @charset "utf-8";
 
+$phone-breakpoint: 767px;
+$outer-margin: 35px;
+
 $sidebar-width: 210px;
-$sidebar-padding: 35px;
+$sidebar-padding: $outer-margin;
 
 $font-weight-normal: 300;
 $font-weight-bold: 500;
