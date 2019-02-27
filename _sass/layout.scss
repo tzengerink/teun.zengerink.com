@@ -1,12 +1,23 @@
 header {
   background-color: $background-color;
 
-  .menu-button,
+  .menu-hamburger,
   .menu-checkbox {
     display: none;
     position: absolute;
     top: $outer-margin;
     right: $outer-margin;
+  }
+
+  .menu-hamburger .line {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;
+    background-color: $text-color;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   h1 {
@@ -58,14 +69,15 @@ main {
     top: 0;
     left: 0;
     right: 0;
-    height: 70px;
+    height: 90px;
 
     h1 {
-      top: $outer-margin - 3;
+      font-weight: 1.1em;
+      top: $outer-margin;
       left: $outer-margin;
     }
 
-    .menu-button {
+    .menu-hamburger {
       display: block;
       top: $outer-margin;
       right: $outer-margin;
@@ -74,6 +86,27 @@ main {
 
     .menu-checkbox:checked ~ nav {
       display: block;
+    }
+
+    .menu-checkbox:checked ~ .menu-hamburger .line {
+    }
+
+    .menu-checkbox:checked ~ .menu-hamburger .line:nth-child(1) {
+       -webkit-transform: translateY(11px) rotate(45deg);
+       -ms-transform: translateY(11px) rotate(45deg);
+       -o-transform: translateY(11px) rotate(45deg);
+       transform: translateY(11px) rotate(45deg);
+    }
+
+    .menu-checkbox:checked ~ .menu-hamburger .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-checkbox:checked ~ .menu-hamburger .line:nth-child(3) {
+      -webkit-transform: translateY(-7px) rotate(-45deg);
+      -ms-transform: translateY(-7px) rotate(-45deg);
+      -o-transform: translateY(-7px) rotate(-45deg);
+      transform: translateY(-7px) rotate(-45deg);
     }
   }
 
