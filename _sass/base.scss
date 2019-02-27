@@ -72,6 +72,18 @@ img {
   }
 }
 
+.contact {
+  a {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 @media (max-width: $phone-breakpoint) {
 
   .profile {
