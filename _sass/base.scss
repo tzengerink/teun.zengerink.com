@@ -74,13 +74,15 @@ img {
 
 .contact {
   a {
+    font-size: .8em;
     display: block;
     margin-bottom: 8px;
   }
 
   img {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
   }
 }
 
