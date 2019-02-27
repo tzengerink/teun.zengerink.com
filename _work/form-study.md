@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Form studies
-name: form-studies
+title: Form study
+name: form-study
 ---
 
 {% assign photos = site.static_files %}
