@@ -1,7 +1,9 @@
 aside {
-    float: left;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    bottom: 0;
     width: $sidebar-width - (2 * $sidebar-padding);
-    margin-top: 40px;
     padding: 0 $sidebar-padding;
 
     h1 {
@@ -22,13 +24,5 @@ aside {
 
 main {
     margin: 35px 35px 35px $sidebar-width;
-
-    p {
-        display: none;
-        text-align: center;
-
-        &:first-child {
-            display: block;
-        }
-    }
+    overflow-y: scroll;
 }
