@@ -5,8 +5,8 @@ permalink: /about/
 ---
 
 <div class="profile">
-  <a data-fancybox="image" href="/assets/photos/transhumanism/01.jpg">
-    <img src="/assets/photos/transhumanism/01.jpg" alt="Teun Zengerink">
+  <a href="/work/selected/#images-1">
+    <img src="/assets/photos/selected/01.jpg" alt="Teun Zengerink">
   </a>
 </div>
 

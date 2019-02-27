@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Transhumanism
-name: transhumanism
+title: Parking
+name: parking
+permalink: /work/parking/
 ---
 
 {% assign photos = site.static_files %}

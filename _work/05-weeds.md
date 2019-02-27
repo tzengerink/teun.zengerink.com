@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Form study
-name: form-study
+title: Weeds
+name: weeds
+permalink: /work/weeds/
 ---
 
 {% assign photos = site.static_files %}
