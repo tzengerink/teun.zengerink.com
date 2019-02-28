@@ -45,9 +45,14 @@ img {
   }
 }
 
+.about {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .profile {
   float: left;
-  width: 47%;
+  width: 37%;
 
   img {
     max-width: $max-image-width;
@@ -55,10 +60,10 @@ img {
   }
 }
 
-.about {
+.description {
   float: right;
-  width: 45%;
-  margin: 0 2% 0 6%;
+  width: 50%;
+  margin-right: 5%;
 }
 
 .social {
@@ -89,11 +94,20 @@ img {
 
 @media (max-width: $phone-breakpoint) {
 
-  .profile {
+  .about {
     width: 100%;
   }
 
-  .about {
+  .profile {
+    width: 100%;
+
+    img {
+      display: block;
+      margin: 0 auto 20px 0;
+    }
+  }
+
+  .description {
     width: 100%;
     margin: 0;
   }
