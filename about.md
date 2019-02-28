@@ -13,7 +13,7 @@ permalink: /about/
 <div class="about">
   <h1>{{ page.title }}</h1>
   <p>Teun Zengerink studies photography at the Fotoacademie Amsterdam. After finishing his bachelors degree in Arts, Culture & Media, he started working in the IT-industry. Teun also holds a bachelor in Business Administration & Computer Science, but the idea of doing something with his creativity started to grow on him.</p>
-  <p>Teun is interested in technological transitions and how they impact the society and their individuals. Still he hasn't lost his enthousiasm for the more classical way of representing the world around him. Above all for Teun photography is a means of discovering himself.</p>
+  <p>Teun is interested in technological transitions and how they impact the society and their individuals. Still he hasn't lost his enthusiasm for the more classical way of representing the world around him. Above all for Teun photography is a means of discovering himself.</p>
 
   <div class="contact">
     <a href="https://instagram.com/t.zengerink/">
