@@ -1,0 +1,16 @@
+.work {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $outer-margin;
+  grid-auto-rows: auto;
+}
+
+@media (max-width: $phone-breakpoint) {
+  .work {
+    grid-template-columns: repeat(1, 1fr);
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}
