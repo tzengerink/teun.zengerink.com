@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
 
-<div class="about">
+<article class="about">
   <div class="profile">
     <a href="/work/selected/#images-1">
       <img src="/assets/photos/selected/01.jpg" alt="Teun Zengerink">
@@ -27,5 +27,4 @@ permalink: /about/
       </a>
     </div>
   </div>
-</div>
-
+</article>
