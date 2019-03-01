@@ -8,18 +8,9 @@ description: >-
   creativity started to grow on him, which made him explore for ways to
   do so.
 url: "http://teun.zengerink.com"
-
 collections:
   work:
     output: true
-
-defaults:
-  - scope:
-      path: "assets/photos"
-    values:
-      image: true
-
 sass:
   style: compressed
-
 markdown: kramdown

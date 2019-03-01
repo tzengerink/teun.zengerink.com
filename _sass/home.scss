@@ -1,5 +1,26 @@
 .home {
+  line-height: 0;
+  column-count: 3;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-gap: $outer-margin;
+  -webkit-column-gap: $outer-margin;
+  -moz-column-gap: $outer-margin;
+
   img {
-    margin: 0 auto;
+    margin: 0 auto $outer-margin auto;
+  }
+}
+
+@media (max-width: $phone-breakpoint) {
+  .home {
+    line-height: normal;
+    column-count: auto;
+    -webkit-column-count: auto;
+    -moz-column-count: auto;
+  }
+
+  img {
+    max-height: unset;
   }
 }
