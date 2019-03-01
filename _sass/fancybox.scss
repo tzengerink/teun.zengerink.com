@@ -1,0 +1,25 @@
+.fancybox-bg {
+  background-color: #fff;
+
+  .fancybox-is-open & {
+    opacity: 1;
+  }
+}
+
+.fancybox-button {
+  background-color: #fff;
+
+  &:hover {
+    color: $text-color;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    color: #eee;
+  }
+}
+
+.fancybox-infobar {
+  color: $text-color;
+  mix-blend-mode: normal;
+}
