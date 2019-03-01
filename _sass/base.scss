@@ -35,34 +35,10 @@ p {
 }
 
 img {
-
-  &.center {
-    display: block;
-    height: auto;
-    max-width: $max-image-width;
-    max-height: $max-image-height;
-  }
-}
-
-.about {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.profile {
-  float: left;
-  width: 37%;
-
-  img {
-    max-width: $max-image-width;
-    max-height: $max-image-height;
-  }
-}
-
-.description {
-  float: right;
-  width: 50%;
-  margin-right: 5%;
+  display: block;
+  height: auto;
+  max-width: $max-image-width;
+  max-height: $max-image-height;
 }
 
 .social {
@@ -75,40 +51,4 @@ img {
     height: 28px;
     margin: 0 4px 0 0;
   }
-}
-
-.contact {
-  a {
-    margin-top: 8px;
-    font-size: .8em;
-    display: block;
-  }
-
-  img {
-    width: 18px;
-    height: 18px;
-    vertical-align: middle;
-  }
-}
-
-@media (max-width: $phone-breakpoint) {
-
-  .about {
-    width: 100%;
-  }
-
-  .profile {
-    width: 100%;
-
-    img {
-      display: block;
-      margin: 0 auto 20px 0;
-    }
-  }
-
-  .description {
-    width: 100%;
-    margin: 0;
-  }
-
 }
