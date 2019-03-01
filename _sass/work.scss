@@ -3,11 +3,19 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: $outer-margin;
   grid-auto-rows: auto;
+
+  a:nth-child(2n+1) img {
+    float: right;
+  }
 }
 
 @media (max-width: $phone-breakpoint) {
   .work {
     grid-template-columns: repeat(1, 1fr);
+
+    a:nth-child(2n+1) img {
+      float: none;
+    }
 
     img {
       margin: 0 auto;
