@@ -5,7 +5,7 @@
 
 .profile {
   float: left;
-  width: 37%;
+  width: 27%;
 
   img {
     max-width: $max-image-width;
@@ -15,8 +15,8 @@
 
 .description {
   float: right;
-  width: 50%;
-  margin-right: 5%;
+  width: 70%;
+  margin-right: 0;
 }
 
 .contact {
@@ -30,7 +30,7 @@
     float: left;
     width: 18px;
     height: 18px;
-    margin: -2px 4px 0 0;
+    margin: -2px 3px 0 0;
     vertical-align: middle;
   }
 }
