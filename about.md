@@ -7,7 +7,7 @@ permalink: /about/
 <article class="about">
   <div class="profile">
     <a href="/work/selected/#images-1">
-      <img src="/assets/photos/selected/01.jpg" alt="Teun Zengerink">
+      <img src="/assets/photos/selected/03.jpg" alt="Teun Zengerink">
     </a>
   </div>
 
