@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="work">
+<article class="work{% if page.mode %} {{ page.mode }}{% endif %}">
   {% assign photos = site.static_files %}
   {% for photo in photos %}
     {% if photo.image and photo.path contains page.name %}
