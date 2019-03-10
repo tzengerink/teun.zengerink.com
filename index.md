@@ -8,7 +8,7 @@ layout: default
       {% assign path = 'assets/photos/' | append: item.name | append: '/01' %}
       {% if photo.path contains path %}
         <a href="/work/{{ item.name }}">
-          <img src="{{ photo.path }}" alt="{{ page.title  }} {{ forloop.index }}">
+          <img src="{{ photo.path }}" alt="{{ item.name | capitalize  }} {{ photo.basename }}">
         </a>
       {% endif %}
     {% endfor %}
