@@ -6,7 +6,7 @@ layout: default
   {% for photo in site.static_files %}
     {% if photo.path contains page.name %}
       <a data-fancybox="images" href="{{ photo.path }}">
-        <img src="{{ photo.path }}" alt="{{ page.title  }} {{ photo.basename }}">
+        <img src="{{ photo.path }}" alt="{{ site.title }} - {{ page.title  }} {{ photo.basename }}">
       </a>
     {% endif %}
   {% endfor %}
