@@ -1,5 +1,5 @@
 .about {
-  width: 80%;
+  width: $main-block-width;
   margin: 0 auto;
 }
 
@@ -22,7 +22,7 @@
 .contact {
   a {
     margin-top: 8px;
-    font-size: .8em;
+    font-size: .69em;
     display: block;
   }
 
@@ -30,7 +30,7 @@
     float: left;
     width: 18px;
     height: 18px;
-    margin: -2px 3px 0 0;
+    margin: -3px 3px 0 0;
     vertical-align: middle;
   }
 }
@@ -46,7 +46,7 @@
 
     img {
       display: block;
-      margin: 0 auto 20px 0;
+      margin: 0 auto 20px auto;
     }
   }
 

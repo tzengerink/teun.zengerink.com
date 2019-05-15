@@ -8,10 +8,6 @@ body {
   background-color: $background-color;
 }
 
-main {
-  padding: 10px 0 0 0;
-}
-
 h1 {
   font-size: 1em;
   font-weight: $font-weight-bold;
@@ -33,6 +29,7 @@ a {
 }
 
 p {
+  text-align: justify;
   font-size: .8em;
   line-height: 1.5em;
   margin-bottom: 1.5em;

@@ -2,12 +2,19 @@
 layout: default
 ---
 
-<article class="work{% if page.mode %} {{ page.mode }}{% endif %}">
-  {% for photo in site.static_files %}
-    {% if photo.path contains page.name %}
-      <a data-fancybox="images" href="{{ photo.path }}">
-        <img src="{{ photo.path }}" alt="{{ site.title }} - {{ page.title  }} {{ photo.basename }}">
-      </a>
-    {% endif %}
-  {% endfor %}
-</article>
+<div class="work">
+  <h2>{{ page.title }}</h2>
+  {% if page.statement %}
+    <p>{{ page.statement }}</p>
+  {% endif %}
+
+  <article{% if page.mode %}  class="{{ page.mode }}"{% endif %}>
+    {% for photo in site.static_files %}
+      {% if photo.path contains page.name %}
+        <a data-fancybox="images" href="{{ photo.path }}">
+          <img src="{{ photo.path }}" alt="{{ site.title }} - {{ page.title  }} {{ photo.basename }}">
+        </a>
+      {% endif %}
+    {% endfor %}
+  </article>
+</div>
