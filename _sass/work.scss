@@ -1,6 +1,10 @@
 .work {
   max-width: $main-block-width;
   margin: 0 auto;
+
+  h2 {
+    text-align: center;
+  }
 }
 
 .grid {
