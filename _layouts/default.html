@@ -41,7 +41,9 @@
         <h2>Work</h2>
         <ul>
         {% for item in site.work %}
-          <li><a href="/work/{{ item.name }}">{{ item.title }}</a></li>
+          <li{% if item.name == page.name %} class="active"{% endif %}>
+            <a href="/work/{{ item.name }}">{{ item.title }}</a>
+          </li>
         {% endfor %}
         </ul>
 

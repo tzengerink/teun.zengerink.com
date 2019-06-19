@@ -46,8 +46,12 @@ nav {
     margin: 0 0 0 -40px;
   }
 
-  a {
+  li a {
     font-size: 0.8em;
+  }
+
+  li.active a {
+    text-decoration: underline;
   }
 }
 
