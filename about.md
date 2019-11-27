@@ -6,7 +6,7 @@ permalink: /about/
 
 <article class="about">
   <div class="profile">
-    <img src="/assets/photos/selected/06.jpg" alt="Teun Zengerink">
+    <img src="/assets/photos/about/teun-zengerink.png" alt="Teun Zengerink">
   </div>
 
   <div class="description">
