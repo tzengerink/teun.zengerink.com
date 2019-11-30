@@ -8,6 +8,7 @@
   width: 27%;
 
   img {
+    margin-top: 8px;
     max-width: $max-image-width;
     max-height: $max-image-height;
   }
@@ -46,7 +47,7 @@
 
     img {
       display: block;
-      margin: 0 auto 20px auto;
+      margin-bottom: 20px;
     }
   }
 

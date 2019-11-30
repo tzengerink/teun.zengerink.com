@@ -60,3 +60,9 @@ img {
     margin: 0 8px 0 0;
   }
 }
+
+@media (max-width: $phone-breakpoint) {
+  p.statement {
+    display: none;
+  }
+}
