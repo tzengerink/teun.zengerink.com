@@ -47,7 +47,11 @@
         {% endfor %}
         </ul>
 
-        <span class="social">
+        <span class="navigation-bottom">
+          {% if page.statement %}
+            <p class="statement">{{ page.statement }}</p>
+          {% endif %}
+
           <a href="https://instagram.com/t.zengerink/">
             <img src="/assets/img/instagram.jpg">
           </a>

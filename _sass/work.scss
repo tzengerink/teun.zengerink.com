@@ -7,37 +7,22 @@
   }
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: $outer-margin;
-  grid-auto-rows: auto;
+.photos {
+    a {
+        display: none;
+    }
 
-  a:nth-child(2n+1) img {
-    float: right;
-  }
-}
+    a:first-child {
+        display: inherit;
+    }
 
-.no-grid {
-  img {
-    margin: 0 auto $outer-margin auto;
-  }
+    img {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: $phone-breakpoint) {
   .work {
     max-width: none;
-  }
-
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-
-    a:nth-child(2n+1) img {
-      float: none;
-    }
-
-    img {
-      margin: 0 auto;
-    }
   }
 }

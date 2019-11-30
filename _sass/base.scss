@@ -33,6 +33,12 @@ p {
   font-size: .8em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
+
+    &.statement {
+      text-align: left;
+      font-size: .65em;
+      color: $text-color-light;
+    }
 }
 
 img {
@@ -42,7 +48,7 @@ img {
   max-height: $max-image-height;
 }
 
-.social {
+.navigation-bottom {
   a {
     text-decoration: none;
   }

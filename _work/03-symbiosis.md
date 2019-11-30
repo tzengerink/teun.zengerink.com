@@ -1,6 +1,5 @@
 ---
 layout: work
-mode: grid
 title: Symbiosis
 name: symbiosis
 permalink: /work/symbiosis/

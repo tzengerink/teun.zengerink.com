@@ -3,12 +3,7 @@ layout: default
 ---
 
 <div class="work">
-  {% if page.statement %}
-    <h2>{{ page.title }}</h2>
-    <p>{{ page.statement }}</p>
-  {% endif %}
-
-  <article{% if page.mode %}  class="{{ page.mode }}"{% endif %}>
+  <article class="photos">
     {% for photo in site.static_files %}
       {% if photo.path contains page.name %}
         <a data-fancybox="images" href="{{ photo.path }}">
