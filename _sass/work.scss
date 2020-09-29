@@ -1,28 +1,35 @@
 .work {
-  max-width: $main-block-width;
   margin: 0 auto;
-
-  h2 {
-    text-align: left;
-  }
 }
 
 .photos {
-    a {
-        display: none;
-    }
+  a[data-fancybox] {
+    display: none;
+  }
 
-    a:first-child {
-        display: inherit;
-    }
+  a[data-fancybox]:first-child {
+    display: inherit;
+  }
 
-    img {
-        margin: 0 auto;
+  .statement {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .button-next {
+    float: right;
+    color: $text-color-light;
+    font-size: 1.4em;  
+    text-decoration: none;
+
+    &:hover {
+      color: $text-color;
     }
+  }
 }
 
 @media (max-width: $phone-breakpoint) {
-  .work {
+  .photos .statement {
     max-width: none;
   }
 }

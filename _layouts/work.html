@@ -4,6 +4,13 @@ layout: default
 
 <div class="work">
   <article class="photos">
+      {% if page.statement %}
+        <div class="statement">
+          <h2>{{ page.title }}</h2>
+          <p>{{ page.statement }}</p>
+          <a class="button-next" data-fancybox-trigger="images" href="javascript:;">&rarr;</a>
+        </div>
+      {% endif %}
     {% for photo in site.static_files %}
       {% if photo.path contains page.name %}
         <a data-fancybox="images" href="{{ photo.path }}">
