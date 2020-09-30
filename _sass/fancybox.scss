@@ -12,11 +12,10 @@
   &:hover {
     color: $text-color;
   }
+}
 
-  &:disabled,
-  &:disabled:hover {
-    color: #eee;
-  }
+.fancybox-content {
+  margin: 0 50px;
 }
 
 .fancybox-infobar {

@@ -5,7 +5,6 @@
 
 $phone-breakpoint: 767px;
 $outer-margin: 35px;
-$main-block-width: 75%;
 
 $sidebar-width: 250px;
 $sidebar-padding: $outer-margin;
@@ -22,6 +21,5 @@ $max-image-height: 80vh;
 
 @import 'base';
 @import 'layout';
-@import 'about';
 @import 'work';
 @import 'fancybox';

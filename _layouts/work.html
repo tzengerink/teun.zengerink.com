@@ -1,9 +1,17 @@
 ---
 layout: default
 ---
+{% assign content = page.content | strip_newlines %}
 
 <div class="work">
   <article class="photos">
+      {% if content != "" %}
+        <div class="statement">
+          <h2>{{ page.title }}</h2>
+          <p>{{ content }}</p>
+          <a class="button-next" data-fancybox-trigger="images" href="javascript:;">&rarr;</a>
+        </div>
+      {% endif %}
     {% for photo in site.static_files %}
       {% if photo.path contains page.name %}
         <a data-fancybox="images" href="{{ photo.path }}">

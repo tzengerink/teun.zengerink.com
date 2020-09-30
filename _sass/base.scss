@@ -19,6 +19,13 @@ h2 {
   font-weight: $font-weight-bold;
 }
 
+h3 {
+  margin-bottom: 0;
+  font-size: .8em;
+  font-weight: normal;
+  line-height: .8em;
+}
+
 a {
   color: $text-color;
   text-decoration: none;
@@ -29,21 +36,17 @@ a {
 }
 
 p {
+  margin-top: .5em;
+  margin-bottom: 1.5em;
   text-align: justify;
   font-size: .8em;
   line-height: 1.5em;
-  margin-bottom: 1.5em;
-
-    &.statement {
-      text-align: left;
-      font-size: .65em;
-      color: $text-color-light;
-    }
 }
 
 img {
   display: block;
   height: auto;
+  margin: 0 auto;
   max-width: $max-image-width;
   max-height: $max-image-height;
 }
@@ -58,11 +61,10 @@ img {
     width: 28px;
     height: 28px;
     margin: 0 8px 0 0;
-  }
-}
+    opacity: .7;
 
-@media (max-width: $phone-breakpoint) {
-  p.statement {
-    display: none;
+    &:hover {
+      opacity: 1;
+    }
   }
 }

@@ -34,10 +34,6 @@
         <span class="line"></span>
       </label>
       <nav>
-        <ul>
-          <li><a href="/about">About</a></li>
-        </ul>
-
         <h2>Work</h2>
         <ul>
         {% for item in site.work %}
@@ -48,10 +44,6 @@
         </ul>
 
         <span class="navigation-bottom">
-          {% if page.statement %}
-            <p class="statement">{{ page.statement }}</p>
-          {% endif %}
-
           <a href="https://instagram.com/t.zengerink/">
             <img src="/assets/img/instagram.jpg">
           </a>
@@ -72,11 +64,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
     <script>
       $('[data-fancybox]').fancybox({
+        loop: true,
         buttons: ["close"],
         clickContent: false,
-        mobile: {
-          arrows: false,
-        },
       });
     </script>
   </body>
