@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
+{% assign content = page.content | strip_newlines %}
 
 <div class="work">
   <article class="photos">
-      {% if page.statement %}
+      {% if content != "" %}
         <div class="statement">
           <h2>{{ page.title }}</h2>
-          <p>{{ page.statement }}</p>
+          <p>{{ content }}</p>
           <a class="button-next" data-fancybox-trigger="images" href="javascript:;">&rarr;</a>
         </div>
       {% endif %}

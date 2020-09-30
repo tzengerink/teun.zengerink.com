@@ -62,8 +62,7 @@ nav {
 }
 
 main {
-  margin: 100px $outer-margin $outer-margin $sidebar-width;
-  overflow-y: scroll;
+  margin: 110px $outer-margin $outer-margin $sidebar-width;
 }
 
 @media (max-width: $phone-breakpoint) {
@@ -120,13 +119,7 @@ main {
     width: 100%;
   }
 
-  .social {
-    left: auto;
-    right: $outer-margin;
-    width: $outer-margin + 100;
-  }
-
   main {
-    margin: 80px $outer-margin $outer-margin $outer-margin;
+    margin: 110px $outer-margin $outer-margin $outer-margin;
   }
 }
