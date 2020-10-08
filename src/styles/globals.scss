@@ -1,0 +1,51 @@
+@import 'variables';
+
+html {
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: $font-weight-normal;
+  color: $text-color;
+}
+
+body {
+  background-color: $background-color;
+}
+
+h1 {
+  font-size: 1em;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: .9em;
+  font-weight: $font-weight-bold;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  text-align: justify;
+  font-size: .8em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+
+    &.statement {
+      text-align: left;
+      font-size: .65em;
+      color: $text-color-light;
+    }
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: $max-image-width;
+  max-height: $max-image-height;
+}

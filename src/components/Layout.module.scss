@@ -1,0 +1,140 @@
+@import '../styles/variables';
+
+.header {
+    background-color: $background-color;
+
+    h1 {
+        position: fixed;
+        top: $outer-margin;
+        left: $outer-margin;
+    }
+}
+  
+.hamburger,
+.checkbox {
+    display: none;
+    position: absolute;
+    top: $outer-margin;
+    right: $outer-margin;
+}
+  
+.line {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;
+    background-color: $text-color;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+  
+.navigation {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    width: $sidebar-width - (2 * $sidebar-padding);
+    padding: 0 $sidebar-padding;
+    background: $background-color;
+  
+    h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+  
+    ul {
+        list-style: none;
+        margin: 0 0 0 -40px;
+    }
+  
+    li a {
+        font-size: 0.8em;
+    }
+  
+    li.active a {
+        text-decoration: underline;
+    }
+  }
+  
+.socials {
+    position: absolute;
+    left: $outer-margin;
+    bottom: 30px;
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        float: left;
+        width: 28px;
+        height: 28px;
+        margin: 0 8px 0 0;
+    }
+}
+  
+.main {
+    margin: $outer-margin $outer-margin $outer-margin $sidebar-width;
+    overflow-y: scroll;
+}
+  
+@media (max-width: $phone-breakpoint) {
+  
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 90px;
+  
+        h1 {
+            font-weight: 1.1em;
+            top: $outer-margin;
+            left: $outer-margin;
+        }
+    }
+
+    .hamburger {
+        display: block;
+        top: $outer-margin;
+        right: $outer-margin;
+        cursor: pointer;
+    }
+
+    .checkbox:checked ~ nav {
+        display: block;
+    }
+
+    .checkbox:checked ~ .hamburger .line {
+    }
+
+    .checkbox:checked ~ .hamburger .line:nth-child(1) {
+        -webkit-transform: translateY(11px) rotate(45deg);
+        -ms-transform: translateY(11px) rotate(45deg);
+        -o-transform: translateY(11px) rotate(45deg);
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .checkbox:checked ~ .hamburger .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .checkbox:checked ~ .hamburger .line:nth-child(3) {
+        -webkit-transform: translateY(-7px) rotate(-45deg);
+        -ms-transform: translateY(-7px) rotate(-45deg);
+        -o-transform: translateY(-7px) rotate(-45deg);
+        transform: translateY(-7px) rotate(-45deg);
+    }
+  
+    .navigation {
+        display: none;
+        padding-bottom: $outer-margin;
+        width: 100%;
+    }
+  
+    .main {
+        margin: 80px $outer-margin $outer-margin $outer-margin;
+    }
+}
+  
