@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 
-const Home = () => {
+const Work = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const Home = () => {
       .then((response) => setProjects(response.data.projects));
   }, []);
 
-  return <Layout projects={projects}>Home Page</Layout>;
+  return <Layout projects={projects}>Work</Layout>;
 };
 
-export default Home;
+export default Work;
