@@ -19,7 +19,7 @@ interface Photo {
   caption?: string;
 }
 
-interface Project {
+export interface Project {
   title: string;
   slug: string;
   photos: Photo[];
