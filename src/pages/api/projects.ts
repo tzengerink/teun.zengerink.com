@@ -14,7 +14,7 @@ interface ConfigItem {
   captions?: ConfigCaption[];
 }
 
-interface Photo {
+export interface Photo {
   key: string;
   url: string;
   caption?: string;
