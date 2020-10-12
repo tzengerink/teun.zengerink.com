@@ -1,4 +1,5 @@
 import fs from "fs";
+import { IncomingMessage, ServerResponse } from 'http'
 import path from "path";
 import slugify from "slugify";
 
@@ -95,7 +96,7 @@ const config: ConfigItem[] = [
   },
 ];
 
-const handler = (request, response) => {
+const handler = (request: IncomingMessage, response: ServerResponse): void => {
   response.statusCode = 200;
   response.setHeader("Content-Type", "application/json");
   response.end(JSON.stringify({ projects: generateProjects(config) }));

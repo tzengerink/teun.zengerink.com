@@ -8,7 +8,7 @@ interface SidebarProps {
   pageTitle: string;
 }
 
-const Sidebar = (props: SidebarProps) => {
+const Sidebar = (props: SidebarProps): React.ReactElement => {
   const router = useRouter();
 
   return (
