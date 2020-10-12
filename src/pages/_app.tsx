@@ -1,6 +1,6 @@
-import { AppProps } from "next/app"
-import "../styles/globals.scss";
+import { AppProps } from 'next/app'
+import '../styles/globals.scss'
 
-const App = ({ Component, pageProps }: AppProps): React.ReactElement => <Component {...pageProps} />;
+const App = ({ Component, pageProps }: AppProps): React.ReactElement => <Component {...pageProps} />
 
-export default App;
+export default App

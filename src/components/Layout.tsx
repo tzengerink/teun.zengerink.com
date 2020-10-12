@@ -1,13 +1,13 @@
-import Head from "next/head";
-import { Project } from "../pages/api/projects";
-import Sidebar from "./Sidebar";
-import styles from "./Layout.module.scss";
+import Head from 'next/head'
+import { Project } from '../pages/api/projects'
+import Sidebar from './Sidebar'
+import styles from './Layout.module.scss'
 
-const title = "Teun Zengerink";
+const title = 'Teun Zengerink'
 
 interface LayoutProps {
-  projects: Project[];
-  children?: React.ReactNode;
+  projects: Project[]
+  children?: React.ReactNode
 }
 
 const Layout = (props: LayoutProps): React.ReactElement => {
@@ -20,7 +20,7 @@ const Layout = (props: LayoutProps): React.ReactElement => {
       <Sidebar pageTitle={title} projects={props.projects} />
       <main className={styles.main}>{props.children}</main>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
