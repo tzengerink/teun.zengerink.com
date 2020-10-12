@@ -17,8 +17,14 @@ h1 {
 }
 
 h2 {
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: $font-weight-bold;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: $font-weight-bold;
+  text-align: center;
 }
 
 a {
@@ -32,15 +38,15 @@ a {
 
 p {
   text-align: justify;
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
 
-    &.statement {
-      text-align: left;
-      font-size: .65em;
-      color: $text-color-light;
-    }
+  &.statement {
+    text-align: left;
+    font-size: 0.65em;
+    color: $text-color-light;
+  }
 }
 
 img {

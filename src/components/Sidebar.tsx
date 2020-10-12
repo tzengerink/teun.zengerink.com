@@ -1,11 +1,16 @@
-import { useRouter } from 'next/router'
+import { useRouter, NextRouter } from 'next/router'
 import Link from 'next/link'
-import { Project } from '../pages/api/projects'
+import { Project } from '../projectService'
 import styles from './Sidebar.module.scss'
 
 interface SidebarProps {
   projects: Project[]
   pageTitle: string
+}
+
+const isActiveProject = (router: NextRouter, project: Project): boolean => {
+  if (!router.query?.slug) return false
+  return router.query?.slug[0] === project.slug
 }
 
 const Sidebar = (props: SidebarProps): React.ReactElement => {
@@ -26,7 +31,7 @@ const Sidebar = (props: SidebarProps): React.ReactElement => {
         <h2>Work</h2>
         <ul>
           {props.projects.map((project) => (
-            <li key={project.slug} className={router.query.slug == project.slug ? styles.active : ''}>
+            <li key={project.slug} className={isActiveProject(router, project) ? styles.active : ''}>
               <Link href={`/work/${project.slug}`}>
                 <a>{project.title}</a>
               </Link>

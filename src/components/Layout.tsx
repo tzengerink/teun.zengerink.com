@@ -16,6 +16,7 @@ const Layout = (props: LayoutProps): React.ReactElement => {
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,500" rel="stylesheet" />
       </Head>
       <Sidebar pageTitle={title} projects={props.projects} />
       <main className={styles.main}>{props.children}</main>
