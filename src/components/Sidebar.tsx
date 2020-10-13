@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useRouter, NextRouter } from 'next/router'
 import Link from 'next/link'
 import { Project } from '../projectService'
@@ -15,25 +16,25 @@ const isActiveProject = (router: NextRouter, project: Project): boolean => {
 
 const Sidebar = (props: SidebarProps): React.ReactElement => {
   const router = useRouter()
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <aside className={styles.sidebar}>
+    <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
       <a href="/">
         <h1>{props.pageTitle}</h1>
       </a>
-      <input id="visible" className={styles.checkbox} type="checkbox" />
-      <label htmlFor="visible" className={styles.hamburger}>
+      <div className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}>
         <span className={styles.line}></span>
         <span className={styles.line}></span>
         <span className={styles.line}></span>
-      </label>
+      </div>
       <nav className={styles.navigation}>
         <h2>Work</h2>
         <ul>
           {props.projects.map((project) => (
             <li key={project.slug} className={isActiveProject(router, project) ? styles.active : ''}>
               <Link href={`/work/${project.slug}`}>
-                <a>{project.title}</a>
+                <a onClick={() => setIsOpen(false)}>{project.title}</a>
               </Link>
             </li>
           ))}
