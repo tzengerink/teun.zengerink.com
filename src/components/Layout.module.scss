@@ -1,13 +1,11 @@
 @import '../styles/variables';
-  
+
 .main {
-    margin: $outer-margin $outer-margin $outer-margin $sidebar-width;
-    overflow-y: scroll;
+  margin: 95px $outer-margin $outer-margin $sidebar-width;
 }
-  
+
 @media (max-width: $phone-breakpoint) {
-    .main {
-        margin: 80px $outer-margin $outer-margin $outer-margin;
-    }
+  .main {
+    margin: 100px $outer-margin $outer-margin $outer-margin;
+  }
 }
-  

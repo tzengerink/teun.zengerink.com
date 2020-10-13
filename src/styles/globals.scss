@@ -7,10 +7,12 @@ html {
 }
 
 body {
+  margin: 0;
   background-color: $background-color;
 }
 
 h1 {
+  margin-top: 0.5em;
   font-size: 1em;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
@@ -22,8 +24,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1em;
-  font-weight: $font-weight-bold;
+  font-size: 0.9em;
+  font-weight: $font-weight-normal;
   text-align: center;
 }
 

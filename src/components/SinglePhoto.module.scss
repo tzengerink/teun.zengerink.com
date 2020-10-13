@@ -1,48 +1,49 @@
 @import '../styles/variables';
 
 @mixin hide {
-    opacity: 0;
-    transition: all .15s;
-    -webkit-transition: all .15s;
+  opacity: 0;
+  transition: all 0.15s;
+  -webkit-transition: all 0.15s;
 }
 
 @mixin show {
-    opacity: 1;
+  opacity: 1;
 }
 
 @mixin overlay {
-    @include hide;
+  @include hide;
 
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .wrapper {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
 
-    .title {
-        @include overlay;
+  .title {
+    @include overlay;
 
-        top: 50%;
-        text-align: center;
-        color: #fff;
-        font-size: 1.2em;
-        font-weight: $font-weight-bold;
-    }
+    top: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: $font-weight-bold;
+  }
 
-    &:after {
-        @include overlay;
+  &:after {
+    @include overlay;
 
-        content: '\A';
-        background: rgba(0, 0, 0, .4);
-    }
-    
-    &:hover .title,
-    &:hover:after {
-        @include show;
-    }
+    content: '\A';
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  &:hover .title,
+  &:hover:after {
+    @include show;
+  }
 }

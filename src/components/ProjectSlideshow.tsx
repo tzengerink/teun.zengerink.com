@@ -1,4 +1,5 @@
 import { useRouter, NextRouter } from 'next/router'
+import ReactMarkdown from 'react-markdown'
 import { Project, Photo } from '../projectService'
 import styles from './ProjectSlideshow.module.scss'
 
@@ -35,10 +36,6 @@ class ProjectRouter {
     return this.project.photos[this.getSlideIndex() - 1]
   }
 
-  private isStatement(): boolean {
-    return !this.activeKey()
-  }
-
   private isLast(): boolean {
     return this.activeKey() === this.lastPhoto().key
   }
@@ -58,12 +55,12 @@ class ProjectRouter {
   }
 
   activeKey() {
-    return this.router.query?.slug[1]
+    return this.router.query?.slug ? this.router.query?.slug[1] : undefined
   }
 
   next() {
     if (this.project.statement) {
-      if (this.isStatement()) return this.go(this.firstPhoto())
+      if (!this.activeKey()) return this.go(this.firstPhoto())
       if (this.isLast()) return this.go()
       return this.go(this.nextPhoto())
     }
@@ -74,7 +71,7 @@ class ProjectRouter {
 
   previous() {
     if (this.project.statement) {
-      if (this.isStatement()) return this.go(this.lastPhoto())
+      if (!this.activeKey()) return this.go(this.lastPhoto())
       if (this.isFirst()) return this.go()
       return this.go(this.previousPhoto())
     }
@@ -89,13 +86,13 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
 
   return (
     <div className={styles.slideshow}>
-      <h2>{props.project?.title}</h2>
       {props.project?.statement ? (
         <div
           className={`${styles.slide} ${router.activeKey() === undefined ? styles.active : ''}`}
           onClick={() => router.next()}
         >
-          {props.project?.statement}
+          <h2>{props.project?.title}</h2>
+          <ReactMarkdown source={props.project?.statement} />
         </div>
       ) : (
         ''
@@ -113,6 +110,7 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
         <a className={styles.leftArrow} onClick={() => router.previous()}>
           &larr;
         </a>
+        <h3>{router.activeKey()}</h3>
         <a className={styles.rightArrow} onClick={() => router.next()}>
           &rarr;
         </a>
@@ -124,8 +122,7 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
             key={`${props.project.slug}--caption-${photo.key}`}
             className={`${styles.caption} ${router.isActive(photo) ? styles.active : ''}`}
           >
-            <h3>{photo.key}</h3>
-            {photo.caption}
+            <ReactMarkdown source={photo.caption} />
           </div>
         ))}
     </div>

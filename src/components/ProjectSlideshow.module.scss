@@ -1,24 +1,30 @@
 @import '../styles/variables.scss';
 
 .slideshow {
+  margin: 0 auto;
+  max-width: $max-image-width;
+  max-height: $max-image-height;
+
   .navigation {
     display: flex;
     align-content: space-between;
+
+    h3 {
+      margin-top: 0.4em;
+    }
   }
 
   .slide {
     display: none;
     margin: 0 auto;
-    font-size: 0.9em;
+    font-size: 1em;
     cursor: e-resize;
-    max-height: 400px;
   }
 
   .caption {
     display: none;
     margin: 1.3em auto 0 auto;
-    width: 80%;
-    font-size: 0.8em;
+    font-style: italic;
   }
 
   .active {
@@ -35,5 +41,10 @@
 
   .rightArrow {
     text-align: right;
+  }
+}
+
+@media (max-width: $phone-breakpoint) {
+  .slideshow {
   }
 }
