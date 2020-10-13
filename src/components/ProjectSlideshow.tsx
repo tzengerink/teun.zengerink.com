@@ -14,6 +14,10 @@ class ProjectRouter {
   constructor(router: NextRouter, project: Project) {
     this.router = router
     this.project = project
+
+    if (this.project && !this.project.statement && this.activeKey() === undefined) {
+      this.go(this.firstPhoto())
+    }
   }
 
   private getSlideIndex(): number {
