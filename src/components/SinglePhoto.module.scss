@@ -20,7 +20,11 @@
   left: 0;
 }
 
-.wrapper {
+.outer {
+  text-align: center;
+}
+
+.inner {
   position: relative;
   cursor: pointer;
   display: inline-block;

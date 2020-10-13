@@ -1,4 +1,4 @@
-import { Photo, Project } from '../pages/api/projects'
+import { Photo, Project } from '../projectService'
 import Link from 'next/link'
 import styles from './SinglePhoto.module.scss'
 
@@ -13,9 +13,11 @@ const getPhoto = (project: Project): Photo => {
 
 const SinglePhoto = (props: SinglePhotoProps): React.ReactElement => (
   <Link href={`/work/${props.project?.slug}`}>
-    <div className={styles.wrapper}>
-      <div className={styles.title}>{props.project?.title}</div>
-      <img src={getPhoto(props.project)?.url} />
+    <div className={styles.outer}>
+      <div className={styles.inner}>
+        <div className={styles.title}>{props.project?.title}</div>
+        <img src={getPhoto(props.project)?.url} />
+      </div>
     </div>
   </Link>
 )
