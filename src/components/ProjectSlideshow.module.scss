@@ -2,7 +2,7 @@
 
 .slideshow {
   margin: 0 auto;
-  max-width: $max-image-width;
+  max-width: 700px;
   max-height: $max-image-height;
 
   .navigation {
@@ -13,38 +13,37 @@
       margin-top: 0.4em;
     }
   }
+}
 
-  .slide {
-    display: none;
-    margin: 0 auto;
-    font-size: 1em;
-    cursor: e-resize;
-  }
+.slide {
+  display: none;
+  margin: 0 auto;
+  font-size: 1em;
+  cursor: e-resize;
+}
 
-  .caption {
-    display: none;
-    margin: 1.3em auto 0 auto;
-    font-style: italic;
-  }
+.caption {
+  display: none;
+  margin: 1.1em auto 0 auto;
+  font-style: italic;
+}
 
-  .active {
-    display: block;
-  }
+.active {
+  display: block;
+}
 
-  .leftArrow,
-  .rightArrow {
-    flex-grow: 1;
-    font-size: 1.3em;
+.leftArrow,
+.rightArrow {
+  flex-grow: 1;
+  font-size: 1.3em;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
     text-decoration: none;
-    cursor: pointer;
-  }
-
-  .rightArrow {
-    text-align: right;
   }
 }
 
-@media (max-width: $phone-breakpoint) {
-  .slideshow {
-  }
+.rightArrow {
+  text-align: right;
 }
