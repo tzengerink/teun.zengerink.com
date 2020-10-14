@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Loader from '../components/Loader'
 import Layout from '../components/Layout'
 import SinglePhoto from '../components/SinglePhoto'
 import { Project, getProjects } from '../projectService'
@@ -10,7 +11,7 @@ const Home = (): React.ReactElement => {
     getProjects().then(setProjects)
   }, [])
 
-  return <Layout projects={projects}>{projects ? <SinglePhoto project={projects[0]} /> : ''}</Layout>
+  return <Layout projects={projects}>{projects.length ? <SinglePhoto project={projects[0]} /> : <Loader />}</Layout>
 }
 
 export default Home

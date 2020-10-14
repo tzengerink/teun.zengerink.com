@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter, NextRouter } from 'next/router'
 import { Project, getProjects } from '../../projectService'
+import Loader from '../../components/Loader'
 import Layout from '../../components/Layout'
 import ProjectSlideshow from '../../components/ProjectSlideshow'
 
@@ -19,7 +20,7 @@ const Work = (): React.ReactElement => {
 
   return (
     <Layout projects={projects}>
-      <ProjectSlideshow project={getProject(router, projects)} />
+      {projects.length ? <ProjectSlideshow project={getProject(router, projects)} /> : <Loader />}
     </Layout>
   )
 }
