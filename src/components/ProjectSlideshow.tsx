@@ -54,12 +54,21 @@ class ProjectRouter {
     return this.router.push(`${slug}/${photo.key}`)
   }
 
+  private pad(str: string, length: number): string {
+    const output = str.toString()
+    return output.length < length ? this.pad('0' + output, length) : output
+  }
+
   isActive(photo: Photo): boolean {
     return this.activeKey() === photo.key
   }
 
   activeKey() {
     return this.router.query?.slug ? this.router.query?.slug[1] : undefined
+  }
+
+  countPhotos(length = 2) {
+    return this.pad(this.project?.photos.length.toString(), length)
   }
 
   next() {
@@ -90,31 +99,35 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
 
   return (
     <div className={styles.slideshow}>
-      {props.project?.statement ? (
-        <div
-          className={`${styles.slide} ${router.activeKey() === undefined ? styles.active : ''}`}
-          onClick={() => router.next()}
-        >
-          <h2>{props.project?.title}</h2>
-          <ReactMarkdown source={props.project?.statement} />
-        </div>
-      ) : (
-        ''
-      )}
-      {props.project?.photos.map((photo) => (
-        <img
-          key={`${props.project.slug}--photo-${photo.key}`}
-          className={`${styles.slide} ${router.isActive(photo) ? styles.active : ''}`}
-          src={photo.url}
-          alt={photo.caption}
-          onClick={() => router.next()}
-        />
-      ))}
+      <div className={styles.slides} onClick={() => router.next()}>
+        {props.project?.statement ? (
+          <div className={`${styles.slide} ${router.activeKey() === undefined ? styles.active : ''}`}>
+            <h2>{props.project?.title}</h2>
+            <ReactMarkdown source={props.project?.statement} />
+          </div>
+        ) : (
+          ''
+        )}
+        {props.project?.photos.map((photo) => (
+          <img
+            key={`${props.project.slug}--photo-${photo.key}`}
+            className={`${styles.slide} ${router.isActive(photo) ? styles.active : ''}`}
+            src={photo.url}
+            alt={photo.caption}
+          />
+        ))}
+      </div>
       <div className={styles.navigation}>
         <a className={styles.leftArrow} onClick={() => router.previous()}>
           &larr;
         </a>
-        <h3>{router.activeKey()}</h3>
+        {router.activeKey() ? (
+          <h3>
+            {router.activeKey()}/{router.countPhotos()}
+          </h3>
+        ) : (
+          ''
+        )}
         <a className={styles.rightArrow} onClick={() => router.next()}>
           &rarr;
         </a>

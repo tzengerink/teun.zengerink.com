@@ -4,27 +4,34 @@
   margin: 0 auto;
   max-width: 700px;
   max-height: $max-image-height;
+}
 
-  .navigation {
-    display: flex;
-    align-content: space-between;
-
-    h3 {
-      margin-top: 0.4em;
-    }
-  }
+.slides {
+  cursor: e-resize;
 }
 
 .slide {
   display: none;
   margin: 0 auto;
+  text-align: center;
   font-size: 1em;
-  cursor: e-resize;
+
+  p {
+    margin: 0.9em 0;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-content: space-between;
+
+  h3 {
+    margin: 0.4em 0;
+  }
 }
 
 .caption {
   display: none;
-  margin: 1.1em auto 0 auto;
   font-style: italic;
 }
 
