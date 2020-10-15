@@ -41,10 +41,10 @@ const Sidebar = (props: SidebarProps): React.ReactElement => {
         </ul>
         <span className={styles.socials}>
           <a href="https://instagram.com/t.zengerink/">
-            <img src="/img/instagram.jpg" />
+            <img src="/img/instagram.jpg" alt="Instagram" />
           </a>
           <a href="https://pinterest.com/tzengerink/">
-            <img src="/img/pinterest.jpg" />
+            <img src="/img/pinterest.jpg" alt="Pinterest" />
           </a>
         </span>
       </nav>

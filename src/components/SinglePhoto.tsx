@@ -16,7 +16,7 @@ const SinglePhoto = (props: SinglePhotoProps): React.ReactElement => (
     <div className={styles.outer}>
       <div className={styles.inner}>
         <div className={styles.title}>{props.project?.title}</div>
-        <img src={getPhoto(props.project)?.url} />
+        <img src={getPhoto(props.project)?.url} alt={props.project.title} />
       </div>
     </div>
   </Link>

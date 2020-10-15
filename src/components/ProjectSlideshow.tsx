@@ -135,7 +135,7 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
             key={`${props.project.slug}--photo-${photo.key}`}
             className={`${styles.slide} ${router.isActive(photo) ? styles.active : ''}`}
             src={photo.url}
-            alt={photo.caption}
+            alt={photo.caption ? photo.caption : photo.key}
           />
         ))}
       </div>

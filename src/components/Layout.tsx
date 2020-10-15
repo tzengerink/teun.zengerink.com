@@ -12,10 +12,13 @@ interface LayoutProps {
 }
 
 const Layout = (props: LayoutProps): React.ReactElement => {
+  const getPageTitle = () => (props.title ? props.title : pageTitle)
   return (
     <div>
       <Head>
-        <title>{props.title ? props.title : pageTitle}</title>
+        <meta charSet="utf-8" />
+        <meta name="description" content={getPageTitle()}></meta>
+        <title>{getPageTitle()}</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,300&display=swap"
