@@ -3,9 +3,10 @@ import { Project } from '../projectService'
 import Sidebar from './Sidebar'
 import styles from './Layout.module.scss'
 
-const title = 'Teun Zengerink'
+export const pageTitle = 'Teun Zengerink'
 
 interface LayoutProps {
+  title?: string
   projects: Project[]
   children?: React.ReactNode
 }
@@ -14,14 +15,14 @@ const Layout = (props: LayoutProps): React.ReactElement => {
   return (
     <div>
       <Head>
-        <title>{title}</title>
+        <title>{props.title ? props.title : pageTitle}</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,300&display=swap"
           rel="stylesheet"
         ></link>
       </Head>
-      <Sidebar pageTitle={title} projects={props.projects} />
+      <Sidebar pageTitle={pageTitle} projects={props.projects} />
       <main className={styles.main}>{props.children}</main>
     </div>
   )

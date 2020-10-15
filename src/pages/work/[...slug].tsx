@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useRouter, NextRouter } from 'next/router'
 import { Project, getProjects } from '../../projectService'
 import Loader from '../../components/Loader'
-import Layout from '../../components/Layout'
+import Layout, { pageTitle } from '../../components/Layout'
 import ProjectSlideshow from '../../components/ProjectSlideshow'
 
 const getProject = (router: NextRouter, projects: Project[]) => {
@@ -13,14 +13,15 @@ const getProject = (router: NextRouter, projects: Project[]) => {
 const Work = (): React.ReactElement => {
   const router = useRouter()
   const [projects, setProjects] = useState<Project[]>([])
+  const project = getProject(router, projects)
 
   useEffect(() => {
     getProjects().then(setProjects)
   }, [])
 
   return (
-    <Layout projects={projects}>
-      {projects.length ? <ProjectSlideshow project={getProject(router, projects)} /> : <Loader />}
+    <Layout title={projects.length ? `${pageTitle} - ${project.title}` : pageTitle} projects={projects}>
+      {projects.length ? <ProjectSlideshow project={project} /> : <Loader />}
     </Layout>
   )
 }
