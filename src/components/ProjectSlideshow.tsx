@@ -1,7 +1,13 @@
+import { useEffect } from 'react'
 import { useRouter, NextRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
 import { Project, Photo } from '../projectService'
 import styles from './ProjectSlideshow.module.scss'
+
+enum Key {
+  LEFT = 'ArrowLeft',
+  RIGHT = 'ArrowRight',
+}
 
 interface ProjectSlideshowProps {
   project: Project
@@ -96,6 +102,22 @@ class ProjectRouter {
 
 const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
   const router = new ProjectRouter(useRouter(), props.project)
+
+  useEffect(() => {
+    const keyUpHandler = ({ key }: KeyboardEvent) => {
+      switch (key) {
+        case Key.LEFT:
+          router.previous()
+          break
+        case Key.RIGHT:
+          router.next()
+          break
+      }
+    }
+
+    window.addEventListener('keyup', keyUpHandler)
+    return () => window.removeEventListener('keyup', keyUpHandler)
+  })
 
   return (
     <div className={styles.slideshow}>
