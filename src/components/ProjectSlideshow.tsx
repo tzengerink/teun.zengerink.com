@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRouter, NextRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
-import { Project, Photo } from '../projectService'
+import { Project, Photo } from '../lib/projectService'
 import styles from './ProjectSlideshow.module.scss'
 
 enum Key {

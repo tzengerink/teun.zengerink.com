@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRouter, NextRouter } from 'next/router'
 import Link from 'next/link'
-import { Project } from '../projectService'
+import { Project } from '../lib/projectService'
 import styles from './Sidebar.module.scss'
 
 interface SidebarProps {

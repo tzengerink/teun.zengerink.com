@@ -1,5 +1,5 @@
-import { Photo, Project } from '../projectService'
 import Link from 'next/link'
+import { Photo, Project } from '../lib/projectService'
 import styles from './SinglePhoto.module.scss'
 
 interface SinglePhotoProps {

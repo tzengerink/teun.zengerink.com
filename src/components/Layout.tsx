@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Project } from '../projectService'
+import { Project } from '../lib/projectService'
 import Sidebar from './Sidebar'
 import styles from './Layout.module.scss'
 

@@ -2,7 +2,7 @@ import fs from 'fs'
 import { IncomingMessage, ServerResponse } from 'http'
 import path from 'path'
 import slugify from 'slugify'
-import { Photo, Project } from '../../projectService'
+import { Photo, Project } from '../../lib/projectService'
 
 interface ConfigCaption {
   key: string

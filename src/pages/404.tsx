@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Layout from '../components/Layout'
-import { Project, getProjects } from '../projectService'
+import { Project, getProjects } from '../lib/projectService'
 
 const Error = (): React.ReactElement => {
   const [projects, setProjects] = useState<Project[]>([])
