@@ -10,7 +10,7 @@ interface SidebarProps {
 }
 
 const isActiveProject = (router: NextRouter, project: Project): boolean => {
-  if (!router.query?.slug) return false
+  if (!router?.query?.slug) return false
   return router.query?.slug[0] === project.slug
 }
 

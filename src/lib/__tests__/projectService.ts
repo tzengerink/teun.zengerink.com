@@ -1,6 +1,6 @@
 import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
-import { getProjects } from './projectService'
+import { getProjects } from '../projectService'
 
 describe('getProjects', () => {
   const ENV = process.env

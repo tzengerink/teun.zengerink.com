@@ -7,7 +7,6 @@
     "build": "next build && next export",
     "start": "next start",
     "test": "jest --watch",
-    "test:cov": "jest --coverage",
     "test:ci": "jest --ci",
     "lint": "eslint src/**/*.{ts,tsx} --fix"
   },

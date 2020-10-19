@@ -70,7 +70,7 @@ class ProjectRouter {
   }
 
   activeKey() {
-    return this.router.query?.slug ? this.router.query?.slug[1] : undefined
+    return this.router?.query?.slug ? this.router.query?.slug[1] : undefined
   }
 
   countPhotos(length = 2) {

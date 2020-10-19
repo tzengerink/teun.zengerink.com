@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="slideshow"
+>
+  <div
+    className="slides"
+    onClick={[Function]}
+  >
+    <div
+      className="slide active"
+    >
+      <h2>
+        My First Project
+      </h2>
+      <p>
+        The statement for the project
+      </p>
+    </div>
+    <img
+      alt="01"
+      className="slide "
+      src="/photos/my-first-project/01.jpg"
+    />
+    <img
+      alt="02"
+      className="slide "
+      src="/photos/my-first-project/02.jpg"
+    />
+    <img
+      alt="03"
+      className="slide "
+      src="/photos/my-first-project/03.jpg"
+    />
+  </div>
+  <div
+    className="navigation"
+  >
+    <a
+      className="leftArrow"
+      onClick={[Function]}
+    >
+      ←
+    </a>
+    
+    <a
+      className="rightArrow"
+      onClick={[Function]}
+    >
+      →
+    </a>
+  </div>
+</div>
+`;
