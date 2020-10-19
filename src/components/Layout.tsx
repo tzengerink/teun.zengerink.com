@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import { Project } from '../lib/projectService'
 import Sidebar from './Sidebar'

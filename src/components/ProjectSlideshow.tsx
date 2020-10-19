@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useRouter, NextRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
 import { Project, Photo } from '../lib/projectService'

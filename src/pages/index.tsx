@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Loader from '../components/Loader'
 import Layout from '../components/Layout'
 import SinglePhoto from '../components/SinglePhoto'

@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import { Photo, Project } from '../lib/projectService'
 import styles from './SinglePhoto.module.scss'

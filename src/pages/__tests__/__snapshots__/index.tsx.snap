@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <aside
+    className="sidebar "
+  >
+    <a
+      href="/"
+    >
+      <h1>
+        Teun Zengerink
+      </h1>
+    </a>
+    <div
+      className="hamburger"
+      onClick={[Function]}
+    >
+      <span
+        className="line"
+      />
+      <span
+        className="line"
+      />
+      <span
+        className="line"
+      />
+    </div>
+    <nav
+      className="navigation"
+    >
+      
+      <ul />
+      <span
+        className="socials"
+      >
+        <a
+          href="https://instagram.com/t.zengerink/"
+        >
+          <img
+            alt="Instagram"
+            src="/img/instagram.jpg"
+          />
+        </a>
+        <a
+          href="https://pinterest.com/tzengerink/"
+        >
+          <img
+            alt="Pinterest"
+            src="/img/pinterest.jpg"
+          />
+        </a>
+      </span>
+    </nav>
+  </aside>
+  <main
+    className="main"
+  >
+    <div
+      className="loader"
+    />
+  </main>
+</div>
+`;
