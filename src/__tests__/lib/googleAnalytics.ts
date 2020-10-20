@@ -1,4 +1,4 @@
-import { trackPageView } from '../googleAnalytics'
+import { trackPageView } from '../../lib/googleAnalytics'
 
 describe('trackPageView', () => {
   const ENV = process.env

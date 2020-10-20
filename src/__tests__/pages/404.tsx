@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Work from '../work/[...slug]'
+import Error404 from '../../pages/404'
 
 it('renders correctly', () => {
-  const tree = renderer.create(<Work />).toJSON()
+  const tree = renderer.create(<Error404 />).toJSON()
   expect(tree).toMatchSnapshot()
 })

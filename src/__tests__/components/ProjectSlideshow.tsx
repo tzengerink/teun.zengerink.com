@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import ProjectSlideshow from '../ProjectSlideshow'
+import ProjectSlideshow from '../../components/ProjectSlideshow'
 import projects from './__mocks__/projects'
 
 it('renders correctly', () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import SinglePhoto from '../SinglePhoto'
+import SinglePhoto from '../../components/SinglePhoto'
 import projects from './__mocks__/projects'
 
 it('renders correctly', () => {

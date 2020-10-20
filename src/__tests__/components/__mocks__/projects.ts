@@ -1,4 +1,4 @@
-import ProjectSlideshow from '../../ProjectSlideshow'
+import ProjectSlideshow from '../../../components/ProjectSlideshow'
 
 const projects = [
   {
@@ -47,4 +47,5 @@ const projects = [
     ],
   },
 ]
+
 export default projects

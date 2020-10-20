@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Error404 from '../404'
+import Home from '../../pages/index'
 
 it('renders correctly', () => {
-  const tree = renderer.create(<Error404 />).toJSON()
+  const tree = renderer.create(<Home />).toJSON()
   expect(tree).toMatchSnapshot()
 })

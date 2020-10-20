@@ -1,9 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Layout from '../Layout'
+import Sidebar from '../../components/Sidebar'
 import projects from './__mocks__/projects'
 
 it('renders correctly', () => {
-  const tree = renderer.create(<Layout projects={projects} />).toJSON()
+  const tree = renderer.create(<Sidebar pageTitle="My Homepage" projects={projects} />).toJSON()
   expect(tree).toMatchSnapshot()
 })
