@@ -15,6 +15,7 @@ interface ProjectSlideshowProps {
 }
 
 const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
+  let touchStartX: number
   const router = new ProjectRouter(useRouter(), props.project)
 
   useEffect(() => {
@@ -33,9 +34,26 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
     return () => window.removeEventListener('keyup', keyUpHandler)
   })
 
+  const touchStartHandler = ({ touches }: React.TouchEvent) => {
+    touchStartX = touches[0].clientX
+  }
+
+  const touchMoveHandler = ({ touches }: React.TouchEvent) => {
+    if (!touchStartX) return
+    const difference = touchStartX - touches[0].clientX
+    if (difference > 150) router.previous()
+    if (difference < 150) router.next()
+    touchStartX = null
+  }
+
   return (
     <div className={styles.slideshow}>
-      <div className={styles.slides} onClick={() => router.next()}>
+      <div
+        className={styles.slides}
+        onClick={() => router.next()}
+        onTouchStart={(e) => touchStartHandler(e)}
+        onTouchMove={(e) => touchMoveHandler(e)}
+      >
         {props.project?.statement ? (
           <div className={`${styles.slide} ${router.activeKey() === undefined ? styles.active : ''}`}>
             <h2>{props.project?.title}</h2>

@@ -7,6 +7,8 @@ exports[`renders correctly 1`] = `
   <div
     className="slides"
     onClick={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
   >
     <div
       className="slide active"
