@@ -29,9 +29,9 @@ const Sidebar = (props: SidebarProps): React.ReactElement => {
         <span className={styles.line}></span>
       </div>
       <nav className={styles.navigation}>
-        {props.projects.length ? <h2>Work</h2> : ''}
+        {props.projects?.length ? <h2>Work</h2> : ''}
         <ul>
-          {props.projects.map((project) => (
+          {props.projects?.map((project) => (
             <li key={project.slug} className={isActiveProject(router, project) ? styles.active : ''}>
               <Link href={`/work/${project.slug}`}>
                 <a onClick={() => setIsOpen(false)}>{project.title}</a>
