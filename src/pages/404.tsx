@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Layout from '../components/Layout'
-import { Project, getProjects } from '../lib/projectService'
+import { getProjects, Project } from '../lib/projectService'
 
-const Error = (): React.ReactElement => {
-  const [projects, setProjects] = useState<Project[]>([])
-
-  useEffect(() => {
-    getProjects().then(setProjects)
-  }, [])
-
-  return (
-    <Layout projects={projects}>
-      <h2 className="error">Page Not Found</h2>
-    </Layout>
-  )
+interface ErrorProps {
+  projects: Project[]
 }
+
+const Error = (props: ErrorProps): React.ReactElement => (
+  <Layout projects={props.projects}>
+    <h2 className="error">Page Not Found</h2>
+  </Layout>
+)
+export const getStaticProps = async (): Promise<{ props: ErrorProps }> => ({ props: { projects: await getProjects() } })
 
 export default Error

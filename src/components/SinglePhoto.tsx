@@ -13,7 +13,7 @@ const getPhoto = (project: Project): Photo => {
 }
 
 const SinglePhoto = (props: SinglePhotoProps): React.ReactElement => (
-  <Link href={`/work/${props.project?.slug}`}>
+  <Link href={`/work/${props.project?.slug}${!props.project.statement ? `/${getPhoto(props.project).key}` : ''}`}>
     <div className={styles.outer}>
       <div className={styles.inner}>
         <div className={styles.title}>{props.project?.title}</div>
