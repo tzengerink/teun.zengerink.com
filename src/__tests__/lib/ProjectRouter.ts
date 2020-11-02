@@ -43,22 +43,6 @@ const project: Project = {
   statement: 'The project statement',
 }
 
-describe('constructor', () => {
-  test('it opens first photo when there is no statement', () => {
-    const mockRouter = new MockRouter()
-    const projectRouter = new ProjectRouter(mockRouter, { ...project, statement: undefined })
-    expect(projectRouter).toBeDefined()
-    expect(mockRouter.pushed).toEqual('/work/my-project/01')
-  })
-
-  test('it opens the statement when there is a statement', () => {
-    const mockRouter = new MockRouter()
-    const projectRouter = new ProjectRouter(mockRouter, project)
-    expect(projectRouter).toBeDefined()
-    expect(mockRouter.pushed).toBeUndefined()
-  })
-})
-
 describe('isActive', () => {
   test('it returns true when photo is active', () => {
     const mockRouter = new MockRouter()

@@ -48,7 +48,7 @@ exports[`renders correctly 1`] = `
           className=""
         >
           <a
-            href="/work/no-statement"
+            href="/work/no-statement/01"
             onClick={[Function]}
             onMouseEnter={[Function]}
           >

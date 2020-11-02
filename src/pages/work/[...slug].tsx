@@ -9,6 +9,10 @@ interface WorkProps {
   projects: Project[]
 }
 
+interface WorkPath {
+  params: { slug: string }
+}
+
 const getProject = (router: NextRouter, projects: Project[]) => {
   const slug = router?.query?.slug?.length ? router.query.slug[0] : ''
   return projects?.find((project) => project.slug === slug)
@@ -26,5 +30,20 @@ const Work = (props: WorkProps): React.ReactElement => {
 }
 
 export const getStaticProps = async (): Promise<{ props: WorkProps }> => ({ props: { projects: await getProjects() } })
+
+export const getStaticPaths = async (): Promise<{ paths: WorkPath[]; fallback: boolean }> => {
+  const paths = []
+  const projects = await getProjects()
+  projects.forEach((project) => {
+    if (project.statement) {
+      paths.push({ params: { slug: [project.slug] } })
+    }
+    project.photos.forEach((photo) => {
+      paths.push({ params: { slug: [project.slug, photo.key] } })
+    })
+  })
+
+  return { paths, fallback: false }
+}
 
 export default Work

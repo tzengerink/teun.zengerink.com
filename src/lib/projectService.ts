@@ -32,11 +32,11 @@ const generatePhotos = (slug: string, captions: ConfigCaption[]): Photo[] => {
 
   return fileNames.map((filename) => {
     const key = path.basename(filename, '.jpg')
-    const caption = captions?.find((c) => c.key == key)?.caption
+    const caption = captions?.find((c) => c.key == key)
 
     return {
       key,
-      caption,
+      caption: caption ? caption.caption : '',
       url: `/photos/${slug}/${filename}`,
     }
   })
@@ -48,7 +48,7 @@ const generateProjects = (item: ConfigItem[]): Project[] => {
 
     return {
       title: project.title,
-      statement: project.statement,
+      statement: project.statement ? project.statement : '',
       slug,
       photos: generatePhotos(slug, project.captions),
     }

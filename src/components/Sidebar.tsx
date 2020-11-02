@@ -33,7 +33,7 @@ const Sidebar = (props: SidebarProps): React.ReactElement => {
         <ul>
           {props.projects?.map((project) => (
             <li key={project.slug} className={isActiveProject(router, project) ? styles.active : ''}>
-              <Link href={`/work/${project.slug}`}>
+              <Link href={`/work/${project.slug}${!project.statement ? `/${project.photos[0].key}` : ''}`}>
                 <a onClick={() => setIsOpen(false)}>{project.title}</a>
               </Link>
             </li>

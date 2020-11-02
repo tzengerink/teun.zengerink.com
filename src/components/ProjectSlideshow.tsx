@@ -15,7 +15,8 @@ interface ProjectSlideshowProps {
 }
 
 const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
-  const router = new ProjectRouter(useRouter(), props.project)
+  const nextRouter = useRouter()
+  const router = new ProjectRouter(nextRouter, props.project)
 
   useEffect(() => {
     const keyUpHandler = ({ key }: KeyboardEvent) => {
