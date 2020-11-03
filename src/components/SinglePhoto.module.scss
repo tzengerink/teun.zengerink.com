@@ -1,5 +1,3 @@
-@import '../styles/variables';
-
 @mixin hide {
   opacity: 0;
   transition: all 0.15s;
@@ -20,14 +18,9 @@
   left: 0;
 }
 
-.outer {
-  text-align: center;
-}
-
-.inner {
+.container {
   position: relative;
   cursor: pointer;
-  display: inline-block;
 
   .title {
     @include overlay;
@@ -36,7 +29,7 @@
     text-align: center;
     color: #fff;
     font-size: 1.2em;
-    font-weight: $font-weight-bold;
+    z-index: 2;
   }
 
   &:after {
@@ -44,6 +37,7 @@
 
     content: '\A';
     background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
   }
 
   &:hover .title,

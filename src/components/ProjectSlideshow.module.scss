@@ -2,12 +2,8 @@
 
 .slideshow {
   margin: 0 auto;
-  max-width: 700px;
-  max-height: $max-image-height;
-}
-
-.slides {
-  cursor: e-resize;
+  max-width: 650px;
+  height: 60vh;
 }
 
 .slide {
@@ -15,15 +11,21 @@
   margin: 0 auto;
   text-align: center;
   font-size: 1em;
+  cursor: e-resize;
 
   p {
     margin: 0.9em 0;
+  }
+
+  img {
+    margin: 0 auto;
   }
 }
 
 .navigation {
   display: flex;
   align-content: space-between;
+  margin-bottom: $outer-margin;
 
   h3 {
     margin: 0.6em 0;
