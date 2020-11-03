@@ -2,22 +2,49 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="outer"
+  className="container"
   onClick={[Function]}
   onMouseEnter={[Function]}
 >
   <div
-    className="inner"
+    className="title"
+  >
+    My First Project
+  </div>
+  <div
+    style={
+      Object {
+        "maxWidth": "100%",
+        "width": 800,
+      }
+    }
   >
     <div
-      className="title"
+      style={
+        Object {
+          "paddingBottom": "75%",
+          "position": "relative",
+        }
+      }
     >
-      My First Project
+      
+      <img
+        alt="My First Project"
+        className="__lazy"
+        data-src="/_next/image?url=%2Fphotos%2Fmy-first-project%2F01.jpg&w=1024&q=75"
+        data-srcset="/_next/image?url=%2Fphotos%2Fmy-first-project%2F01.jpg&w=320&q=75 320w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F01.jpg&w=420&q=75 420w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F01.jpg&w=768&q=75 768w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F01.jpg&w=1024&q=75 1024w"
+        style={
+          Object {
+            "height": "100%",
+            "left": "0",
+            "position": "absolute",
+            "top": "0",
+            "visibility": "hidden",
+            "width": "100%",
+          }
+        }
+      />
     </div>
-    <img
-      alt="My First Project"
-      src="/photos/my-first-project/01.jpg"
-    />
   </div>
 </div>
 `;
