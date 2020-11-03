@@ -5,36 +5,143 @@ exports[`renders correctly 1`] = `
   className="slideshow"
 >
   <div
-    className="slides"
+    className="slide active"
+    onClick={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+  >
+    <h2>
+      My First Project
+    </h2>
+    <p>
+      The statement for the project
+    </p>
+  </div>
+  <div
+    className="slide "
     onClick={[Function]}
     onTouchMove={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="slide active"
+      style={
+        Object {
+          "maxWidth": "100%",
+          "width": 800,
+        }
+      }
     >
-      <h2>
-        My First Project
-      </h2>
-      <p>
-        The statement for the project
-      </p>
+      <div
+        style={
+          Object {
+            "paddingBottom": "75%",
+            "position": "relative",
+          }
+        }
+      >
+        
+        <img
+          alt="01"
+          className="__lazy"
+          data-src="/_next/image?url=%2Fphotos%2Fmy-first-project%2F01.jpg&w=1024&q=75"
+          data-srcset="/_next/image?url=%2Fphotos%2Fmy-first-project%2F01.jpg&w=320&q=75 320w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F01.jpg&w=420&q=75 420w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F01.jpg&w=768&q=75 768w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F01.jpg&w=1024&q=75 1024w"
+          style={
+            Object {
+              "height": "100%",
+              "left": "0",
+              "position": "absolute",
+              "top": "0",
+              "visibility": "hidden",
+              "width": "100%",
+            }
+          }
+        />
+      </div>
     </div>
-    <img
-      alt="01"
-      className="slide "
-      src="/photos/my-first-project/01.jpg"
-    />
-    <img
-      alt="02"
-      className="slide "
-      src="/photos/my-first-project/02.jpg"
-    />
-    <img
-      alt="03"
-      className="slide "
-      src="/photos/my-first-project/03.jpg"
-    />
+  </div>
+  <div
+    className="slide "
+    onClick={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      style={
+        Object {
+          "maxWidth": "100%",
+          "width": 600,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "paddingBottom": "133.33333333333331%",
+            "position": "relative",
+          }
+        }
+      >
+        
+        <img
+          alt="02"
+          className="__lazy"
+          data-src="/_next/image?url=%2Fphotos%2Fmy-first-project%2F02.jpg&w=768&q=75"
+          data-srcset="/_next/image?url=%2Fphotos%2Fmy-first-project%2F02.jpg&w=320&q=75 320w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F02.jpg&w=420&q=75 420w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F02.jpg&w=768&q=75 768w"
+          style={
+            Object {
+              "height": "100%",
+              "left": "0",
+              "position": "absolute",
+              "top": "0",
+              "visibility": "hidden",
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="slide "
+    onClick={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      style={
+        Object {
+          "maxWidth": "100%",
+          "width": 800,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "paddingBottom": "75%",
+            "position": "relative",
+          }
+        }
+      >
+        
+        <img
+          alt="03"
+          className="__lazy"
+          data-src="/_next/image?url=%2Fphotos%2Fmy-first-project%2F03.jpg&w=1024&q=75"
+          data-srcset="/_next/image?url=%2Fphotos%2Fmy-first-project%2F03.jpg&w=320&q=75 320w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F03.jpg&w=420&q=75 420w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F03.jpg&w=768&q=75 768w, /_next/image?url=%2Fphotos%2Fmy-first-project%2F03.jpg&w=1024&q=75 1024w"
+          style={
+            Object {
+              "height": "100%",
+              "left": "0",
+              "position": "absolute",
+              "top": "0",
+              "visibility": "hidden",
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+    </div>
   </div>
   <div
     className="navigation"

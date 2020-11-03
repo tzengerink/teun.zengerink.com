@@ -5,6 +5,7 @@
 
   h1 {
     position: fixed;
+    z-index: 4;
     top: $outer-margin;
     left: $outer-margin;
   }
@@ -12,7 +13,8 @@
 
 .hamburger {
   display: none;
-  position: absolute;
+  z-index: 4;
+  position: fixed;
   top: $outer-margin;
   right: $outer-margin;
 }
@@ -30,11 +32,12 @@
 
 .navigation {
   position: fixed;
-  top: 80px;
+  top: 0;
   left: 0;
   bottom: 0;
+  z-index: 3;
   width: $sidebar-width - (2 * $sidebar-padding);
-  padding: 0 $sidebar-padding;
+  padding: 80px $sidebar-padding $sidebar-padding $sidebar-padding;
   background: $background-color;
 
   h2 {
@@ -124,6 +127,5 @@
     display: none;
     padding-bottom: $outer-margin;
     width: 100%;
-    z-index: 1000;
   }
 }

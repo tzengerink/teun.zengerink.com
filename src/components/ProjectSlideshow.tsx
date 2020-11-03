@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
 import ProjectRouter from '../lib/ProjectRouter'
@@ -48,29 +49,35 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
 
   return (
     <div className={styles.slideshow}>
-      <div
-        className={styles.slides}
-        onClick={() => router.next()}
-        onTouchStart={(e) => touchStartHandler(e)}
-        onTouchMove={(e) => touchMoveHandler(e)}
-      >
-        {props.project?.statement ? (
-          <div className={`${styles.slide} ${router.activeKey() === undefined ? styles.active : ''}`}>
-            <h2>{props.project?.title}</h2>
-            <ReactMarkdown source={props.project?.statement} />
-          </div>
-        ) : (
-          ''
-        )}
-        {props.project?.photos.map((photo) => (
-          <img
-            key={`${props.project.slug}--photo-${photo.key}`}
-            className={`${styles.slide} ${router.isActive(photo) ? styles.active : ''}`}
+      {props.project?.statement ? (
+        <div
+          className={`${styles.slide} ${router.activeKey() === undefined ? styles.active : ''}`}
+          onClick={() => router.next()}
+          onTouchStart={(e) => touchStartHandler(e)}
+          onTouchMove={(e) => touchMoveHandler(e)}
+        >
+          <h2>{props.project?.title}</h2>
+          <ReactMarkdown source={props.project?.statement} />
+        </div>
+      ) : (
+        ''
+      )}
+      {props.project?.photos.map((photo) => (
+        <div
+          key={`${props.project.slug}--slide-${photo.key}`}
+          className={`${styles.slide} ${router.isActive(photo) ? styles.active : ''}`}
+          onClick={() => router.next()}
+          onTouchStart={(e) => touchStartHandler(e)}
+          onTouchMove={(e) => touchMoveHandler(e)}
+        >
+          <Image
             src={photo.url}
             alt={photo.caption ? photo.caption : photo.key}
+            width={photo.size.width}
+            height={photo.size.height}
           />
-        ))}
-      </div>
+        </div>
+      ))}
       <div className={styles.navigation}>
         <a className={styles.leftArrow} onClick={() => router.previous()}>
           &larr;
