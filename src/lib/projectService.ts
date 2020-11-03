@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import slugify from 'slugify'
+import sizeOf from 'image-size'
 
 interface ConfigCaption {
   key: string
@@ -16,6 +17,7 @@ interface ConfigItem {
 export interface Photo {
   key: string
   url: string
+  size: { width: number; height: number }
   caption?: string
 }
 
@@ -38,6 +40,7 @@ const generatePhotos = (slug: string, captions: ConfigCaption[]): Photo[] => {
       key,
       caption: caption ? caption.caption : '',
       url: `/photos/${slug}/${filename}`,
+      size: sizeOf(path.join(photosDirectory, filename)),
     }
   })
 }
