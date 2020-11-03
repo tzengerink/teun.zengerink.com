@@ -42,8 +42,8 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
   const touchMoveHandler = ({ touches }: React.TouchEvent) => {
     if (!touchStartX) return
     const difference = touchStartX - touches[0].clientX
-    if (difference > 150) router.previous()
-    if (difference < 150) router.next()
+    if (difference < 0) router.previous()
+    if (difference > 0) router.next()
     touchStartX = null
   }
 
