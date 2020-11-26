@@ -2,6 +2,7 @@
 
 .main {
   margin: 95px $outer-margin $outer-margin $sidebar-width;
+  text-align: center;
 }
 
 @media (max-width: $phone-breakpoint) {
