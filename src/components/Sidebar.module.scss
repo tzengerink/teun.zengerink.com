@@ -101,8 +101,21 @@
     cursor: pointer;
   }
 
+  .navigation {
+    padding-bottom: $outer-margin;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50px);
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+
   .open .navigation {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
   }
 
   .open .hamburger .line:nth-child(1) {
@@ -121,11 +134,5 @@
     -ms-transform: translateY(-7px) rotate(-45deg);
     -o-transform: translateY(-7px) rotate(-45deg);
     transform: translateY(-7px) rotate(-45deg);
-  }
-
-  .navigation {
-    display: none;
-    padding-bottom: $outer-margin;
-    width: 100%;
   }
 }
