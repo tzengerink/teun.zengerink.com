@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
 import ProjectRouter from '../lib/ProjectRouter'
@@ -70,7 +69,7 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
           onTouchStart={(e) => touchStartHandler(e)}
           onTouchMove={(e) => touchMoveHandler(e)}
         >
-          <Image
+          <img
             src={photo.url}
             alt={photo.caption ? photo.caption : photo.key}
             width={photo.size.width}
