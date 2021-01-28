@@ -1,9 +1,5 @@
-name: Push
-on:
-  push:
-    branches:
-      - '*'
-      - '!master'
+name: Push and Pull
+on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
