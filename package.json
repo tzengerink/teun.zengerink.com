@@ -24,7 +24,7 @@
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
-    "@babel/preset-typescript": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.13",
     "@types/image-size": "^0.8.0",
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.5",
