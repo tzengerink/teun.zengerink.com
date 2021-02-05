@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`displays a loader when no projects are loaded 1`] = `
 <div>
   <aside
     className="sidebar "
@@ -59,6 +59,108 @@ exports[`renders correctly 1`] = `
     <div
       className="loader"
     />
+  </main>
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div>
+  <aside
+    className="sidebar "
+  >
+    <a
+      href="/"
+    >
+      <h1>
+        Teun Zengerink
+      </h1>
+    </a>
+    <div
+      className="hamburger"
+      onClick={[Function]}
+    >
+      <span
+        className="line"
+      />
+      <span
+        className="line"
+      />
+      <span
+        className="line"
+      />
+    </div>
+    <nav
+      className="navigation"
+    >
+      <h2>
+        Work
+      </h2>
+      <ul>
+        <li
+          className=""
+        >
+          <a
+            href="/work/my-first-project"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            My First Project
+          </a>
+        </li>
+        <li
+          className=""
+        >
+          <a
+            href="/work/no-statement/01"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Project without a statement
+          </a>
+        </li>
+      </ul>
+      <span
+        className="socials"
+      >
+        <a
+          href="https://instagram.com/t.zengerink/"
+        >
+          <img
+            alt="Instagram"
+            src="/img/instagram.jpg"
+          />
+        </a>
+        <a
+          href="https://pinterest.com/tzengerink/"
+        >
+          <img
+            alt="Pinterest"
+            src="/img/pinterest.jpg"
+          />
+        </a>
+      </span>
+    </nav>
+  </aside>
+  <main
+    className="main"
+  >
+    <div
+      className="container"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      <div
+        className="title"
+      >
+        My First Project
+      </div>
+      <img
+        alt="My First Project"
+        height={600}
+        src="/photos/my-first-project/01.jpg"
+        width={800}
+      />
+    </div>
   </main>
 </div>
 `;

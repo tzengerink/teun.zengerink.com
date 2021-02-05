@@ -1,7 +1,10 @@
-const projects = [
+import { Project } from '../lib/projectService'
+
+const projects: Project[] = [
   {
     title: 'My First Project',
     slug: 'my-first-project',
+    statement: 'The statement for the project',
     photos: [
       {
         key: '01',
@@ -19,7 +22,6 @@ const projects = [
         size: { width: 800, height: 600 },
       },
     ],
-    statement: 'The statement for the project',
   },
   {
     title: 'Project without a statement',
