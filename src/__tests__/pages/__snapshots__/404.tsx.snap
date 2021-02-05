@@ -29,8 +29,33 @@ exports[`renders correctly 1`] = `
     <nav
       className="navigation"
     >
-      
-      <ul />
+      <h2>
+        Work
+      </h2>
+      <ul>
+        <li
+          className=""
+        >
+          <a
+            href="/work/my-first-project"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            My First Project
+          </a>
+        </li>
+        <li
+          className=""
+        >
+          <a
+            href="/work/no-statement/01"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Project without a statement
+          </a>
+        </li>
+      </ul>
       <span
         className="socials"
       >

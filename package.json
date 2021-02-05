@@ -7,8 +7,11 @@
     "build": "next build && next export",
     "start": "next start",
     "test": "jest --watch",
-    "test:ci": "jest --ci",
-    "lint": "eslint src/**/*.{ts,tsx} --fix"
+    "test:ci": "yarn lint && jest --ci",
+    "lint": "yarn lint:ts && yarn lint:types",
+    "lint:ts": "eslint src/**/*.{ts,tsx}",
+    "lint:types": "tsc --noEmit",
+    "fix": "yarn lint --fix"
   },
   "dependencies": {
     "image-size": "^0.9.3",
@@ -39,6 +42,6 @@
     "jest": "^26.5.3",
     "prettier": "^2.1.2",
     "react-test-renderer": "^17.0.0",
-    "typescript": "^4.0.3"
+    "typescript": "^4.1.3"
   }
 }
