@@ -13,13 +13,13 @@ interface LayoutProps {
 }
 
 const Layout = (props: LayoutProps): React.ReactElement => {
-  const getPageTitle = () => (props.title ? props.title : pageTitle)
+  const title = React.useMemo(() => (props.title ? props.title : pageTitle), [props.title, pageTitle])
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="description" content={getPageTitle()}></meta>
-        <title>{getPageTitle()}</title>
+        <meta name="description" content={title}></meta>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,300&display=swap"
