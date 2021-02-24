@@ -65,7 +65,6 @@ exports[`renders correctly 1`] = `
     >
       ←
     </a>
-    
     <a
       className="rightArrow"
       onClick={[Function]}

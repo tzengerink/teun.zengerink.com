@@ -147,7 +147,6 @@ exports[`renders correctly 1`] = `
     <div
       className="slideshow"
     >
-      
       <div
         className="navigation"
       >
@@ -157,7 +156,6 @@ exports[`renders correctly 1`] = `
         >
           ←
         </a>
-        
         <a
           className="rightArrow"
           onClick={[Function]}

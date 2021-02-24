@@ -39,7 +39,7 @@ const generatePhotos = (slug: string, captions: ConfigCaption[]): Photo[] => {
 
     return {
       key,
-      caption: caption ? caption.caption : '',
+      caption: caption?.caption ?? '',
       url: `/photos/${slug}/${filename}`,
       size: sizeOf(path.join(photosDirectory, filename)),
     }
@@ -51,9 +51,9 @@ const generateProjects = (item: ConfigItem[]): Project[] => {
     const slug = slugify(project.title, { lower: true })
 
     return {
-      title: project.title,
-      statement: project.statement ? project.statement : '',
       slug,
+      title: project.title,
+      statement: project.statement ?? '',
       photos: generatePhotos(slug, project.captions),
     }
   })
