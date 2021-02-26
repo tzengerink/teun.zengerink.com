@@ -2,7 +2,7 @@ import React from 'react'
 import Loader from '../components/Loader'
 import Layout from '../components/Layout'
 import SinglePhoto from '../components/SinglePhoto'
-import { Project, getProjects } from '../lib/projectService'
+import { Project, getProjects } from '../lib/projects'
 
 interface HomeProps {
   projects: Project[]

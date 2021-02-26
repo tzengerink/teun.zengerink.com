@@ -1,4 +1,4 @@
-import { Project } from '../lib/projectService'
+import { Project } from '../lib/projects'
 
 const projects: Project[] = [
   {

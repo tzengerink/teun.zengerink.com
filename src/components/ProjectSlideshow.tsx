@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Project } from '../lib/projectService'
-import { useProjectRouter } from '../lib/useProjectRouter'
+import { Project } from '../lib/projects'
+import { useProject } from '../lib/useProject'
 import styles from './ProjectSlideshow.module.scss'
 
 enum Key {
@@ -20,7 +20,7 @@ const pad = (str: string, length: number): string => {
 
 const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
   let touchStartX: number
-  const { activeKey, previous, next } = useProjectRouter(props.project)
+  const { activeKey, previous, next } = useProject(props.project)
 
   const numberOfPhotos = pad(props.project?.photos?.length?.toString(), 2)
 

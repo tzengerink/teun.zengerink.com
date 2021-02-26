@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter, NextRouter } from 'next/router'
-import { Project, getProjects } from '../../lib/projectService'
+import { Project, getProjects } from '../../lib/projects'
 import Loader from '../../components/Loader'
 import Layout, { pageTitle } from '../../components/Layout'
 import ProjectSlideshow from '../../components/ProjectSlideshow'
