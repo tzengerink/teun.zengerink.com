@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { getProjects, Project } from '../lib/projectService'
+import { getProjects, Project } from '../lib/projects'
 
 interface ErrorProps {
   projects: Project[]

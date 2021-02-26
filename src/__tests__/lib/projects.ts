@@ -1,4 +1,4 @@
-import { getProjects } from '../../lib/projectService'
+import { getProjects } from '../../lib/projects'
 
 describe('getProjects', () => {
   test('it returns the projects asynchronously', async () => {

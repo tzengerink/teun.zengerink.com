@@ -1,4 +1,4 @@
-import { useProjectRouter } from '../../lib/useProjectRouter'
+import { useProject } from '../../lib/useProject'
 import projects from '../../__mocks__/projects'
 
 let mockRouter
@@ -28,13 +28,13 @@ beforeEach(() => {
 
 describe('activeKey', () => {
   test('it returns `undefined` when no photo is active', () => {
-    const { activeKey } = useProjectRouter(projects[0])
+    const { activeKey } = useProject(projects[0])
     expect(activeKey).toBeUndefined()
   })
 
   test('it returns the photo key', () => {
     mockRouter.query = { slug: [projects[0].slug, projects[0].photos[0].key] }
-    const { activeKey } = useProjectRouter(projects[0])
+    const { activeKey } = useProject(projects[0])
     expect(activeKey).toBe(projects[0].photos[0].key)
   })
 })
@@ -42,21 +42,21 @@ describe('activeKey', () => {
 describe('next', () => {
   describe('with statement', () => {
     test('it opens the first photo when viewing the statement', () => {
-      const { next } = useProjectRouter(projects[0])
+      const { next } = useProject(projects[0])
       next()
       expect(mockRouter.push).toHaveBeenCalledWith(`/work/${projects[0].slug}/01`)
     })
 
     test('it opens the statement when viewing the last photo', () => {
       mockRouter.query = { slug: ['my-project', '03'] }
-      const { next } = useProjectRouter(projects[0])
+      const { next } = useProject(projects[0])
       next()
       expect(mockRouter.push).toHaveBeenCalledWith(`/work/${projects[0].slug}`)
     })
 
     test('it opens the next photo', () => {
       mockRouter.query = { slug: ['my-project', '02'] }
-      const { next } = useProjectRouter(projects[0])
+      const { next } = useProject(projects[0])
       next()
       expect(mockRouter.push).toHaveBeenCalledWith(`/work/${projects[0].slug}/03`)
     })
@@ -65,14 +65,14 @@ describe('next', () => {
   describe('without statement', () => {
     test('it opens the first photo when viewing the last photo', () => {
       mockRouter.query = { slug: ['my-project', '03'] }
-      const { next } = useProjectRouter({ ...projects[0], statement: undefined })
+      const { next } = useProject({ ...projects[0], statement: undefined })
       next()
       expect(mockRouter.push).toHaveBeenCalledWith(`/work/${projects[0].slug}/01`)
     })
 
     test('it opens the next photo', () => {
       mockRouter.query = { slug: ['my-project', '02'] }
-      const { next } = useProjectRouter({ ...projects[0], statement: undefined })
+      const { next } = useProject({ ...projects[0], statement: undefined })
       next()
       expect(mockRouter.push).toHaveBeenCalledWith(`/work/${projects[0].slug}/03`)
     })
@@ -82,21 +82,21 @@ describe('next', () => {
 describe('previous', () => {
   describe('with statement', () => {
     test('it opens the last photo when viewing the statement', () => {
-      const { previous } = useProjectRouter(projects[0])
+      const { previous } = useProject(projects[0])
       previous()
       expect(mockRouter.push).toHaveBeenCalledWith(`/work/${projects[0].slug}/03`)
     })
 
     test('it opens the statement when viewing the first photo', () => {
       mockRouter.query = { slug: ['my-project', '01'] }
-      const { previous } = useProjectRouter(projects[0])
+      const { previous } = useProject(projects[0])
       previous()
       expect(mockRouter.push).toHaveBeenCalledWith(`/work/${projects[0].slug}`)
     })
 
     test('it opens the previous photo', () => {
       mockRouter.query = { slug: ['my-project', '02'] }
-      const { previous } = useProjectRouter(projects[0])
+      const { previous } = useProject(projects[0])
       previous()
       expect(mockRouter.push).toHaveBeenCalledWith(`/work/${projects[0].slug}/01`)
     })
@@ -105,14 +105,14 @@ describe('previous', () => {
   describe('without statement', () => {
     test('it opens the last photo when viewing the first photo', () => {
       mockRouter.query = { slug: ['my-project', '01'] }
-      const { previous } = useProjectRouter({ ...projects[0], statement: undefined })
+      const { previous } = useProject({ ...projects[0], statement: undefined })
       previous()
       expect(mockRouter.push).toHaveBeenCalledWith(`/work/${projects[0].slug}/03`)
     })
 
     test('it opens the previous photo', () => {
       mockRouter.query = { slug: ['my-project', '02'] }
-      const { previous } = useProjectRouter({ ...projects[0], statement: undefined })
+      const { previous } = useProject({ ...projects[0], statement: undefined })
       previous()
       expect(mockRouter.push).toHaveBeenCalledWith(`/work/${projects[0].slug}/01`)
     })

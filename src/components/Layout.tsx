@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { Project } from '../lib/projectService'
+import { Project } from '../lib/projects'
 import Sidebar from './Sidebar'
 import styles from './Layout.module.scss'
 
