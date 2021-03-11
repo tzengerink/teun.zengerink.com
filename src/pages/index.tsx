@@ -1,8 +1,8 @@
 import React from 'react'
-import Loader from '../components/Loader'
 import Layout from '../components/Layout'
+import Loader from '../components/Loader'
 import SinglePhoto from '../components/SinglePhoto'
-import { Project, getProjects } from '../lib/projects'
+import { getProjects, Project } from '../lib/projects'
 
 interface HomeProps {
   projects: Project[]
