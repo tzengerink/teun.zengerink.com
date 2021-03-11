@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`displays a loader when no projects are loaded 1`] = `
+exports[`Work displays a loader when no projects are loaded 1`] = `
 <div>
   <aside
     className="sidebar "
@@ -63,7 +63,7 @@ exports[`displays a loader when no projects are loaded 1`] = `
 </div>
 `;
 
-exports[`renders correctly 1`] = `
+exports[`Work renders correctly 1`] = `
 <div>
   <aside
     className="sidebar "

@@ -1,8 +1,8 @@
-import React from 'react'
 import Head from 'next/head'
+import React from 'react'
 import { Project } from '../lib/projects'
-import Sidebar from './Sidebar'
 import styles from './Layout.module.scss'
+import Sidebar from './Sidebar'
 
 export const pageTitle = 'Teun Zengerink'
 

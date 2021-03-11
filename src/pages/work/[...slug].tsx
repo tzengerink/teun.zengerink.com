@@ -1,26 +1,22 @@
+import { useRouter } from 'next/router'
 import React from 'react'
-import { useRouter, NextRouter } from 'next/router'
-import { Project, getProjects } from '../../lib/projects'
-import Loader from '../../components/Loader'
 import Layout, { pageTitle } from '../../components/Layout'
+import Loader from '../../components/Loader'
 import ProjectSlideshow from '../../components/ProjectSlideshow'
+import { getProjects, Project } from '../../lib/projects'
 
 interface WorkProps {
   projects: Project[]
 }
 
 interface WorkPath {
-  params: { slug: string }
-}
-
-const getProject = (router: NextRouter, projects: Project[]) => {
-  const slug = router?.query?.slug?.length ? router.query.slug[0] : ''
-  return projects?.find((project) => project.slug === slug)
+  params: { slug: string[] }
 }
 
 const Work = (props: WorkProps): React.ReactElement => {
   const router = useRouter()
-  const project = getProject(router, props.projects)
+  const slug = router?.query?.slug?.length ? router.query.slug[0] : ''
+  const project = props.projects?.find((project) => project.slug === slug)
 
   return (
     <Layout title={project ? `${pageTitle} - ${project.title}` : pageTitle} projects={props.projects}>
@@ -32,18 +28,16 @@ const Work = (props: WorkProps): React.ReactElement => {
 export const getStaticProps = async (): Promise<{ props: WorkProps }> => ({ props: { projects: await getProjects() } })
 
 export const getStaticPaths = async (): Promise<{ paths: WorkPath[]; fallback: boolean }> => {
-  const paths = []
   const projects = await getProjects()
-  projects.forEach((project) => {
-    if (project.statement) {
-      paths.push({ params: { slug: [project.slug] } })
-    }
-    project.photos.forEach((photo) => {
-      paths.push({ params: { slug: [project.slug, photo.key] } })
-    })
-  })
 
-  return { paths, fallback: false }
+  return {
+    paths: projects.flatMap((project) => {
+      const paths = project.photos.map((photo) => ({ params: { slug: [project.slug, photo.key] } }))
+      if (project.statement) paths.unshift({ params: { slug: [project.slug] } })
+      return paths
+    }),
+    fallback: false,
+  }
 }
 
 export default Work
