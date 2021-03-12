@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import Layout, { pageTitle } from '../../components/Layout'
+import Layout from '../../components/Layout'
 import Loader from '../../components/Loader'
 import ProjectSlideshow from '../../components/ProjectSlideshow'
 import { getProjects, Project } from '../../lib/projects'
@@ -13,14 +13,14 @@ interface WorkPath {
   params: { slug: string[] }
 }
 
-const Work = (props: WorkProps): React.ReactElement => {
+const Work: React.FC<WorkProps> = ({ projects }): React.ReactElement => {
   const router = useRouter()
   const slug = router?.query?.slug?.length ? router.query.slug[0] : ''
-  const project = props.projects?.find((project) => project.slug === slug)
+  const project = projects?.find((project) => project.slug === slug)
 
   return (
-    <Layout title={project ? `${pageTitle} - ${project.title}` : pageTitle} projects={props.projects}>
-      {props.projects?.length ? <ProjectSlideshow project={project} /> : <Loader />}
+    <Layout title={project?.title} projects={projects}>
+      {projects?.length ? <ProjectSlideshow project={project} /> : <Loader />}
     </Layout>
   )
 }
