@@ -16,7 +16,7 @@
     "test:ci": "yarn lint && jest --ci"
   },
   "dependencies": {
-    "image-size": "^0.9.4",
+    "image-size": "^0.9.5",
     "js-yaml": "^4.0.0",
     "next": "^10.0.8",
     "next-build-id": "^3.0.0",
