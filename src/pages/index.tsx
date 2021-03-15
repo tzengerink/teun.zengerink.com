@@ -2,20 +2,12 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Loader from '../components/Loader'
 import SinglePhoto from '../components/SinglePhoto'
-import { getProjects, Project } from '../lib/projects'
+import { Props } from '../lib/staticProps'
 
-interface HomeProps {
-  projects: Project[]
+const Home: React.FC<Props> = ({ projects }): React.ReactElement => {
+  return <Layout projects={projects}>{projects?.length ? <SinglePhoto project={projects[0]} /> : <Loader />}</Layout>
 }
 
-const Home = (props: HomeProps): React.ReactElement => {
-  return (
-    <Layout projects={props.projects}>
-      {props.projects?.length ? <SinglePhoto project={props.projects[0]} /> : <Loader />}
-    </Layout>
-  )
-}
-
-export const getStaticProps = async (): Promise<{ props: HomeProps }> => ({ props: { projects: await getProjects() } })
+export { getStaticProps } from '../lib/staticProps'
 
 export default Home

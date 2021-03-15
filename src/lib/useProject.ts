@@ -7,10 +7,10 @@ interface UseProject {
   next: () => void
 }
 
-const noop = () => false
+const NOOP = () => false
 
 export const useProject = (project: Project): UseProject => {
-  if (!project?.photos?.length) return { activeKey: undefined, previous: noop, next: noop }
+  if (!project?.photos?.length) return { activeKey: undefined, previous: NOOP, next: NOOP }
 
   const router = useRouter()
 
