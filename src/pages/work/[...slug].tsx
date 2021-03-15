@@ -3,17 +3,14 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import Loader from '../../components/Loader'
 import ProjectSlideshow from '../../components/ProjectSlideshow'
-import { getProjects, Project } from '../../lib/projects'
-
-interface WorkProps {
-  projects: Project[]
-}
+import { getProjects } from '../../lib/projects'
+import { Props } from '../../lib/staticProps'
 
 interface WorkPath {
   params: { slug: string[] }
 }
 
-const Work: React.FC<WorkProps> = ({ projects }): React.ReactElement => {
+const Work: React.FC<Props> = ({ projects }): React.ReactElement => {
   const router = useRouter()
   const slug = router?.query?.slug?.length ? router.query.slug[0] : ''
   const project = projects?.find((project) => project.slug === slug)
@@ -24,8 +21,6 @@ const Work: React.FC<WorkProps> = ({ projects }): React.ReactElement => {
     </Layout>
   )
 }
-
-export const getStaticProps = async (): Promise<{ props: WorkProps }> => ({ props: { projects: await getProjects() } })
 
 export const getStaticPaths = async (): Promise<{ paths: WorkPath[]; fallback: boolean }> => {
   const projects = await getProjects()
@@ -39,5 +34,7 @@ export const getStaticPaths = async (): Promise<{ paths: WorkPath[]; fallback: b
     fallback: false,
   }
 }
+
+export { getStaticProps } from '../../lib/staticProps'
 
 export default Work

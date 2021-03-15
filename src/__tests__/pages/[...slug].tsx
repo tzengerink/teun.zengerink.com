@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Work, { getStaticPaths, getStaticProps } from '../../pages/work/[...slug]'
+import Work, { getStaticPaths } from '../../pages/work/[...slug]'
 import mockProjects from '../../__mocks__/projects'
 
 const mockGetProjects = jest.fn(() => new Promise((resolve) => resolve(mockProjects)))
@@ -19,14 +19,6 @@ describe('Work', () => {
     const props = { projects: [] }
     const tree = renderer.create(<Work {...props} />).toJSON()
     expect(tree).toMatchSnapshot()
-  })
-})
-
-describe('getStaticProps', () => {
-  it('gets the projects', async () => {
-    const props = await getStaticProps()
-    expect(mockGetProjects).toHaveBeenCalled()
-    expect(props).toEqual({ props: { projects: mockProjects } })
   })
 })
 
