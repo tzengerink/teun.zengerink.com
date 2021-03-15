@@ -60,11 +60,15 @@ const generateProjects = (item: ConfigItem[]): Project[] => {
 }
 
 export const getProjects = async (): Promise<Project[]> => {
+  let projects: Project[] = []
+
   try {
     const file = path.join(process.cwd(), 'src', 'config.yml')
     const config = yaml.load(fs.readFileSync(file, 'utf-8'))
-    return await generateProjects(config)
+    projects = await generateProjects(config)
   } catch (e) {
     console.error(e)
   }
+
+  return projects
 }
