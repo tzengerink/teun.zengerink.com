@@ -27,4 +27,4 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./out
       - name: Smoke test
-        run: sleep 30 && npm run test:smoke
+        run: sleep 60 && npm run test:smoke
