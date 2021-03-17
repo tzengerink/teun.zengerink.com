@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout from '../components/Layout'
-import Loader from '../components/Loader'
-import SinglePhoto from '../components/SinglePhoto'
+import Layout from '../components/Layout/Layout'
+import Loader from '../components/Loader/Loader'
+import SinglePhoto from '../components/SinglePhoto/SinglePhoto'
 import { Props } from '../lib/staticProps'
 
 const Home: React.FC<Props> = ({ projects }): React.ReactElement => {

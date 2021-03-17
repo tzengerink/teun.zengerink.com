@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { Project } from '../lib/projects'
+import { useRouter } from 'next/router'
+import React, { useState } from 'react'
+import { Project } from '../../lib/projects'
 import styles from './Sidebar.module.scss'
 
 interface SocialAccount {
