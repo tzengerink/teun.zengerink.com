@@ -1,5 +1,5 @@
-import { useProject } from '../../lib/useProject'
-import projects from '../../__mocks__/projects'
+import projects from '../__mocks__/projects'
+import { useProject } from './useProject'
 
 let mockRouter
 
