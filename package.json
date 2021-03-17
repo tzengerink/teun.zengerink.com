@@ -12,6 +12,7 @@
     "postinstall": "husky install",
     "start": "next start",
     "test": "jest --watch",
+    "test:coverage": "jest --collectCoverage",
     "test:smoke": "export $(grep -v '^#' .env | xargs) && curl -v --silent $NEXT_PUBLIC_PROTO://$NEXT_PUBLIC_HOST/ 2>&1 | grep -q $(git rev-parse HEAD)",
     "test:ci": "yarn lint && jest --ci"
   },
