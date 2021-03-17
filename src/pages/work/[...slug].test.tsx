@@ -1,11 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import mockProjects from '../../__mocks__/projects'
-import Work, { getStaticPaths } from './[...slug]'
-
-const mockGetProjects = jest.fn(() => new Promise((resolve) => resolve(mockProjects)))
-
-jest.mock('../../lib/projects', () => ({ getProjects: () => mockGetProjects() }))
+import Work from './[...slug].page'
 
 const defaultProps = { projects: mockProjects }
 
@@ -19,16 +15,5 @@ describe('Work', () => {
     const props = { projects: [] }
     const tree = renderer.create(<Work {...props} />).toJSON()
     expect(tree).toMatchSnapshot()
-  })
-})
-
-describe('getStaticPaths', () => {
-  it('gets the paths', async () => {
-    const numberOfProjectsWithStatement = mockProjects.filter((project) => !!project.statement).length
-    const numberOfPhotos = mockProjects.reduce((sum, project) => sum + project.photos.length, 0)
-    const paths = await getStaticPaths()
-    expect(mockGetProjects).toHaveBeenCalled()
-    expect(paths.fallback).toBe(false)
-    expect(paths.paths.length).toEqual(numberOfProjectsWithStatement + numberOfPhotos)
   })
 })

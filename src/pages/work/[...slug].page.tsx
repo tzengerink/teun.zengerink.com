@@ -3,12 +3,7 @@ import React from 'react'
 import Layout from '../../components/Layout/Layout'
 import Loader from '../../components/Loader/Loader'
 import ProjectSlideshow from '../../components/ProjectSlideshow/ProjectSlideshow'
-import { getProjects } from '../../lib/projects'
-import { Props } from '../../lib/staticProps'
-
-interface WorkPath {
-  params: { slug: string[] }
-}
+import { Props } from '../../lib/static'
 
 const Work: React.FC<Props> = ({ projects }): React.ReactElement => {
   const router = useRouter()
@@ -22,19 +17,6 @@ const Work: React.FC<Props> = ({ projects }): React.ReactElement => {
   )
 }
 
-export const getStaticPaths = async (): Promise<{ paths: WorkPath[]; fallback: boolean }> => {
-  const projects = await getProjects()
-
-  return {
-    paths: projects.flatMap((project) => {
-      const paths = project.photos.map((photo) => ({ params: { slug: [project.slug, photo.key] } }))
-      if (project.statement) paths.unshift({ params: { slug: [project.slug] } })
-      return paths
-    }),
-    fallback: false,
-  }
-}
-
-export { getStaticProps } from '../../lib/staticProps'
+export { getStaticPaths, getStaticProps } from '../../lib/static'
 
 export default Work
