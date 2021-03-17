@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Layout from '../../components/Layout'
-import projects from '../../__mocks__/projects'
+import projects from '../__mocks__/projects'
+import Layout from './Layout'
 
 const defaultProps = { projects }
 

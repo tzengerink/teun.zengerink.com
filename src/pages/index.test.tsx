@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Home from '../../pages/index'
-import projects from '../../__mocks__/projects'
+import projects from '../__mocks__/projects'
+import Home from './index'
 
 const defaultProps = { projects }
 

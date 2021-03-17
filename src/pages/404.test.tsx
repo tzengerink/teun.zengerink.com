@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Error404 from '../../pages/404'
-import projects from '../../__mocks__/projects'
+import projects from '../__mocks__/projects'
+import Error404 from './404'
 
 const defaultProps = { projects }
 

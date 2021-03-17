@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Work, { getStaticPaths } from '../../pages/work/[...slug]'
 import mockProjects from '../../__mocks__/projects'
+import Work, { getStaticPaths } from './[...slug]'
 
 const mockGetProjects = jest.fn(() => new Promise((resolve) => resolve(mockProjects)))
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import ProjectSlideshow from '../../components/ProjectSlideshow'
-import projects from '../../__mocks__/projects'
+import projects from '../__mocks__/projects'
+import ProjectSlideshow from './ProjectSlideshow'
 
 const defaultProps = { project: projects[0] }
 

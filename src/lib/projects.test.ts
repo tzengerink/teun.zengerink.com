@@ -1,5 +1,5 @@
 import slugify from 'slugify'
-import { getProjects } from '../../lib/projects'
+import { getProjects } from './projects'
 
 const mockSize = { width: 500, height: 400 }
 const mockPhotos = Array.from(Array(5).keys()).map((item) => `${item}.jpg`)

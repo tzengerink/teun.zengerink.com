@@ -1,9 +1,9 @@
-import mockProjects from '../../__mocks__/projects'
-import { getStaticProps } from '../../lib/staticProps'
+import mockProjects from '../__mocks__/projects'
+import { getStaticProps } from './staticProps'
 
 const mock = jest.fn(() => mockProjects)
 
-jest.mock('../../lib/projects', () => ({
+jest.mock('./projects', () => ({
   getProjects: () => mock(),
 }))
 

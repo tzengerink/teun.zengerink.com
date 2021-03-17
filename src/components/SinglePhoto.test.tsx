@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import SinglePhoto from '../../components/SinglePhoto'
-import projects from '../../__mocks__/projects'
+import projects from '../__mocks__/projects'
+import SinglePhoto from './SinglePhoto'
 
 const defaultProps = { project: projects[0] }
 
