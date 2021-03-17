@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import React from 'react'
 import Layout from '../../components/Layout/Layout'
-import Loader from '../../components/Loader/Loader'
 import ProjectSlideshow from '../../components/ProjectSlideshow/ProjectSlideshow'
 import { Props } from '../../lib/static'
 
@@ -12,7 +11,7 @@ const Work: React.FC<Props> = ({ projects }): React.ReactElement => {
 
   return (
     <Layout title={project?.title} projects={projects}>
-      {projects?.length ? <ProjectSlideshow project={project} /> : <Loader />}
+      <ProjectSlideshow project={project} />
     </Layout>
   )
 }

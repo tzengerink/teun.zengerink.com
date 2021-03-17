@@ -5,13 +5,9 @@ import Home from './index.page'
 
 const defaultProps = { projects }
 
-it('renders correctly', () => {
-  const tree = renderer.create(<Home {...defaultProps} />).toJSON()
-  expect(tree).toMatchSnapshot()
-})
-
-it('displays a loader when no projects are loaded', () => {
-  const props = { projects: [] }
-  const tree = renderer.create(<Home {...props} />).toJSON()
-  expect(tree).toMatchSnapshot()
+describe('Home', () => {
+  it('renders correctly', () => {
+    const tree = renderer.create(<Home {...defaultProps} />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })

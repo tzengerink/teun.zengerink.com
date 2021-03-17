@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import { Project } from '../../lib/projects'
+import Loader from '../Loader/Loader'
 import Sidebar from '../Sidebar/Sidebar'
 import styles from './Layout.module.scss'
 
@@ -13,7 +14,7 @@ interface LayoutProps {
   children?: React.ReactNode
 }
 
-const Layout: React.FC<LayoutProps> = ({ title, projects, children }): React.ReactElement => {
+const Layout: React.FC<LayoutProps> = ({ title, projects, children }) => {
   const pageTitle = React.useMemo(() => (title ? [TITLE_ROOT, title].join(TITLE_DIV) : TITLE_ROOT), [title])
 
   return (
@@ -29,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ title, projects, children }): React.Rea
         ></link>
       </Head>
       <Sidebar pageTitle={TITLE_ROOT} projects={projects} />
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main}>{projects?.length ? children : <Loader />}</main>
     </div>
   )
 }

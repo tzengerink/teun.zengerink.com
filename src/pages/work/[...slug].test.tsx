@@ -10,10 +10,4 @@ describe('Work', () => {
     const tree = renderer.create(<Work {...defaultProps} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
-
-  it('displays a loader when no projects are loaded', () => {
-    const props = { projects: [] }
-    const tree = renderer.create(<Work {...props} />).toJSON()
-    expect(tree).toMatchSnapshot()
-  })
 })
