@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import Layout from '../../components/Layout'
-import Loader from '../../components/Loader'
-import ProjectSlideshow from '../../components/ProjectSlideshow'
+import Layout from '../../components/Layout/Layout'
+import Loader from '../../components/Loader/Loader'
+import ProjectSlideshow from '../../components/ProjectSlideshow/ProjectSlideshow'
 import { getProjects } from '../../lib/projects'
 import { Props } from '../../lib/staticProps'
 

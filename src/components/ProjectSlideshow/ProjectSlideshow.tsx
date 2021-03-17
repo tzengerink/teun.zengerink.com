@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Project } from '../lib/projects'
-import { useProject } from '../lib/useProject'
+import { Project } from '../../lib/projects'
+import { useProject } from '../../lib/useProject'
 import styles from './ProjectSlideshow.module.scss'
 
 enum Key {
