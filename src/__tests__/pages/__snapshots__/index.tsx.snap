@@ -29,7 +29,6 @@ exports[`displays a loader when no projects are loaded 1`] = `
     <nav
       className="navigation"
     >
-      
       <ul />
       <span
         className="socials"
