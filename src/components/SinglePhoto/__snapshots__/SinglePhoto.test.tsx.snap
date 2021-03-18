@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="container"
-  onClick={[Function]}
-  onMouseEnter={[Function]}
->
+<div>
   <div
-    className="title"
+    class="container"
   >
-    My First Project
+    <div
+      class="title"
+    >
+      My First Project
+    </div>
+    <img
+      alt="My First Project"
+      height="600"
+      src="/photos/my-first-project/01.jpg"
+      width="800"
+    />
   </div>
-  <img
-    alt="My First Project"
-    height={600}
-    src="/photos/my-first-project/01.jpg"
-    width={800}
-  />
 </div>
 `;

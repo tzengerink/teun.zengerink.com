@@ -1,80 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<aside
-  className="sidebar "
->
-  <a
-    href="/"
+<div>
+  <aside
+    class="sidebar "
   >
-    <h1>
-      My Homepage
-    </h1>
-  </a>
-  <div
-    className="hamburger"
-    onClick={[Function]}
-  >
-    <span
-      className="line"
-    />
-    <span
-      className="line"
-    />
-    <span
-      className="line"
-    />
-  </div>
-  <nav
-    className="navigation"
-  >
-    <h2>
-      Work
-    </h2>
-    <ul>
-      <li
-        className=""
-      >
-        <a
-          href="/work/my-first-project"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-        >
-          My First Project
-        </a>
-      </li>
-      <li
-        className=""
-      >
-        <a
-          href="/work/no-statement/01"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-        >
-          Project without a statement
-        </a>
-      </li>
-    </ul>
-    <span
-      className="socials"
+    <a
+      href="/"
     >
-      <a
-        href="https://instagram.com/t.zengerink/"
+      <h1>
+        My Homepage
+      </h1>
+    </a>
+    <div
+      class="hamburger"
+    >
+      <span
+        class="line"
+      />
+      <span
+        class="line"
+      />
+      <span
+        class="line"
+      />
+    </div>
+    <nav
+      class="navigation"
+    >
+      <h2>
+        Work
+      </h2>
+      <ul>
+        <li
+          class=""
+        >
+          <a
+            href="/work/my-first-project"
+          >
+            My First Project
+          </a>
+        </li>
+        <li
+          class=""
+        >
+          <a
+            href="/work/no-statement/01"
+          >
+            Project without a statement
+          </a>
+        </li>
+      </ul>
+      <span
+        class="socials"
       >
-        <img
-          alt="Instagram"
-          src="/img/instagram.jpg"
-        />
-      </a>
-      <a
-        href="https://pinterest.com/tzengerink/"
-      >
-        <img
-          alt="Pinterest"
-          src="/img/pinterest.jpg"
-        />
-      </a>
-    </span>
-  </nav>
-</aside>
+        <a
+          href="https://instagram.com/t.zengerink/"
+        >
+          <img
+            alt="Instagram"
+            src="/img/instagram.jpg"
+          />
+        </a>
+        <a
+          href="https://pinterest.com/tzengerink/"
+        >
+          <img
+            alt="Pinterest"
+            src="/img/pinterest.jpg"
+          />
+        </a>
+      </span>
+    </nav>
+  </aside>
+</div>
 `;
