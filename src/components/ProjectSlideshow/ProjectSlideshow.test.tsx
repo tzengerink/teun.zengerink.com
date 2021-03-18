@@ -7,6 +7,11 @@ const mockProject = projects[0]
 const mockNext = jest.fn()
 const mockPrevious = jest.fn()
 
+jest.mock('react-markdown', () => ({
+  __esModule: true,
+  default: ({ source }) => <p>{source}</p>,
+}))
+
 jest.mock('../../lib/useProject', () => ({
   useProject: () => ({
     activeKey: '--',

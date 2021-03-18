@@ -3,55 +3,9 @@
 exports[`Layout renders a loader when initializing 1`] = `
 <div>
   <div>
-    <aside
-      class="sidebar "
-    >
-      <a
-        href="/"
-      >
-        <h1>
-          Teun Zengerink
-        </h1>
-      </a>
-      <div
-        class="hamburger"
-      >
-        <span
-          class="line"
-        />
-        <span
-          class="line"
-        />
-        <span
-          class="line"
-        />
-      </div>
-      <nav
-        class="navigation"
-      >
-        <ul />
-        <span
-          class="socials"
-        >
-          <a
-            href="https://instagram.com/t.zengerink/"
-          >
-            <img
-              alt="Instagram"
-              src="/img/instagram.jpg"
-            />
-          </a>
-          <a
-            href="https://pinterest.com/tzengerink/"
-          >
-            <img
-              alt="Pinterest"
-              src="/img/pinterest.jpg"
-            />
-          </a>
-        </span>
-      </nav>
-    </aside>
+    <div>
+      [SIDEBAR]
+    </div>
     <main
       class="main"
     >
@@ -66,77 +20,9 @@ exports[`Layout renders a loader when initializing 1`] = `
 exports[`Layout renders the children when initialized 1`] = `
 <div>
   <div>
-    <aside
-      class="sidebar "
-    >
-      <a
-        href="/"
-      >
-        <h1>
-          Teun Zengerink
-        </h1>
-      </a>
-      <div
-        class="hamburger"
-      >
-        <span
-          class="line"
-        />
-        <span
-          class="line"
-        />
-        <span
-          class="line"
-        />
-      </div>
-      <nav
-        class="navigation"
-      >
-        <h2>
-          Work
-        </h2>
-        <ul>
-          <li
-            class=""
-          >
-            <a
-              href="/work/my-first-project"
-            >
-              My First Project
-            </a>
-          </li>
-          <li
-            class=""
-          >
-            <a
-              href="/work/no-statement/01"
-            >
-              Project without a statement
-            </a>
-          </li>
-        </ul>
-        <span
-          class="socials"
-        >
-          <a
-            href="https://instagram.com/t.zengerink/"
-          >
-            <img
-              alt="Instagram"
-              src="/img/instagram.jpg"
-            />
-          </a>
-          <a
-            href="https://pinterest.com/tzengerink/"
-          >
-            <img
-              alt="Pinterest"
-              src="/img/pinterest.jpg"
-            />
-          </a>
-        </span>
-      </nav>
-    </aside>
+    <div>
+      [SIDEBAR]
+    </div>
     <main
       class="main"
     >

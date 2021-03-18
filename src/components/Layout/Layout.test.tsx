@@ -3,6 +3,11 @@ import React from 'react'
 import projects from '../../__mocks__/projects'
 import Layout from './Layout'
 
+jest.mock('../Sidebar/Sidebar', () => ({
+  __esModule: true,
+  default: () => <div>[SIDEBAR]</div>,
+}))
+
 describe('Layout', () => {
   it('renders a loader when initializing', () => {
     const { container } = render(<Layout projects={null} />)
