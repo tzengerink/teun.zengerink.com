@@ -42,7 +42,7 @@ const ACCOUNTS: SocialAccount[] = [
 
 const Hamburger: React.FC<ClickableProps> = ({ onClick }) => {
   return (
-    <div className={styles.hamburger} onClick={onClick}>
+    <div data-testid="hamburger" className={styles.hamburger} onClick={onClick}>
       <span className={styles.line}></span>
       <span className={styles.line}></span>
       <span className={styles.line}></span>
@@ -77,13 +77,13 @@ const Sidebar: React.FC<SidebarProps> = ({ pageTitle, projects }): React.ReactEl
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+    <aside data-testid="sidebar" className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
       <a href="/">
         <h1>{pageTitle}</h1>
       </a>
       <Hamburger onClick={() => setIsOpen(!isOpen)} />
       <nav className={styles.navigation}>
-        {projects?.length ? <h2>Work</h2> : null}
+        <h2>Work</h2>
         <ul>
           {projects?.map((project) => (
             <MenuItem key={project.slug} project={project} onClick={() => setIsOpen(false)} />

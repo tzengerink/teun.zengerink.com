@@ -1,7 +1,7 @@
 import slugify from 'slugify'
 import { getProjects } from './projects'
 
-const mockSize = { width: 500, height: 400 }
+let mockSize = () => ({ width: 500, height: 400 })
 const mockPhotos = Array.from(Array(5).keys()).map((item) => `${item}.jpg`)
 const mockConfig = [
   {
@@ -25,11 +25,11 @@ jest.mock('fs', () => ({
 
 jest.mock('image-size', () => ({
   __esModule: true,
-  default: jest.fn(() => mockSize),
+  default: jest.fn(() => mockSize()),
 }))
 
 describe('getProjects', () => {
-  test('it returns the projects asynchronously', async () => {
+  it('returns the projects asynchronously', async () => {
     const projects = await getProjects()
     expect(projects).toEqual(
       mockConfig.map((item) => ({
@@ -38,11 +38,23 @@ describe('getProjects', () => {
         statement: item.statement ?? '',
         photos: mockPhotos.map((photo, index) => ({
           key: `${index}`,
-          size: mockSize,
+          size: mockSize(),
           caption: (item.captions ?? []).find((caption) => caption.key === `${index}`)?.caption ?? '',
           url: `/photos/${slugify(item.title.toLowerCase())}/${photo}`,
         })),
       })),
     )
+  })
+
+  it('logs errors to the console', async () => {
+    const spy = jest.spyOn(console, 'error').mockImplementation()
+    const error = new Error('Not working')
+    mockSize = () => {
+      throw error
+    }
+    const projects = await getProjects()
+    expect(projects).toEqual([])
+    expect(spy).toHaveBeenCalledWith(error)
+    spy.mockRestore()
   })
 })

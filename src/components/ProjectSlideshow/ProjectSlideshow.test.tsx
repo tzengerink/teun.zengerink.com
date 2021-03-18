@@ -86,6 +86,8 @@ describe('ProjectSlideshow', () => {
     const expectSwipeToCall = (element, direction: 'left' | 'right', mock) => {
       const clientX = 10
       expect(mock).not.toHaveBeenCalled()
+      fireEvent.touchMove(element, { touches: [{ clientX }] })
+      expect(mock).not.toHaveBeenCalled()
       fireEvent.touchStart(element, { touches: [{ clientX }] })
       expect(mock).not.toHaveBeenCalled()
       const newClientX = direction === 'left' ? clientX - 5 : clientX + 5
