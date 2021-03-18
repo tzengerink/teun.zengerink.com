@@ -36,8 +36,9 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
       }
     }
 
-    window.addEventListener('keyup', keyUpHandler)
-    return () => window.removeEventListener('keyup', keyUpHandler)
+    const ON = 'keyup'
+    window.addEventListener(ON, keyUpHandler)
+    return () => window.removeEventListener(ON, keyUpHandler)
   })
 
   const touchStartHandler = ({ touches }: React.TouchEvent) => {

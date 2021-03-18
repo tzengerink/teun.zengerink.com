@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`ProjectSlideshow renders correctly 1`] = `
 <div
   className="slideshow"
 >
   <div
-    className="slide active"
+    className="slide "
     onClick={[Function]}
     onTouchMove={[Function]}
     onTouchStart={[Function]}
@@ -65,6 +65,11 @@ exports[`renders correctly 1`] = `
     >
       ←
     </a>
+    <h3>
+      active
+      /
+      03
+    </h3>
     <a
       className="rightArrow"
       onClick={[Function]}
