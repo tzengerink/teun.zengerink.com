@@ -5,6 +5,7 @@ exports[`Home renders correctly 1`] = `
   <div>
     <aside
       class="sidebar "
+      data-testid="sidebar"
     >
       <a
         href="/"
@@ -15,6 +16,7 @@ exports[`Home renders correctly 1`] = `
       </a>
       <div
         class="hamburger"
+        data-testid="hamburger"
       >
         <span
           class="line"

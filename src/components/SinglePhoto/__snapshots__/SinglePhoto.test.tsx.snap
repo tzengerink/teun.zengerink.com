@@ -1,21 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`SinglePhoto renders correctly for projects with a statement 1`] = `
 <div>
-  <div
-    class="container"
+  <a
+    href="/work/my-first-project"
   >
     <div
-      class="title"
+      class="container"
     >
-      My First Project
+      <div
+        class="title"
+      >
+        My First Project
+      </div>
+      <img
+        alt="My First Project"
+        height="600"
+        src="/photos/my-first-project/01.jpg"
+        width="800"
+      />
     </div>
-    <img
-      alt="My First Project"
-      height="600"
-      src="/photos/my-first-project/01.jpg"
-      width="800"
-    />
-  </div>
+  </a>
+</div>
+`;
+
+exports[`SinglePhoto renders correctly for projects without a statement 1`] = `
+<div>
+  <a
+    href="/work/no-statement/01"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="title"
+      >
+        Project without a statement
+      </div>
+      <img
+        alt="Project without a statement"
+        height="600"
+        src="/photos/no-statement/01.jpg"
+        width="800"
+      />
+    </div>
+  </a>
 </div>
 `;
