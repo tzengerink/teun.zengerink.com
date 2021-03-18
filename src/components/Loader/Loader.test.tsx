@@ -1,8 +1,8 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import renderer from 'react-test-renderer'
 import Loader from './Loader'
 
 it('renders correctly', () => {
-  const tree = renderer.create(<Loader />).toJSON()
-  expect(tree).toMatchSnapshot()
+  const { container } = render(<Loader />)
+  expect(container).toMatchSnapshot()
 })
