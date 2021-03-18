@@ -1,40 +1,115 @@
+import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
-import renderer from 'react-test-renderer'
 import projects from '../../__mocks__/projects'
 import ProjectSlideshow from './ProjectSlideshow'
 
-const defaultProps = { project: projects[0] }
-
+const mockProject = projects[0]
 const mockNext = jest.fn()
 const mockPrevious = jest.fn()
 
 jest.mock('../../lib/useProject', () => ({
   useProject: () => ({
-    activeKey: 'active',
+    activeKey: '--',
     next: () => mockNext(),
     previous: () => mockPrevious(),
   }),
 }))
 
 describe('ProjectSlideshow', () => {
-  const create = (props = defaultProps) => renderer.create(<ProjectSlideshow {...props} />)
+  afterEach(() => jest.clearAllMocks())
 
-  it('renders correctly', () => {
-    const tree = create().toJSON()
-    expect(tree).toMatchSnapshot()
+  const renderComponent = (project = mockProject) => render(<ProjectSlideshow project={project} />)
+
+  it('renders correctly for projects with a statement', () => {
+    const { container } = renderComponent()
+    expect(container).toMatchSnapshot()
   })
 
-  it('triggers next on right arrow key up', () => {
-    const event = new KeyboardEvent('keyup', { key: 'ArrowRight' })
-    create().toJSON()
-    window.dispatchEvent(event)
-    expect(mockNext).toHaveBeenCalled()
+  it('renders correctly for projects with captions', () => {
+    const { container } = renderComponent(projects[1])
+    expect(container).toMatchSnapshot()
   })
 
-  it('triggers previous on left arrow key up', () => {
-    const event = new KeyboardEvent('keyup', { key: 'ArrowLeft' })
-    create().toJSON()
-    window.dispatchEvent(event)
-    expect(mockPrevious).toHaveBeenCalled()
+  describe('Keyboard navigation', () => {
+    const expectKeyupToCall = (key, mock) => {
+      renderComponent()
+      expect(mock).not.toHaveBeenCalled()
+      window.dispatchEvent(new KeyboardEvent('keyup', { key }))
+      expect(mock).toHaveBeenCalled()
+    }
+
+    it('triggers next when right arrow key is pressed', () => {
+      expectKeyupToCall('ArrowRight', mockNext)
+    })
+
+    it('triggers previous when left arrow key is pressed', () => {
+      expectKeyupToCall('ArrowLeft', mockPrevious)
+    })
+  })
+
+  describe('Mouse navigation', () => {
+    const expectClickToCall = (element, mock) => {
+      expect(mock).not.toHaveBeenCalled()
+      fireEvent.click(element)
+      expect(mock).toHaveBeenCalled()
+    }
+
+    it('triggers next when statement is clicked', () => {
+      const { getByText } = renderComponent()
+      const statement = getByText(mockProject.statement)
+      expectClickToCall(statement, mockNext)
+    })
+
+    it('triggers next when clicking a photo', () => {
+      const { getByAltText } = renderComponent()
+      const photo = getByAltText(mockProject.photos[0].key)
+      expectClickToCall(photo, mockNext)
+    })
+
+    it('triggers next when right arrow is clicked', () => {
+      const { getByText } = renderComponent()
+      expectClickToCall(getByText('→'), mockNext)
+    })
+
+    it('triggers previous when left arrow is clicked', () => {
+      const { getByText } = renderComponent()
+      expectClickToCall(getByText('←'), mockPrevious)
+    })
+  })
+
+  describe('Touch navigation', () => {
+    const expectSwipeToCall = (element, direction: 'left' | 'right', mock) => {
+      const clientX = 10
+      expect(mock).not.toHaveBeenCalled()
+      fireEvent.touchStart(element, { touches: [{ clientX }] })
+      expect(mock).not.toHaveBeenCalled()
+      const newClientX = direction === 'left' ? clientX - 5 : clientX + 5
+      fireEvent.touchMove(element, { touches: [{ clientX: newClientX }] })
+      expect(mock).toHaveBeenCalled()
+    }
+
+    it('triggers next when swiping the statement to the left', () => {
+      const { getByText } = renderComponent()
+      const statement = getByText(mockProject.statement)
+      expectSwipeToCall(statement, 'left', mockNext)
+    })
+
+    it('triggers previous when swiping the statement to the right', () => {
+      const { getByText } = renderComponent()
+      const statement = getByText(mockProject.statement)
+      expectSwipeToCall(statement, 'right', mockPrevious)
+    })
+
+    it('triggers next when swiping a photo to the left', () => {
+      const { getByAltText } = renderComponent()
+      const photo = getByAltText(mockProject.photos[0].key)
+      expectSwipeToCall(photo, 'left', mockNext)
+    })
+
+    it('triggers previous when swiping a photo to the right', () => {
+      const { getByAltText } = renderComponent()
+      const photo = getByAltText(mockProject.photos[0].key)
+      expectSwipeToCall(photo, 'right', mockPrevious)
+    })
   })
 })

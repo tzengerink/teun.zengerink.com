@@ -1,81 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProjectSlideshow renders correctly 1`] = `
-<div
-  className="slideshow"
->
+exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = `
+<div>
   <div
-    className="slide "
-    onClick={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
+    class="slideshow"
   >
-    <h2>
-      My First Project
-    </h2>
-    <p>
-      The statement for the project
-    </p>
-  </div>
-  <div
-    className="slide "
-    onClick={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-  >
-    <img
-      alt="01"
-      height={600}
-      src="/photos/my-first-project/01.jpg"
-      width={800}
-    />
-  </div>
-  <div
-    className="slide "
-    onClick={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-  >
-    <img
-      alt="02"
-      height={800}
-      src="/photos/my-first-project/02.jpg"
-      width={600}
-    />
-  </div>
-  <div
-    className="slide "
-    onClick={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-  >
-    <img
-      alt="03"
-      height={600}
-      src="/photos/my-first-project/03.jpg"
-      width={800}
-    />
-  </div>
-  <div
-    className="navigation"
-  >
-    <a
-      className="leftArrow"
-      onClick={[Function]}
+    <div
+      class="slide "
     >
-      ←
-    </a>
-    <h3>
-      active
-      /
-      03
-    </h3>
-    <a
-      className="rightArrow"
-      onClick={[Function]}
+      <h2>
+        My First Project
+      </h2>
+      <p>
+        The statement for the project
+      </p>
+    </div>
+    <div
+      class="slide "
     >
-      →
-    </a>
+      <img
+        alt="01"
+        height="600"
+        src="/photos/my-first-project/01.jpg"
+        width="800"
+      />
+    </div>
+    <div
+      class="slide "
+    >
+      <img
+        alt="02"
+        height="800"
+        src="/photos/my-first-project/02.jpg"
+        width="600"
+      />
+    </div>
+    <div
+      class="slide "
+    >
+      <img
+        alt="03"
+        height="600"
+        src="/photos/my-first-project/03.jpg"
+        width="800"
+      />
+    </div>
+    <div
+      class="navigation"
+    >
+      <a
+        class="leftArrow"
+      >
+        ←
+      </a>
+      <h3>
+        --
+        /
+        03
+      </h3>
+      <a
+        class="rightArrow"
+      >
+        →
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
+<div>
+  <div
+    class="slideshow"
+  >
+    <div
+      class="slide "
+    >
+      <img
+        alt="This is image 1"
+        height="600"
+        src="/photos/no-statement/01.jpg"
+        width="800"
+      />
+    </div>
+    <div
+      class="slide "
+    >
+      <img
+        alt="This is image 2"
+        height="600"
+        src="/photos/no-statement/02.jpg"
+        width="800"
+      />
+    </div>
+    <div
+      class="slide "
+    >
+      <img
+        alt="This is image 3"
+        height="800"
+        src="/photos/no-statement/03.jpg"
+        width="600"
+      />
+    </div>
+    <div
+      class="slide "
+    >
+      <img
+        alt="This is image 4"
+        height="600"
+        src="/photos/no-statement/04.jpg"
+        width="800"
+      />
+    </div>
+    <div
+      class="navigation"
+    >
+      <a
+        class="leftArrow"
+      >
+        ←
+      </a>
+      <h3>
+        --
+        /
+        04
+      </h3>
+      <a
+        class="rightArrow"
+      >
+        →
+      </a>
+    </div>
+    <div
+      class="caption "
+    >
+      <p>
+        This is image 1
+      </p>
+    </div>
+    <div
+      class="caption "
+    >
+      <p>
+        This is image 2
+      </p>
+    </div>
+    <div
+      class="caption "
+    >
+      <p>
+        This is image 3
+      </p>
+    </div>
+    <div
+      class="caption "
+    >
+      <p>
+        This is image 4
+      </p>
+    </div>
   </div>
 </div>
 `;
