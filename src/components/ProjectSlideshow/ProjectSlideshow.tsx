@@ -63,7 +63,7 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
           onTouchMove={(e) => touchMoveHandler(e)}
         >
           <h2>{props.project?.title}</h2>
-          <ReactMarkdown source={props.project?.statement} />
+          <ReactMarkdown>{props.project?.statement}</ReactMarkdown>
         </div>
       )}
       {props.project?.photos.map((photo) => (
@@ -76,7 +76,7 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
         >
           <img
             src={photo.url}
-            alt={photo.caption ? photo.caption : photo.key}
+            alt={`${props.project?.title} - ${photo.key}`}
             width={photo.size.width}
             height={photo.size.height}
           />
@@ -102,7 +102,7 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
             key={`${props.project.slug}--caption-${photo.key}`}
             className={`${styles.caption} ${photo.key === activeKey ? styles.active : ''}`}
           >
-            <ReactMarkdown source={photo.caption} />
+            <ReactMarkdown>{photo.caption}</ReactMarkdown>
           </div>
         ))}
     </div>

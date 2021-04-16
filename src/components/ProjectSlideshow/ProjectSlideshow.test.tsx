@@ -7,11 +7,6 @@ const mockProject = projects[0]
 const mockNext = jest.fn()
 const mockPrevious = jest.fn()
 
-jest.mock('react-markdown', () => ({
-  __esModule: true,
-  default: ({ source }) => <p>{source}</p>,
-}))
-
 jest.mock('../../lib/useProject', () => ({
   useProject: () => ({
     activeKey: '--',
@@ -61,13 +56,13 @@ describe('ProjectSlideshow', () => {
 
     it('triggers next when statement is clicked', () => {
       const { getByText } = renderComponent()
-      const statement = getByText(mockProject.statement)
+      const statement = getByText('statement')
       expectClickToCall(statement, mockNext)
     })
 
     it('triggers next when clicking a photo', () => {
       const { getByAltText } = renderComponent()
-      const photo = getByAltText(mockProject.photos[0].key)
+      const photo = getByAltText(`${mockProject.title} - ${mockProject.photos[0].key}`)
       expectClickToCall(photo, mockNext)
     })
 
@@ -97,25 +92,25 @@ describe('ProjectSlideshow', () => {
 
     it('triggers next when swiping the statement to the left', () => {
       const { getByText } = renderComponent()
-      const statement = getByText(mockProject.statement)
+      const statement = getByText('statement')
       expectSwipeToCall(statement, 'left', mockNext)
     })
 
     it('triggers previous when swiping the statement to the right', () => {
       const { getByText } = renderComponent()
-      const statement = getByText(mockProject.statement)
+      const statement = getByText('statement')
       expectSwipeToCall(statement, 'right', mockPrevious)
     })
 
     it('triggers next when swiping a photo to the left', () => {
       const { getByAltText } = renderComponent()
-      const photo = getByAltText(mockProject.photos[0].key)
+      const photo = getByAltText(`${mockProject.title} - ${mockProject.photos[0].key}`)
       expectSwipeToCall(photo, 'left', mockNext)
     })
 
     it('triggers previous when swiping a photo to the right', () => {
       const { getByAltText } = renderComponent()
-      const photo = getByAltText(mockProject.photos[0].key)
+      const photo = getByAltText(`${mockProject.title} - ${mockProject.photos[0].key}`)
       expectSwipeToCall(photo, 'right', mockPrevious)
     })
   })

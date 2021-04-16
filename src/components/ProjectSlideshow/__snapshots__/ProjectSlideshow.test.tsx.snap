@@ -12,14 +12,21 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
         My First Project
       </h2>
       <p>
-        The statement for the project
+        The 
+        <em>
+          statement
+        </em>
+         for the 
+        <em>
+          project
+        </em>
       </p>
     </div>
     <div
       class="slide "
     >
       <img
-        alt="01"
+        alt="My First Project - 01"
         height="600"
         src="/photos/my-first-project/01.jpg"
         width="800"
@@ -29,7 +36,7 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
       class="slide "
     >
       <img
-        alt="02"
+        alt="My First Project - 02"
         height="800"
         src="/photos/my-first-project/02.jpg"
         width="600"
@@ -39,7 +46,7 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
       class="slide "
     >
       <img
-        alt="03"
+        alt="My First Project - 03"
         height="600"
         src="/photos/my-first-project/03.jpg"
         width="800"
@@ -77,7 +84,7 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
       class="slide "
     >
       <img
-        alt="This is image 1"
+        alt="Project without a statement - 01"
         height="600"
         src="/photos/no-statement/01.jpg"
         width="800"
@@ -87,7 +94,7 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
       class="slide "
     >
       <img
-        alt="This is image 2"
+        alt="Project without a statement - 02"
         height="600"
         src="/photos/no-statement/02.jpg"
         width="800"
@@ -97,7 +104,7 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
       class="slide "
     >
       <img
-        alt="This is image 3"
+        alt="Project without a statement - 03"
         height="800"
         src="/photos/no-statement/03.jpg"
         width="600"
@@ -107,7 +114,7 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
       class="slide "
     >
       <img
-        alt="This is image 4"
+        alt="Project without a statement - 04"
         height="600"
         src="/photos/no-statement/04.jpg"
         width="800"
@@ -136,28 +143,40 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
       class="caption "
     >
       <p>
-        This is image 1
+        This is 
+        <em>
+          image 1
+        </em>
       </p>
     </div>
     <div
       class="caption "
     >
       <p>
-        This is image 2
+        This is 
+        <em>
+          image 2
+        </em>
       </p>
     </div>
     <div
       class="caption "
     >
       <p>
-        This is image 3
+        This is 
+        <em>
+          image 3
+        </em>
       </p>
     </div>
     <div
       class="caption "
     >
       <p>
-        This is image 4
+        This is 
+        <em>
+          image 4
+        </em>
       </p>
     </div>
   </div>
