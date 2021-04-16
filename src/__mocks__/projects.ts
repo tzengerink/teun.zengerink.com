@@ -4,7 +4,7 @@ const projects: Project[] = [
   {
     title: 'My First Project',
     slug: 'my-first-project',
-    statement: 'The statement for the project',
+    statement: 'The *statement* for the _project_',
     photos: [
       {
         key: '01',
@@ -30,25 +30,25 @@ const projects: Project[] = [
       {
         key: '01',
         url: '/photos/no-statement/01.jpg',
-        caption: 'This is image 1',
+        caption: 'This is _image 1_',
         size: { width: 800, height: 600 },
       },
       {
         key: '02',
         url: '/photos/no-statement/02.jpg',
-        caption: 'This is image 2',
+        caption: 'This is _image 2_',
         size: { width: 800, height: 600 },
       },
       {
         key: '03',
         url: '/photos/no-statement/03.jpg',
-        caption: 'This is image 3',
+        caption: 'This is _image 3_',
         size: { width: 600, height: 800 },
       },
       {
         key: '04',
         url: '/photos/no-statement/04.jpg',
-        caption: 'This is image 4',
+        caption: 'This is _image 4_',
         size: { width: 800, height: 600 },
       },
     ],
