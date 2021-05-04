@@ -16,7 +16,6 @@
     "test:ci": "yarn lint && jest --ci --collectCoverage"
   },
   "dependencies": {
-    "image-size": "^1.0.0",
     "js-yaml": "^4.1.0",
     "next": "^10.2.0",
     "next-build-id": "^3.0.0",
@@ -40,8 +39,8 @@
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
     "babel-jest": "^26.5.2",
-    "eslint-config-prettier": "^8.3.0",
     "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^6.0.0",
     "identity-obj-proxy": "^3.0.0",

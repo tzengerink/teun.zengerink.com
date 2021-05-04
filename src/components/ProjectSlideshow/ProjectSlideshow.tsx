@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Project } from '../../lib/projects'
 import { useProject } from '../../lib/useProject'
+import Photo from '../Photo/Photo'
 import styles from './ProjectSlideshow.module.scss'
 
 enum Key {
@@ -18,11 +19,11 @@ const pad = (str: string, length: number): string => {
   return output.length < length ? pad('0' + output, length) : output
 }
 
-const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
+const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
   let touchStartX: number
-  const { activeKey, previous, next } = useProject(props.project)
+  const { activeKey, previous, next } = useProject(project)
 
-  const numberOfPhotos = pad(props.project?.photos?.length?.toString(), 2)
+  const numberOfPhotos = pad(project?.photos?.length?.toString(), 2)
 
   useEffect(() => {
     const keyUpHandler = ({ key }: KeyboardEvent) => {
@@ -55,31 +56,26 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
 
   return (
     <div className={styles.slideshow}>
-      {props.project?.statement && (
+      {project?.statement && (
         <div
           className={`${styles.slide} ${activeKey === undefined ? styles.active : ''}`}
           onClick={() => next()}
           onTouchStart={(e) => touchStartHandler(e)}
           onTouchMove={(e) => touchMoveHandler(e)}
         >
-          <h2>{props.project?.title}</h2>
-          <ReactMarkdown>{props.project?.statement}</ReactMarkdown>
+          <h2>{project?.title}</h2>
+          <ReactMarkdown>{project?.statement}</ReactMarkdown>
         </div>
       )}
-      {props.project?.photos.map((photo) => (
+      {project?.photos.map((photo) => (
         <div
-          key={`${props.project.slug}--slide-${photo.key}`}
+          key={`${project.slug}--slide-${photo.key}`}
           className={`${styles.slide} ${photo.key === activeKey ? styles.active : ''}`}
           onClick={() => next()}
           onTouchStart={(e) => touchStartHandler(e)}
           onTouchMove={(e) => touchMoveHandler(e)}
         >
-          <img
-            src={photo.url}
-            alt={`${props.project?.title} - ${photo.key}`}
-            width={photo.size.width}
-            height={photo.size.height}
-          />
+          <Photo photo={photo} alt={`${project?.title} - ${photo.key}`} />
         </div>
       ))}
       <div className={styles.navigation}>
@@ -95,11 +91,11 @@ const ProjectSlideshow = (props: ProjectSlideshowProps): React.ReactElement => {
           &rarr;
         </a>
       </div>
-      {props.project?.photos
+      {project?.photos
         .filter((photo) => photo.caption)
         .map((photo) => (
           <div
-            key={`${props.project.slug}--caption-${photo.key}`}
+            key={`${project.slug}--caption-${photo.key}`}
             className={`${styles.caption} ${photo.key === activeKey ? styles.active : ''}`}
           >
             <ReactMarkdown>{photo.caption}</ReactMarkdown>

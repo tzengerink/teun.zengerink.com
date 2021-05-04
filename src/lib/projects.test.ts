@@ -1,8 +1,8 @@
 import slugify from 'slugify'
-import { DEFAULT_SIZE, getProjects } from './projects'
+import { MAX_WIDTHS, getProjects } from './projects'
 
-let mockSize = () => ({ width: 500, height: 400 })
 const mockPhotos = Array.from(Array(5).keys()).map((item) => `${item}.jpg`)
+
 const mockConfig = [
   {
     title: 'The first title',
@@ -14,19 +14,18 @@ const mockConfig = [
   },
 ]
 
+const mockReaddirSync = jest.fn(() => mockPhotos)
+
 jest.mock('js-yaml', () => ({
   load: jest.fn(() => mockConfig),
 }))
 
 jest.mock('fs', () => ({
-  readdirSync: jest.fn(() => mockPhotos),
+  readdirSync: jest.fn(() => mockReaddirSync()),
   readFileSync: jest.fn(),
 }))
 
-jest.mock('image-size', () => ({
-  __esModule: true,
-  default: jest.fn(() => mockSize()),
-}))
+beforeEach(jest.restoreAllMocks)
 
 describe('getProjects', () => {
   it('returns the projects asynchronously', async () => {
@@ -38,9 +37,11 @@ describe('getProjects', () => {
         statement: item.statement ?? '',
         photos: mockPhotos.map((photo, index) => ({
           key: `${index}`,
-          size: mockSize(),
           caption: (item.captions ?? []).find((caption) => caption.key === `${index}`)?.caption ?? '',
-          url: `/photos/${slugify(item.title.toLowerCase())}/${DEFAULT_SIZE}/${photo}`,
+          exports: MAX_WIDTHS.map((width) => ({
+            width,
+            url: `/photos/${slugify(item.title.toLowerCase())}/${width}w/${photo}`,
+          })),
         })),
       })),
     )
@@ -49,9 +50,9 @@ describe('getProjects', () => {
   it('logs errors to the console', async () => {
     const spy = jest.spyOn(console, 'error').mockImplementation()
     const error = new Error('Not working')
-    mockSize = () => {
+    mockReaddirSync.mockImplementation(() => {
       throw error
-    }
+    })
     const projects = await getProjects()
     expect(projects).toEqual([])
     expect(spy).toHaveBeenCalledWith(error)
