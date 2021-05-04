@@ -1,5 +1,5 @@
 import slugify from 'slugify'
-import { getProjects } from './projects'
+import { DEFAULT_SIZE, getProjects } from './projects'
 
 let mockSize = () => ({ width: 500, height: 400 })
 const mockPhotos = Array.from(Array(5).keys()).map((item) => `${item}.jpg`)
@@ -40,7 +40,7 @@ describe('getProjects', () => {
           key: `${index}`,
           size: mockSize(),
           caption: (item.captions ?? []).find((caption) => caption.key === `${index}`)?.caption ?? '',
-          url: `/photos/${slugify(item.title.toLowerCase())}/${photo}`,
+          url: `/photos/${slugify(item.title.toLowerCase())}/${DEFAULT_SIZE}/${photo}`,
         })),
       })),
     )
