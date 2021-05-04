@@ -29,8 +29,10 @@ export interface Project {
   statement?: string
 }
 
+export const DEFAULT_SIZE = '1280w'
+
 const generatePhotos = (slug: string, captions: ConfigCaption[]): Photo[] => {
-  const photosDirectory = path.join(process.cwd(), 'public/photos', slug)
+  const photosDirectory = path.join(process.cwd(), 'public/photos', slug, DEFAULT_SIZE)
   const fileNames = fs.readdirSync(photosDirectory)
 
   return fileNames.map((filename) => {
@@ -40,7 +42,7 @@ const generatePhotos = (slug: string, captions: ConfigCaption[]): Photo[] => {
     return {
       key,
       caption: caption?.caption ?? '',
-      url: `/photos/${slug}/${filename}`,
+      url: `/photos/${slug}/${DEFAULT_SIZE}/${filename}`,
       size: sizeOf(path.join(photosDirectory, filename)),
     }
   })
