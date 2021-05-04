@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
 import { Project } from '../../lib/projects'
-import styles from './SinglePhoto.module.scss'
+import Photo from '../Photo/Photo'
+import styles from './ProjectLink.module.scss'
 
-interface SinglePhotoProps {
+interface ProjectLink {
   project: Project
 }
 
-const SinglePhoto: React.FC<SinglePhotoProps> = ({ project }) => {
+const ProjectLink: React.FC<ProjectLink> = ({ project }) => {
   const photo = project?.photos[0]
   const href = `/work/${project?.slug}${!project.statement ? `/${photo.key}` : ''}`
 
@@ -15,10 +16,10 @@ const SinglePhoto: React.FC<SinglePhotoProps> = ({ project }) => {
     <Link href={href}>
       <div className={styles.container}>
         <div className={styles.title}>{project?.title}</div>
-        <img width={photo.size.width} height={photo.size.height} src={photo.url} alt={project.title} />
+        <Photo photo={photo} alt={project?.title} />
       </div>
     </Link>
   )
 }
 
-export default SinglePhoto
+export default ProjectLink

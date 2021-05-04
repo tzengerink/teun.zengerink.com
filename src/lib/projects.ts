@@ -1,8 +1,12 @@
 import fs from 'fs'
 import path from 'path'
 import slugify from 'slugify'
-import sizeOf from 'image-size'
 import yaml from 'js-yaml'
+
+export enum Width {
+  Mobile = 768,
+  Desktop = 1280,
+}
 
 interface ConfigCaption {
   key: string
@@ -15,13 +19,16 @@ interface ConfigItem {
   captions?: ConfigCaption[]
 }
 
-export interface Photo {
-  key: string
+export interface Export {
+  width: Width
   url: string
-  size: { width: number; height: number }
-  caption?: string
 }
 
+export interface Photo {
+  key: string
+  caption?: string
+  exports: Export[]
+}
 export interface Project {
   title: string
   slug: string
@@ -29,10 +36,10 @@ export interface Project {
   statement?: string
 }
 
-export const DEFAULT_SIZE = '1280w'
+export const MAX_WIDTHS = [Width.Mobile, Width.Desktop]
 
 const generatePhotos = (slug: string, captions: ConfigCaption[]): Photo[] => {
-  const photosDirectory = path.join(process.cwd(), 'public/photos', slug, DEFAULT_SIZE)
+  const photosDirectory = path.join(process.cwd(), 'public/photos', slug, `${Width.Mobile}w`)
   const fileNames = fs.readdirSync(photosDirectory)
 
   return fileNames.map((filename) => {
@@ -42,8 +49,7 @@ const generatePhotos = (slug: string, captions: ConfigCaption[]): Photo[] => {
     return {
       key,
       caption: caption?.caption ?? '',
-      url: `/photos/${slug}/${DEFAULT_SIZE}/${filename}`,
-      size: sizeOf(path.join(photosDirectory, filename)),
+      exports: MAX_WIDTHS.map((width) => ({ width, url: `/photos/${slug}/${width}w/${filename}` })),
     }
   })
 }

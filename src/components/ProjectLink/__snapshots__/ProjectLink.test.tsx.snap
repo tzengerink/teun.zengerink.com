@@ -15,9 +15,9 @@ exports[`SinglePhoto renders correctly for projects with a statement 1`] = `
       </div>
       <img
         alt="My First Project"
-        height="600"
-        src="/photos/my-first-project/01.jpg"
-        width="800"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/my-first-project/1280w/01.jpg"
+        srcset="/photos/my-first-project/768w/01.jpg 768w, /photos/my-first-project/1280w/01.jpg 1280w"
       />
     </div>
   </a>
@@ -39,9 +39,9 @@ exports[`SinglePhoto renders correctly for projects without a statement 1`] = `
       </div>
       <img
         alt="Project without a statement"
-        height="600"
-        src="/photos/no-statement/01.jpg"
-        width="800"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/no-statement/1280w/01.jpg"
+        srcset="/photos/no-statement/768w/01.jpg 768w, /photos/no-statement/1280w/01.jpg 1280w"
       />
     </div>
   </a>

@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
-import SinglePhoto from '../components/SinglePhoto/SinglePhoto'
+import ProjectLink from '../components/ProjectLink/ProjectLink'
 import { Props } from '../lib/static'
 
 const Home: React.FC<Props> = ({ projects }): React.ReactElement => {
   return (
     <Layout projects={projects}>
-      <SinglePhoto project={projects[0]} />
+      <ProjectLink project={projects[0]} />
     </Layout>
   )
 }
