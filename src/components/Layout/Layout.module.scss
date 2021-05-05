@@ -1,12 +1,12 @@
 @import '../../styles/variables';
 
 .main {
-  margin: 95px $outer-margin $outer-margin $sidebar-width;
-  text-align: center;
+  margin: 100px $outer-margin $outer-margin $outer-margin;
 }
 
-@media (max-width: $phone-breakpoint) {
+@media (min-width: $phone-breakpoint) {
   .main {
-    margin: 100px $outer-margin $outer-margin $outer-margin;
+    margin: 8vh $outer-margin $outer-margin $sidebar-width;
+    text-align: center;
   }
 }
