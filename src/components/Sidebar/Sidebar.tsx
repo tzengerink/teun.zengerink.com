@@ -33,11 +33,6 @@ const ACCOUNTS: SocialAccount[] = [
     url: 'https://instagram.com/t.zengerink/',
     image: '/img/instagram.jpg',
   },
-  {
-    name: 'Pinterest',
-    url: 'https://pinterest.com/tzengerink/',
-    image: '/img/pinterest.jpg',
-  },
 ]
 
 const Hamburger: React.FC<ClickableProps> = ({ onClick }) => {
