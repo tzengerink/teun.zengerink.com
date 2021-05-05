@@ -64,14 +64,6 @@ exports[`Sidebar renders correctly 1`] = `
             src="/img/instagram.jpg"
           />
         </a>
-        <a
-          href="https://pinterest.com/tzengerink/"
-        >
-          <img
-            alt="Pinterest"
-            src="/img/pinterest.jpg"
-          />
-        </a>
       </span>
     </nav>
   </aside>
