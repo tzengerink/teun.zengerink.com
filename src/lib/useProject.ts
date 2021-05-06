@@ -23,33 +23,9 @@ export const useProject = (project: Project): UseProject => {
   const isLast = activeKey === lastPhoto.key
   const isFirst = activeKey === firstPhoto.key
 
-  const go = (photo?: Photo) => {
-    const slug = `/work/${project.slug}`
-    if (!photo) return router.push(slug)
-    return router.push(`${slug}/${photo.key}`)
-  }
-
-  const previous = () => {
-    if (project.statement) {
-      if (!activeKey) return go(lastPhoto)
-      if (isFirst) return go()
-      return go(previousPhoto)
-    }
-
-    if (isFirst) return go(lastPhoto)
-    go(previousPhoto)
-  }
-
-  const next = () => {
-    if (project.statement) {
-      if (!activeKey) return go(firstPhoto)
-      if (isLast) return go()
-      return go(nextPhoto)
-    }
-
-    if (isLast) return go(firstPhoto)
-    go(nextPhoto)
-  }
+  const go = (photo: Photo) => router.push(`${`/work/${project.slug}`}/${photo.key}`)
+  const previous = () => (isFirst ? go(lastPhoto) : go(previousPhoto))
+  const next = () => (isLast ? go(firstPhoto) : go(nextPhoto))
 
   return { activeKey, previous, next }
 }

@@ -8,25 +8,9 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
     <div
       class="slide "
     >
-      <h2>
-        My First Project
-      </h2>
-      <p>
-        The 
-        <em>
-          statement
-        </em>
-         for the 
-        <em>
-          project
-        </em>
-      </p>
-    </div>
-    <div
-      class="slide "
-    >
       <img
         alt="My First Project - 01"
+        class="photo"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/my-first-project/1280w/01.jpg"
         srcset="/photos/my-first-project/768w/01.jpg 768w, /photos/my-first-project/1280w/01.jpg 1280w"
@@ -37,6 +21,7 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
     >
       <img
         alt="My First Project - 02"
+        class="photo"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/my-first-project/1280w/02.jpg"
         srcset="/photos/my-first-project/768w/02.jpg 768w, /photos/my-first-project/1280w/02.jpg 1280w"
@@ -47,29 +32,11 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
     >
       <img
         alt="My First Project - 03"
+        class="photo"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/my-first-project/1280w/03.jpg"
         srcset="/photos/my-first-project/768w/03.jpg 768w, /photos/my-first-project/1280w/03.jpg 1280w"
       />
-    </div>
-    <div
-      class="navigation"
-    >
-      <a
-        class="leftArrow"
-      >
-        ←
-      </a>
-      <h3>
-        --
-        /
-        03
-      </h3>
-      <a
-        class="rightArrow"
-      >
-        →
-      </a>
     </div>
   </div>
 </div>
@@ -85,6 +52,7 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
     >
       <img
         alt="Project without a statement - 01"
+        class="photo"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/no-statement/1280w/01.jpg"
         srcset="/photos/no-statement/768w/01.jpg 768w, /photos/no-statement/1280w/01.jpg 1280w"
@@ -95,6 +63,7 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
     >
       <img
         alt="Project without a statement - 02"
+        class="photo"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/no-statement/1280w/02.jpg"
         srcset="/photos/no-statement/768w/02.jpg 768w, /photos/no-statement/1280w/02.jpg 1280w"
@@ -105,6 +74,7 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
     >
       <img
         alt="Project without a statement - 03"
+        class="photo"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/no-statement/1280w/03.jpg"
         srcset="/photos/no-statement/768w/03.jpg 768w, /photos/no-statement/1280w/03.jpg 1280w"
@@ -115,69 +85,11 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
     >
       <img
         alt="Project without a statement - 04"
+        class="photo"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/no-statement/1280w/04.jpg"
         srcset="/photos/no-statement/768w/04.jpg 768w, /photos/no-statement/1280w/04.jpg 1280w"
       />
-    </div>
-    <div
-      class="navigation"
-    >
-      <a
-        class="leftArrow"
-      >
-        ←
-      </a>
-      <h3>
-        --
-        /
-        04
-      </h3>
-      <a
-        class="rightArrow"
-      >
-        →
-      </a>
-    </div>
-    <div
-      class="caption "
-    >
-      <p>
-        This is 
-        <em>
-          image 1
-        </em>
-      </p>
-    </div>
-    <div
-      class="caption "
-    >
-      <p>
-        This is 
-        <em>
-          image 2
-        </em>
-      </p>
-    </div>
-    <div
-      class="caption "
-    >
-      <p>
-        This is 
-        <em>
-          image 3
-        </em>
-      </p>
-    </div>
-    <div
-      class="caption "
-    >
-      <p>
-        This is 
-        <em>
-          image 4
-        </em>
-      </p>
     </div>
   </div>
 </div>

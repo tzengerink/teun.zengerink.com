@@ -1,5 +1,7 @@
 import { Photo as PhotoInterface, Width, MAX_WIDTHS } from '../../lib/projects'
 
+import styles from './Photo.module.scss'
+
 interface Props {
   photo: PhotoInterface
   alt: string
@@ -16,6 +18,7 @@ const Photo: React.FC<Props> = ({ photo, alt }) => {
 
   return (
     <img
+      className={styles.photo}
       alt={alt}
       src={findExport(Width.Desktop).url}
       sizes={`${firstWidths.map((width) => `(max-width: ${width - 1}px) ${width}px`).join(', ')}, ${lastWidth}px`}

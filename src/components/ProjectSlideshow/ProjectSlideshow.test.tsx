@@ -54,26 +54,10 @@ describe('ProjectSlideshow', () => {
       expect(mock).toHaveBeenCalled()
     }
 
-    it('triggers next when statement is clicked', () => {
-      const { getByText } = renderComponent()
-      const statement = getByText('statement')
-      expectClickToCall(statement, mockNext)
-    })
-
     it('triggers next when clicking a photo', () => {
       const { getByAltText } = renderComponent()
       const photo = getByAltText(`${mockProject.title} - ${mockProject.photos[0].key}`)
       expectClickToCall(photo, mockNext)
-    })
-
-    it('triggers next when right arrow is clicked', () => {
-      const { getByText } = renderComponent()
-      expectClickToCall(getByText('→'), mockNext)
-    })
-
-    it('triggers previous when left arrow is clicked', () => {
-      const { getByText } = renderComponent()
-      expectClickToCall(getByText('←'), mockPrevious)
     })
   })
 
@@ -89,18 +73,6 @@ describe('ProjectSlideshow', () => {
       fireEvent.touchMove(element, { touches: [{ clientX: newClientX }] })
       expect(mock).toHaveBeenCalled()
     }
-
-    it('triggers next when swiping the statement to the left', () => {
-      const { getByText } = renderComponent()
-      const statement = getByText('statement')
-      expectSwipeToCall(statement, 'left', mockNext)
-    })
-
-    it('triggers previous when swiping the statement to the right', () => {
-      const { getByText } = renderComponent()
-      const statement = getByText('statement')
-      expectSwipeToCall(statement, 'right', mockPrevious)
-    })
 
     it('triggers next when swiping a photo to the left', () => {
       const { getByAltText } = renderComponent()

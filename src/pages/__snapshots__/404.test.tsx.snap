@@ -39,7 +39,7 @@ exports[`Error renders correctly 1`] = `
             class=""
           >
             <a
-              href="/work/my-first-project"
+              href="/work/my-first-project/01"
             >
               My First Project
             </a>
