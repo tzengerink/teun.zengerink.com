@@ -57,7 +57,13 @@
   }
 }
 
-@media (min-width: $phone-breakpoint) {
+@media (min-width: $phone-breakpoint) and (max-width: $tablet-portrait-breakpoint) {
+  .container {
+    margin-top: $outer-margin;
+  }
+}
+
+@media (min-width: $tablet-portrait-breakpoint + 1) {
   .container {
     top: 50%;
     left: 50%;

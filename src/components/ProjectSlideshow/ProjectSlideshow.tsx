@@ -52,17 +52,20 @@ const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
   }
 
   return (
-    <div className={styles.slideshow}>
+    <div
+      className={styles.slideshow}
+      onTouchStart={(e) => touchStartHandler(e)}
+      onTouchMove={(e) => touchMoveHandler(e)}
+    >
+      <div data-testid="left-side" className={styles.previous} onClick={() => previous()} />
+      <div data-testid="right-side" className={styles.next} onClick={() => next()} />
       {project?.photos.map((photo) => (
-        <div
-          key={`${project.slug}--slide-${photo.key}`}
+        <Photo
           className={`${styles.slide} ${photo.key === activeKey ? styles.active : ''}`}
-          onClick={() => next()}
-          onTouchStart={(e) => touchStartHandler(e)}
-          onTouchMove={(e) => touchMoveHandler(e)}
-        >
-          <Photo photo={photo} alt={`${project?.title} - ${photo.key}`} />
-        </div>
+          key={`${project.slug}--slide-${photo.key}`}
+          photo={photo}
+          alt={`${project?.title} - ${photo.key}`}
+        />
       ))}
     </div>
   )
