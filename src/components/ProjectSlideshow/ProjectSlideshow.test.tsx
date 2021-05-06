@@ -54,10 +54,16 @@ describe('ProjectSlideshow', () => {
       expect(mock).toHaveBeenCalled()
     }
 
-    it('triggers next when clicking a photo', () => {
-      const { getByAltText } = renderComponent()
-      const photo = getByAltText(`${mockProject.title} - ${mockProject.photos[0].key}`)
-      expectClickToCall(photo, mockNext)
+    it('triggers next when clicking right side of the slideshow', () => {
+      const { getByTestId } = renderComponent()
+      const rightSide = getByTestId('right-side')
+      expectClickToCall(rightSide, mockNext)
+    })
+
+    it('triggers previous when clicking left side of the slideshow', () => {
+      const { getByTestId } = renderComponent()
+      const leftSide = getByTestId('left-side')
+      expectClickToCall(leftSide, mockPrevious)
     })
   })
 

@@ -73,7 +73,16 @@ exports[`Work renders correctly 1`] = `
     >
       <div
         class="slideshow"
-      />
+      >
+        <div
+          class="previous"
+          data-testid="left-side"
+        />
+        <div
+          class="next"
+          data-testid="right-side"
+        />
+      </div>
     </main>
   </div>
 </div>
