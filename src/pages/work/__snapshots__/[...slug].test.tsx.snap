@@ -39,7 +39,7 @@ exports[`Work renders correctly 1`] = `
             class=""
           >
             <a
-              href="/work/my-first-project"
+              href="/work/my-first-project/01"
             >
               My First Project
             </a>
@@ -73,22 +73,7 @@ exports[`Work renders correctly 1`] = `
     >
       <div
         class="slideshow"
-      >
-        <div
-          class="navigation"
-        >
-          <a
-            class="leftArrow"
-          >
-            ←
-          </a>
-          <a
-            class="rightArrow"
-          >
-            →
-          </a>
-        </div>
-      </div>
+      />
     </main>
   </div>
 </div>

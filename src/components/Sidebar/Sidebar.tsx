@@ -51,7 +51,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ project, onClick }) => {
 
   return (
     <li key={project.slug} className={isActive ? styles.active : ''}>
-      <Link href={`/work/${project.slug}${!project.statement ? `/${project.photos[0].key}` : ''}`}>
+      <Link href={`/work/${project.slug}/${project.photos[0].key}`}>
         <a onClick={onClick}>{project.title}</a>
       </Link>
     </li>

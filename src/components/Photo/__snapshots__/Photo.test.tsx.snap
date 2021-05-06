@@ -4,6 +4,7 @@ exports[`Photo renders correctly 1`] = `
 <div>
   <img
     alt="The alt text"
+    class="photo"
     sizes="(max-width: 767px) 768px, 1280px"
     src="/photos/my-first-project/1280w/01.jpg"
     srcset="/photos/my-first-project/768w/01.jpg 768w, /photos/my-first-project/1280w/01.jpg 1280w"

@@ -9,14 +9,11 @@ interface ProjectLink {
 }
 
 const ProjectLink: React.FC<ProjectLink> = ({ project }) => {
-  const photo = project?.photos[0]
-  const href = `/work/${project?.slug}${!project.statement ? `/${photo.key}` : ''}`
-
   return (
-    <Link href={href}>
+    <Link href={`/work/${project?.slug}/${project?.photos[1].key}`}>
       <div className={styles.container}>
         <div className={styles.title}>{project?.title}</div>
-        <Photo photo={photo} alt={project?.title} />
+        <Photo photo={project?.photos[0]} alt={project?.title} />
       </div>
     </Link>
   )

@@ -1,69 +1,26 @@
 @import '../../styles/variables.scss';
 
 .slideshow {
+  position: relative;
   display: inline-block;
-  margin: 0 auto;
-  max-width: 650px;
 }
 
 .slide {
   display: none;
-  margin: 0 auto;
   text-align: center;
   font-size: 1em;
   line-height: 0;
   cursor: e-resize;
-
-  p {
-    margin: 0.9em 0;
-  }
-
-  img {
-    margin: 0 auto;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 65vh;
-  }
-}
-
-.navigation {
-  display: flex;
-  align-content: space-between;
-  margin-bottom: $outer-margin;
-
-  h3 {
-    margin: 0.6em 0;
-    font-size: 0.8em;
-  }
-}
-
-.caption {
-  display: none;
-  font-style: italic;
-
-  p {
-    margin-top: 0;
-  }
 }
 
 .active {
   display: inline-block;
 }
 
-.leftArrow,
-.rightArrow {
-  flex-grow: 1;
-  font-size: 1.3em;
-  text-decoration: none;
-  text-align: left;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: none;
+@media (min-width: $phone-breakpoint) {
+  .slideshow {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-}
-
-.rightArrow {
-  text-align: right;
 }
