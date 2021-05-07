@@ -3,9 +3,9 @@ import React from 'react'
 import projects from '../../__mocks__/projects'
 import Layout from './Layout'
 
-jest.mock('../Sidebar/Sidebar', () => ({
+jest.mock('../Menu/Menu', () => ({
   __esModule: true,
-  default: () => <div>[SIDEBAR]</div>,
+  default: () => <div>[MENU]</div>,
 }))
 
 describe('Layout', () => {

@@ -4,7 +4,7 @@ exports[`Layout renders a loader when initializing 1`] = `
 <div>
   <div>
     <div>
-      [SIDEBAR]
+      [MENU]
     </div>
     <main
       class="main"
@@ -21,7 +21,7 @@ exports[`Layout renders the children when initialized 1`] = `
 <div>
   <div>
     <div>
-      [SIDEBAR]
+      [MENU]
     </div>
     <main
       class="main"
