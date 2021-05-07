@@ -1,11 +1,11 @@
-@import '../../styles/variables';
+@import '../../styles/index';
 
 .main {
   position: relative;
   margin: 75px $outer-margin $outer-margin $outer-margin;
 }
 
-@media (min-width: $phone-breakpoint) {
+@include for-phone {
   .main {
     position: absolute;
     top: $outer-margin;

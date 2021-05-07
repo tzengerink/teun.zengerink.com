@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../styles/index';
 
 .slideshow {
   position: relative;
@@ -35,10 +35,73 @@
   display: inline-block;
 }
 
-@media (min-width: $phone-breakpoint) {
+.statement {
+  .text {
+    @include transition(0.3s);
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    padding: $outer-margin;
+    margin-bottom: $outer-margin;
+    font-size: 0.9em;
+    background-color: $background-color-transparent;
+    z-index: 1;
+  }
+
+  h2 {
+    position: fixed;
+    bottom: $outer-margin;
+    left: $outer-margin;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    z-index: 2;
+
+    &:hover {
+      display: block;
+    }
+
+    &:hover + .text {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0px);
+      cursor: pointer;
+    }
+  }
+}
+
+@include for-phone {
   .slideshow {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .statement {
+    display: block;
+
+    .text {
+      left: $outer-margin;
+      bottom: $outer-margin;
+      padding: $outer-margin $outer-margin $outer-margin 0;
+      margin-bottom: 0;
+      width: 500px;
+    }
+
+    h2 {
+      right: auto;
+      font-size: 0.8em;
+
+      &:hover + .text {
+        display: block;
+        cursor: pointer;
+      }
+    }
   }
 }

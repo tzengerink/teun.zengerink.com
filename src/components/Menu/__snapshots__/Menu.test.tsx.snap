@@ -31,7 +31,7 @@ exports[`Menu renders correctly 1`] = `
       class="navigation"
     >
       <h2>
-        PROJECTS
+        Projects
       </h2>
       <ul>
         <li

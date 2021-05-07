@@ -1,0 +1,13 @@
+@import './variables';
+
+@mixin transition($duration, $property: all, $timing-fn: ease-in-out) {
+  -webkit-transition: $property 0.3s $timing-fn;
+  -o-transition: $property 0.3s $timing-fn;
+  transition: $property 0.3s $timing-fn;
+}
+
+@mixin for-phone {
+  @media (min-width: $phone-breakpoint) {
+    @content;
+  }
+}
