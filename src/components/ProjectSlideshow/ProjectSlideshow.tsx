@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import ReactMarkdown from 'react-markdown'
 import { Project } from '../../lib/projects'
 import { useProject } from '../../lib/useProject'
 import Photo from '../Photo/Photo'
@@ -52,22 +53,33 @@ const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
   }
 
   return (
-    <div
-      className={styles.slideshow}
-      onTouchStart={(e) => touchStartHandler(e)}
-      onTouchMove={(e) => touchMoveHandler(e)}
-    >
-      <div data-testid="left-side" className={styles.previous} onClick={() => previous()} />
-      <div data-testid="right-side" className={styles.next} onClick={() => next()} />
-      {project?.photos.map((photo) => (
-        <Photo
-          className={`${styles.slide} ${photo.key === activeKey ? styles.active : ''}`}
-          key={`${project.slug}--slide-${photo.key}`}
-          photo={photo}
-          alt={`${project?.title} - ${photo.key}`}
-        />
-      ))}
-    </div>
+    <>
+      <div
+        className={styles.slideshow}
+        onTouchStart={(e) => touchStartHandler(e)}
+        onTouchMove={(e) => touchMoveHandler(e)}
+      >
+        <div data-testid="left-side" className={styles.previous} onClick={() => previous()} />
+        <div data-testid="right-side" className={styles.next} onClick={() => next()} />
+        {project?.photos.map((photo) => (
+          <Photo
+            className={`${styles.slide} ${photo.key === activeKey ? styles.active : ''}`}
+            key={`${project.slug}--slide-${photo.key}`}
+            photo={photo}
+            alt={`${project?.title} - ${photo.key}`}
+          />
+        ))}
+      </div>
+      {project?.statement ? (
+        <div className={styles.statement}>
+          <h2>Statement</h2>
+          <div className={styles.text}>
+            <h3>{project.title}</h3>
+            <ReactMarkdown>{project.statement}</ReactMarkdown>
+          </div>
+        </div>
+      ) : null}
+    </>
   )
 }
 

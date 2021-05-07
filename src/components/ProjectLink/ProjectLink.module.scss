@@ -1,9 +1,9 @@
-@import '../../styles/variables';
+@import '../../styles/index';
 
 @mixin hide {
+  @include transition(0.15s);
+
   opacity: 0;
-  transition: all 0.15s;
-  -webkit-transition: all 0.15s;
 }
 
 @mixin show {
@@ -50,7 +50,7 @@
   }
 }
 
-@media (min-width: $phone-breakpoint) {
+@include for-phone {
   .container {
     top: 50%;
     left: 50%;

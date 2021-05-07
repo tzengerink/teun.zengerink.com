@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../styles/index';
 
 .photo {
   width: auto;
@@ -6,7 +6,7 @@
   max-width: 100%;
 }
 
-@media (min-width: $phone-breakpoint) {
+@include for-phone {
   .photo {
     max-width: 70vw;
     max-height: 90vh;

@@ -35,6 +35,30 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
       srcset="/photos/my-first-project/768w/03.jpg 768w, /photos/my-first-project/1280w/03.jpg 1280w"
     />
   </div>
+  <div
+    class="statement"
+  >
+    <h2>
+      Statement
+    </h2>
+    <div
+      class="text"
+    >
+      <h3>
+        My First Project
+      </h3>
+      <p>
+        The 
+        <em>
+          statement
+        </em>
+         for the 
+        <em>
+          project
+        </em>
+      </p>
+    </div>
+  </div>
 </div>
 `;
 
