@@ -1,8 +1,6 @@
 @import '../../styles/variables';
 
-.sidebar {
-  background-color: $background-color;
-
+.menu {
   h1 {
     position: fixed;
     z-index: 4;
@@ -17,7 +15,7 @@
   left: 0;
   bottom: 0;
   z-index: 3;
-  padding: 80px $sidebar-padding $outer-margin $sidebar-padding;
+  padding: 60px $outer-margin $outer-margin $outer-margin;
   width: 100%;
   visibility: hidden;
   opacity: 0;
@@ -75,7 +73,6 @@
     float: left;
     width: 28px;
     height: 28px;
-    margin: 0 8px 0 0;
     opacity: 0.7;
 
     &:hover {
@@ -112,13 +109,48 @@
 
 @media (min-width: $phone-breakpoint) {
   .navigation {
-    width: $sidebar-width - (2 * $sidebar-padding);
+    position: fixed;
+    right: $outer-margin;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    padding: 0;
+    text-align: right;
     opacity: 1;
     visibility: visible;
     transform: none;
+    background-color: transparent;
+
+    h2 {
+      margin-top: $outer-margin;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+
+    ul {
+      display: none;
+      padding-top: 14px;
+
+      &:hover {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    h2:hover + ul {
+      display: block;
+      cursor: pointer;
+    }
   }
 
   .hamburger {
     display: none;
+  }
+
+  .socials {
+    position: fixed;
+    left: auto;
+    bottom: $outer-margin;
+    right: $outer-margin;
   }
 }

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Project } from '../../lib/projects'
-import styles from './Sidebar.module.scss'
+import styles from './Menu.module.scss'
 
 interface SocialAccount {
   name: string
@@ -10,7 +10,7 @@ interface SocialAccount {
   image: string
 }
 
-interface SidebarProps {
+interface MenuProps {
   projects: Project[]
   pageTitle: string
 }
@@ -68,17 +68,17 @@ const Socials: React.FC<SocialsProps> = ({ accounts }) => (
   </span>
 )
 
-const Sidebar: React.FC<SidebarProps> = ({ pageTitle, projects }): React.ReactElement => {
+const Menu: React.FC<MenuProps> = ({ pageTitle, projects }): React.ReactElement => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <aside data-testid="sidebar" className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+    <aside data-testid="menu" className={`${styles.menu}${isOpen ? ` ${styles.open}` : ''}`}>
       <a href="/">
         <h1>{pageTitle}</h1>
       </a>
       <Hamburger onClick={() => setIsOpen(!isOpen)} />
       <nav className={styles.navigation}>
-        <h2>Work</h2>
+        <h2>Projects</h2>
         <ul>
           {projects?.map((project) => (
             <MenuItem key={project.slug} project={project} onClick={() => setIsOpen(false)} />
@@ -90,4 +90,4 @@ const Sidebar: React.FC<SidebarProps> = ({ pageTitle, projects }): React.ReactEl
   )
 }
 
-export default Sidebar
+export default Menu

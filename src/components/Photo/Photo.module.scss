@@ -1,6 +1,14 @@
+@import '../../styles/variables.scss';
+
 .photo {
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: 94vh;
+}
+
+@media (min-width: $phone-breakpoint) {
+  .photo {
+    max-width: 70vw;
+    max-height: 90vh;
+  }
 }

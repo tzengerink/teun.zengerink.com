@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sidebar renders correctly 1`] = `
+exports[`Menu renders correctly 1`] = `
 <div>
   <aside
-    class="sidebar "
-    data-testid="sidebar"
+    class="menu"
+    data-testid="menu"
   >
     <a
       href="/"
@@ -31,7 +31,7 @@ exports[`Sidebar renders correctly 1`] = `
       class="navigation"
     >
       <h2>
-        Work
+        PROJECTS
       </h2>
       <ul>
         <li

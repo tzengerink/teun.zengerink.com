@@ -2,16 +2,16 @@
 
 .main {
   position: relative;
-  margin: 100px $outer-margin $outer-margin $outer-margin;
+  margin: 75px $outer-margin $outer-margin $outer-margin;
 }
 
 @media (min-width: $phone-breakpoint) {
   .main {
     position: absolute;
-    top: 0;
+    top: $outer-margin;
     right: $outer-margin;
-    bottom: 0;
-    left: $sidebar-width;
+    bottom: $outer-margin;
+    left: $outer-margin;
     margin: 0;
   }
 }

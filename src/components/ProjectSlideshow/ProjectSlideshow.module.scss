@@ -35,13 +35,7 @@
   display: inline-block;
 }
 
-@media (min-width: $phone-breakpoint) and (max-width: $tablet-portrait-breakpoint) {
-  .slideshow {
-    margin-top: $outer-margin;
-  }
-}
-
-@media (min-width: $tablet-portrait-breakpoint + 1) {
+@media (min-width: $phone-breakpoint) {
   .slideshow {
     top: 50%;
     left: 50%;

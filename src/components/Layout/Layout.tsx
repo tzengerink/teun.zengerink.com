@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 import { Project } from '../../lib/projects'
 import Loader from '../Loader/Loader'
-import Sidebar from '../Sidebar/Sidebar'
+import Menu from '../Menu/Menu'
 import styles from './Layout.module.scss'
 
 const TITLE_ROOT = 'Teun Zengerink'
@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ title, projects, children }) => {
           rel="stylesheet"
         ></link>
       </Head>
-      <Sidebar pageTitle={TITLE_ROOT} projects={projects} />
+      <Menu pageTitle={TITLE_ROOT} projects={projects} />
       <main className={styles.main}>{projects?.length ? children : <Loader />}</main>
     </div>
   )

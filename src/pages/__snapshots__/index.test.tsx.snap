@@ -4,8 +4,8 @@ exports[`Home renders correctly 1`] = `
 <div>
   <div>
     <aside
-      class="sidebar "
-      data-testid="sidebar"
+      class="menu"
+      data-testid="menu"
     >
       <a
         href="/"
@@ -32,7 +32,7 @@ exports[`Home renders correctly 1`] = `
         class="navigation"
       >
         <h2>
-          Work
+          PROJECTS
         </h2>
         <ul>
           <li
