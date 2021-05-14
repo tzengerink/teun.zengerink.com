@@ -2,16 +2,16 @@
 
 .main {
   position: relative;
-  margin: 75px $outer-margin $outer-margin $outer-margin;
+  margin: 75px $margin $margin $margin;
 }
 
-@include for-phone {
+@include from-tablet-portrait {
   .main {
     position: absolute;
-    top: $outer-margin;
-    right: $outer-margin;
-    bottom: $outer-margin;
-    left: $outer-margin;
+    top: $margin;
+    right: $margin;
+    bottom: $margin;
+    left: $margin;
     margin: 0;
   }
 }

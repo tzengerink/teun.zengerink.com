@@ -6,7 +6,7 @@
   transition: $property 0.3s $timing-fn;
 }
 
-@mixin for-phone {
+@mixin from-tablet-portrait {
   @media (min-width: $phone-breakpoint) {
     @content;
   }
