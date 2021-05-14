@@ -50,7 +50,7 @@
   }
 }
 
-@include for-phone {
+@include from-tablet-portrait {
   .container {
     top: 50%;
     left: 50%;

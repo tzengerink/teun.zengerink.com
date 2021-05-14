@@ -4,9 +4,9 @@
   h1 {
     position: fixed;
     z-index: 4;
-    top: $outer-margin;
-    left: $outer-margin;
-    padding-top: 8px;
+    top: $margin;
+    left: $margin;
+    padding-top: 4px;
   }
 }
 
@@ -15,24 +15,25 @@
 
   position: fixed;
   top: 0;
-  left: 0;
+  left: $margin-small;
   bottom: 0;
   transform: translateY(-50px);
   visibility: hidden;
   opacity: 0;
   z-index: 3;
-  padding: 60px $outer-margin $outer-margin $outer-margin;
+  padding: 60px $margin $margin $margin;
   width: 100%;
   background: $background-color-transparent;
 
   h2 {
     margin-top: 30px;
     margin-bottom: 10px;
+    cursor: default;
   }
 
   ul {
     list-style: none;
-    margin: 0 0 0 (-1 * $outer-margin);
+    padding: 0;
   }
 
   li a {
@@ -44,8 +45,8 @@
   display: block;
   z-index: 4;
   position: fixed;
-  top: $outer-margin;
-  right: $outer-margin;
+  top: $margin;
+  right: $margin;
   cursor: pointer;
 }
 
@@ -53,18 +54,18 @@
   @include transition(0.3s);
 
   display: block;
-  width: 30px;
-  height: 4px;
-  margin: 5px auto;
+  width: 24px;
+  height: 3px;
+  margin: 4px auto;
   background-color: $text-color;
 }
 
 .socials {
   position: absolute;
-  right: $outer-margin;
-  padding-right: $outer-margin;
-  margin-right: $outer-margin;
-  bottom: $outer-margin;
+  right: $margin;
+  padding-right: $margin;
+  margin-right: $margin;
+  bottom: $margin;
 
   a {
     text-decoration: none;
@@ -90,10 +91,10 @@
   }
 
   .hamburger .line:nth-child(1) {
-    -webkit-transform: translateY(11px) rotate(45deg);
-    -ms-transform: translateY(11px) rotate(45deg);
-    -o-transform: translateY(11px) rotate(45deg);
-    transform: translateY(11px) rotate(45deg);
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    -o-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
 
   .hamburger .line:nth-child(2) {
@@ -101,14 +102,14 @@
   }
 
   .hamburger .line:nth-child(3) {
-    -webkit-transform: translateY(-7px) rotate(-45deg);
-    -ms-transform: translateY(-7px) rotate(-45deg);
-    -o-transform: translateY(-7px) rotate(-45deg);
-    transform: translateY(-7px) rotate(-45deg);
+    -webkit-transform: translateY(-6px) rotate(-45deg);
+    -ms-transform: translateY(-6px) rotate(-45deg);
+    -o-transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
   }
 }
 
-@include for-phone {
+@include from-tablet-portrait {
   .menu {
     h1 {
       padding-top: 0;
@@ -119,7 +120,7 @@
     position: fixed;
     opacity: 1;
     visibility: visible;
-    right: $outer-margin;
+    right: $margin;
     bottom: auto;
     left: auto;
     transform: none;
@@ -128,15 +129,16 @@
     text-align: right;
 
     h2 {
-      margin-top: $outer-margin;
+      margin-top: $margin;
       margin-bottom: 0;
       text-transform: uppercase;
     }
 
     ul {
       display: none;
-      padding-top: $outer-margin;
-      padding-bottom: $outer-margin;
+      margin-top: 0;
+      padding-top: $margin;
+      padding-bottom: $margin;
 
       &:hover {
         display: block;
@@ -155,8 +157,8 @@
   .socials {
     position: fixed;
     left: auto;
-    bottom: $outer-margin;
-    right: $outer-margin;
+    bottom: $margin;
+    right: $margin;
     padding-right: 0;
     margin-right: 0;
   }

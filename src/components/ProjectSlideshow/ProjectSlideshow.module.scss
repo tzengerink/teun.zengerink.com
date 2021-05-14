@@ -46,8 +46,8 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    padding: $outer-margin;
-    margin-bottom: $outer-margin;
+    padding: $margin;
+    margin-bottom: $margin;
     font-size: 0.9em;
     background-color: $background-color-transparent;
     z-index: 1;
@@ -55,12 +55,13 @@
 
   h2 {
     position: fixed;
-    bottom: $outer-margin;
-    left: $outer-margin;
+    bottom: $margin;
+    left: $margin;
     margin-bottom: 0;
     text-transform: uppercase;
     font-size: 0.7em;
     z-index: 2;
+    cursor: default;
 
     &:hover {
       display: block;
@@ -76,7 +77,7 @@
   }
 }
 
-@include for-phone {
+@include from-tablet-portrait {
   .slideshow {
     top: 50%;
     left: 50%;
@@ -87,9 +88,9 @@
     display: block;
 
     .text {
-      left: $outer-margin;
-      bottom: $outer-margin;
-      padding: $outer-margin $outer-margin $outer-margin 0;
+      left: $margin;
+      bottom: $margin;
+      padding: $margin $margin $margin 0;
       margin-bottom: 0;
       width: 500px;
     }

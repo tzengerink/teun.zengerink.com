@@ -6,7 +6,7 @@
   max-width: 100%;
 }
 
-@include for-phone {
+@include from-tablet-portrait {
   .photo {
     max-width: 70vw;
     max-height: 90vh;
