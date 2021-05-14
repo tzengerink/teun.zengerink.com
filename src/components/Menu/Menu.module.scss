@@ -12,12 +12,12 @@
 
 .navigation {
   @include transition(0.1s);
+  @include transform(translateY(-50px));
 
   position: fixed;
   top: 0;
   left: $margin-small;
   bottom: 0;
-  transform: translateY(-50px);
   visibility: hidden;
   opacity: 0;
   z-index: 3;
@@ -85,16 +85,14 @@
 
 .open {
   .navigation {
+    @include transform(none);
+
     visibility: visible;
     opacity: 1;
-    transform: none;
   }
 
   .hamburger .line:nth-child(1) {
-    -webkit-transform: translateY(8px) rotate(45deg);
-    -ms-transform: translateY(8px) rotate(45deg);
-    -o-transform: translateY(8px) rotate(45deg);
-    transform: translateY(8px) rotate(45deg);
+    @include transform(translateY(8px) rotate(45deg));
   }
 
   .hamburger .line:nth-child(2) {
@@ -102,10 +100,7 @@
   }
 
   .hamburger .line:nth-child(3) {
-    -webkit-transform: translateY(-6px) rotate(-45deg);
-    -ms-transform: translateY(-6px) rotate(-45deg);
-    -o-transform: translateY(-6px) rotate(-45deg);
-    transform: translateY(-6px) rotate(-45deg);
+    @include transform(translateY(-6px) rotate(-45deg));
   }
 }
 
@@ -117,13 +112,14 @@
   }
 
   .navigation {
+    @include transform(none);
+
     position: fixed;
     opacity: 1;
     visibility: visible;
     right: $margin;
     bottom: auto;
     left: auto;
-    transform: none;
     width: auto;
     padding: 0;
     text-align: right;

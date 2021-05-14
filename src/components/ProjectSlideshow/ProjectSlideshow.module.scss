@@ -1,8 +1,7 @@
 @import '../../styles/index';
 
 .slideshow {
-  position: relative;
-  display: inline-block;
+  position: absolute;
 }
 
 .slide {
@@ -38,6 +37,7 @@
 .statement {
   .text {
     @include transition(0.3s);
+    @include transform(translateY(20px));
 
     position: fixed;
     left: 0;
@@ -45,7 +45,6 @@
     right: 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
     padding: $margin;
     margin-bottom: $margin;
     font-size: 0.9em;
@@ -68,10 +67,11 @@
     }
 
     &:hover + .text {
+      @include transform(translateY(0px));
+
       display: block;
       opacity: 1;
       visibility: visible;
-      transform: translateY(0px);
       cursor: pointer;
     }
   }
@@ -79,9 +79,10 @@
 
 @include from-tablet-portrait {
   .slideshow {
+    @include transform(translate(-50%, -50%));
+
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .statement {
