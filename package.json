@@ -31,7 +31,7 @@
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
-    "@testing-library/react": "^11.2.6",
+    "@testing-library/react": "^11.2.7",
     "@types/image-size": "^0.8.0",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.3.0",
