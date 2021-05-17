@@ -36,8 +36,14 @@
     padding: 0;
   }
 
-  li a {
-    font-size: 0.8em;
+  li {
+    a {
+      font-size: 0.8em;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
   }
 }
 

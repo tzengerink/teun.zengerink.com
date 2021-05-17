@@ -6,8 +6,7 @@ import { Props } from '../../lib/static'
 
 const Work: React.FC<Props> = ({ projects }): React.ReactElement => {
   const router = useRouter()
-  const slug = router?.query?.slug?.length ? router.query.slug[0] : ''
-  const project = projects?.find((project) => project.slug === slug)
+  const project = projects?.find((project) => router.asPath.includes(project.slug))
 
   return (
     <Layout title={project?.title} projects={projects}>

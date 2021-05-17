@@ -1,14 +1,25 @@
 import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
-import projects from '../../__mocks__/projects'
+import mockProjects from '../../__mocks__/projects'
 import Menu from './Menu'
 
-const defaultProps = { pageTitle: 'My Homepage', projects }
+const mockRouter = jest.fn(() => ({ asPath: '/' }))
+jest.mock('next/router', () => ({ useRouter: () => mockRouter() }))
+
+const defaultProps = { pageTitle: 'My Homepage', projects: mockProjects }
+
+beforeEach(jest.clearAllMocks)
 
 describe('Menu', () => {
   const renderComponent = (props = defaultProps) => render(<Menu {...props} />)
 
-  it('renders correctly', () => {
+  it('renders correctly when on homepage', () => {
+    const { container } = renderComponent()
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders correctly when on a project page', () => {
+    mockRouter.mockImplementation(() => ({ asPath: `${mockProjects[1].slug}` }))
     const { container } = renderComponent()
     expect(container).toMatchSnapshot()
   })

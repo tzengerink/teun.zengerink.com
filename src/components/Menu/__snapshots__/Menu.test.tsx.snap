@@ -1,6 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Menu renders correctly 1`] = `
+exports[`Menu renders correctly when on a project page 1`] = `
+<div>
+  <aside
+    class="menu"
+    data-testid="menu"
+  >
+    <a
+      href="/"
+    >
+      <h1>
+        My Homepage
+      </h1>
+    </a>
+    <div
+      class="hamburger"
+      data-testid="hamburger"
+    >
+      <span
+        class="line"
+      />
+      <span
+        class="line"
+      />
+      <span
+        class="line"
+      />
+    </div>
+    <nav
+      class="navigation"
+    >
+      <h2>
+        Projects
+      </h2>
+      <ul>
+        <li
+          class=""
+        >
+          <a
+            href="/work/my-first-project/01"
+          >
+            My First Project
+          </a>
+        </li>
+        <li
+          class="active"
+        >
+          <a
+            href="/work/no-statement/01"
+          >
+            Project without a statement
+          </a>
+        </li>
+      </ul>
+      <span
+        class="socials"
+      >
+        <a
+          href="https://instagram.com/t.zengerink/"
+        >
+          <img
+            alt="Instagram"
+            src="/img/instagram.jpg"
+          />
+        </a>
+      </span>
+    </nav>
+  </aside>
+</div>
+`;
+
+exports[`Menu renders correctly when on homepage 1`] = `
 <div>
   <aside
     class="menu"

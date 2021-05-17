@@ -14,11 +14,6 @@ interface ProjectSlideshowProps {
   project: Project
 }
 
-const pad = (str: string, length: number): string => {
-  const output = str?.toString() ?? ''
-  return output.length < length ? pad('0' + output, length) : output
-}
-
 const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
   let touchStartX: number
   const { activeKey, previous, next } = useProject(project)
@@ -63,7 +58,7 @@ const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
         <div data-testid="right-side" className={styles.next} onClick={() => next()} />
         {project?.photos.map((photo) => (
           <Photo
-            className={`${styles.slide} ${photo.key === activeKey ? styles.active : ''}`}
+            className={`${styles.slide}${photo.key === activeKey ? ` ${styles.active}` : ''}`}
             key={`${project.slug}--slide-${photo.key}`}
             photo={photo}
             alt={`${project?.title} - ${photo.key}`}

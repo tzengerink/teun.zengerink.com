@@ -9,7 +9,7 @@ const mockPrevious = jest.fn()
 
 jest.mock('../../lib/useProject', () => ({
   useProject: () => ({
-    activeKey: '--',
+    activeKey: mockProject.photos[2].key,
     next: () => mockNext(),
     previous: () => mockPrevious(),
   }),
