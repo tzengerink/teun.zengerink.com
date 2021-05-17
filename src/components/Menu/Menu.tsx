@@ -47,7 +47,7 @@ const Hamburger: React.FC<ClickableProps> = ({ onClick }) => {
 
 const MenuItem: React.FC<MenuItemProps> = ({ project, onClick }) => {
   const router = useRouter()
-  const isActive = router?.query?.slug ? router.query.slug[0] === project.slug : false
+  const isActive = router.asPath.includes(project.slug)
 
   return (
     <li key={project.slug} className={isActive ? styles.active : ''}>
