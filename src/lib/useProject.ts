@@ -14,7 +14,7 @@ export const useProject = (project: Project): UseProject => {
 
   const router = useRouter()
 
-  const activeKey = router?.query?.slug ? router.query?.slug[1] : undefined
+  const activeKey = router?.query?.slug?.length > 1 ? router.query?.slug[1] : project.photos[0].key
   const slideIndex = project.photos.findIndex((photo) => photo.key === activeKey)
   const firstPhoto = project.photos[0]
   const lastPhoto = [...project.photos].pop()
