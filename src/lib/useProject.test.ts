@@ -27,15 +27,15 @@ beforeEach(() => {
 })
 
 describe('activeKey', () => {
-  test('it returns `undefined` when no photo is active', () => {
+  test('it returns first photo key when no photo is active', () => {
     const { activeKey } = useProject(projects[0])
-    expect(activeKey).toBeUndefined()
+    expect(activeKey).toBe(projects[0].photos[0].key)
   })
 
   test('it returns the photo key', () => {
-    mockRouter.query = { slug: [projects[0].slug, projects[0].photos[0].key] }
+    mockRouter.query = { slug: [projects[0].slug, projects[0].photos[1].key] }
     const { activeKey } = useProject(projects[0])
-    expect(activeKey).toBe(projects[0].photos[0].key)
+    expect(activeKey).toBe(projects[0].photos[1].key)
   })
 })
 
