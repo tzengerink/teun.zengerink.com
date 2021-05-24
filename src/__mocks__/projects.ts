@@ -67,6 +67,27 @@ const projects: Project[] = [
       },
     ],
   },
+  {
+    title: 'Archived project',
+    slug: 'archived-project',
+    isArchived: true,
+    photos: [
+      {
+        key: '01',
+        exports: [
+          { width: 768, url: `/photos/archived-project/768w/01.jpg` },
+          { width: 1280, url: `/photos/archived-project/1280w/01.jpg` },
+        ],
+      },
+      {
+        key: '02',
+        exports: [
+          { width: 768, url: `/photos/archived-project/768w/02.jpg` },
+          { width: 1280, url: `/photos/archived-project/1280w/02.jpg` },
+        ],
+      },
+    ],
+  },
 ]
 
 export default projects

@@ -16,6 +16,7 @@ interface ConfigCaption {
 interface ConfigItem {
   title: string
   statement?: string
+  isArchived?: boolean
   captions?: ConfigCaption[]
 }
 
@@ -34,6 +35,7 @@ export interface Project {
   slug: string
   photos: Photo[]
   statement?: string
+  isArchived?: boolean
 }
 
 export const MAX_WIDTHS = [Width.Mobile, Width.Desktop]
@@ -62,6 +64,7 @@ const generateProjects = (item: ConfigItem[]): Project[] => {
       slug,
       title: project.title,
       statement: project.statement ?? '',
+      isArchived: project.isArchived ?? false,
       photos: generatePhotos(slug, project.captions),
     }
   })

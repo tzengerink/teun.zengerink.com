@@ -12,6 +12,10 @@ const mockConfig = [
     title: 'The second title',
     statement: 'The statement',
   },
+  {
+    title: 'The archived title',
+    isArchived: true,
+  },
 ]
 
 const mockReaddirSync = jest.fn(() => mockPhotos)
@@ -35,6 +39,7 @@ describe('getProjects', () => {
         title: item.title,
         slug: slugify(item.title.toLowerCase()),
         statement: item.statement ?? '',
+        isArchived: item.isArchived ?? false,
         photos: mockPhotos.map((photo, index) => ({
           key: `${index}`,
           caption: (item.captions ?? []).find((caption) => caption.key === `${index}`)?.caption ?? '',
