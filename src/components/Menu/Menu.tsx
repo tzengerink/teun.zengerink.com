@@ -71,6 +71,8 @@ const Socials: React.FC<SocialsProps> = ({ accounts }) => (
 const Menu: React.FC<MenuProps> = ({ pageTitle, projects }): React.ReactElement => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const filteredProjects = projects.filter((project) => !project.isArchived)
+
   return (
     <aside data-testid="menu" className={`${styles.menu}${isOpen ? ` ${styles.open}` : ''}`}>
       <a href="/">
@@ -80,7 +82,7 @@ const Menu: React.FC<MenuProps> = ({ pageTitle, projects }): React.ReactElement 
       <nav className={styles.navigation}>
         <h2>Projects</h2>
         <ul>
-          {projects?.map((project) => (
+          {filteredProjects.map((project) => (
             <MenuItem key={project.slug} project={project} onClick={() => setIsOpen(false)} />
           ))}
         </ul>

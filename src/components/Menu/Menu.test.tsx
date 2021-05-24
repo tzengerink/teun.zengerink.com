@@ -24,6 +24,10 @@ describe('Menu', () => {
     expect(container).toMatchSnapshot()
   })
 
+  it('filters out archived projects', () => {
+    // TODO
+  })
+
   it('toggles the menu when the hamburger is clicked', () => {
     const { getByTestId } = renderComponent()
     const menu = getByTestId('menu')
