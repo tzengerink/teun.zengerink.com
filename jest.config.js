@@ -11,4 +11,8 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   transform: { '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest' },
   transformIgnorePatterns: ['/node_modules/', '^.+\\.module\\.(css|sass|scss)$'],
+
+  // This solves an issue created by migrating to v27 of Jest. This change broke @testing-library/react its render 
+  // method during import. For details, see: https://jestjs.io/blog/2021/05/25/jest-27#flipping-defaults
+  timers: 'legacy',
 }
