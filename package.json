@@ -11,8 +11,7 @@
     "lint": "yarn lint:ts && yarn lint:types",
     "postinstall": "husky install",
     "start": "next start",
-    "test:ci": "yarn lint && jest --ci",
-    "test:cov": "jest --ci --collectCoverage",
+    "test:ci": "yarn lint && jest --ci --collectCoverage",
     "test:smoke": "export $(grep -v '^#' .env | xargs) && curl -v --silent $NEXT_PUBLIC_PROTO://$NEXT_PUBLIC_HOST/ 2>&1 | grep -q $(git rev-parse HEAD)",
     "test": "jest --watch"
   },
