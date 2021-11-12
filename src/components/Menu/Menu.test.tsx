@@ -24,9 +24,15 @@ describe('Menu', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('filters out archived projects', () => {
-    // TODO
-  })
+  it.each(mockProjects.map(({ title, isArchived }) => ({ title, isArchived })))(
+    'only renders menu item for $title if not archived',
+    ({ title, isArchived }) => {
+      const { queryByText } = renderComponent()
+      const anchor = queryByText(title)
+      if (isArchived) return expect(anchor).toBe(null)
+      expect(anchor).toBeInstanceOf(HTMLAnchorElement)
+    },
+  )
 
   it('toggles the menu when the hamburger is clicked', () => {
     const { getByTestId } = renderComponent()
