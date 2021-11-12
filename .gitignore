@@ -1,4 +1,5 @@
 # next.js build output
+tsconfig.tsbuildinfo
 .next
 out/
 
