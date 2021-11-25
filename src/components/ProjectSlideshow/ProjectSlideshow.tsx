@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import ReactMarkdown from 'react-markdown'
 import { Project } from '../../lib/projects'
 import { useProject } from '../../lib/useProject'
 import Photo from '../Photo/Photo'
+import Markdown from '../Markdown/Markdown'
 import styles from './ProjectSlideshow.module.scss'
 
 enum Key {
@@ -70,7 +70,7 @@ const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
           <h2>Statement</h2>
           <div className={styles.text}>
             <h3>{project.title}</h3>
-            <ReactMarkdown>{project.statement}</ReactMarkdown>
+            <Markdown>{project.statement}</Markdown>
           </div>
         </div>
       ) : null}
