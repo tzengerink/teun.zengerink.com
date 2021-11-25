@@ -47,16 +47,20 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
       <h3>
         My First Project
       </h3>
-      <p>
-        The 
-        <em>
-          statement
-        </em>
-         for the 
-        <em>
-          project
-        </em>
-      </p>
+      <div>
+        <p>
+          The 
+          <em>
+            statement
+          </em>
+           for the 
+          <em>
+            project
+          </em>
+        </p>
+        
+
+      </div>
     </div>
   </div>
 </div>

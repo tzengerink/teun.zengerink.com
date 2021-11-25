@@ -1,3 +1,4 @@
+import React from 'react'
 import { Photo as PhotoInterface, Width, MAX_WIDTHS } from '../../lib/projects'
 
 import styles from './Photo.module.scss'

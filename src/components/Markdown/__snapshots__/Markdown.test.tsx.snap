@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markdown renders correctly 1`] = `
+<div>
+  <div>
+    <p>
+      The text 
+      <strong>
+        that
+      </strong>
+       contains 
+      <em>
+        some
+      </em>
+       markdown.
+    </p>
+    
+
+    <p>
+      It also supports 
+      <a
+        href="http://teun.zengerink.com/"
+      >
+        multiple
+      </a>
+       paragraphs.
+    </p>
+    
+
+  </div>
+</div>
+`;
