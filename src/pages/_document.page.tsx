@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 class Doc extends Document {
   render(): React.ReactElement {
     return (
-      <Html lang="en">
+      <Html lang="en" className="font-mono font-light text-grey/90">
         {process.env.NEXT_PUBLIC_TRACKING_ID ? (
           <Head>
             <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_TRACKING_ID}`} />
@@ -24,7 +24,7 @@ class Doc extends Document {
         ) : (
           <Head />
         )}
-        <body>
+        <body className="bg-white m-0">
           <Main />
           <NextScript />
         </body>

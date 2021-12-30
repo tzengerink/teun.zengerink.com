@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation renders correctly when on a project page 1`] = `
+<div>
+  <aside>
+    <a
+      href="/"
+    >
+      <h1
+        class="fixed z-40 top-[6px] left-md pt-4 font-medium uppercase hover:underline"
+      >
+        My Homepage
+      </h1>
+    </a>
+    <div
+      class="fixed block z-40 top-md right-md cursor-pointer"
+      data-testid="hamburger"
+    >
+      <span
+        class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 md:hidden"
+      />
+      <span
+        class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 md:hidden"
+      />
+      <span
+        class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 md:hidden"
+      />
+    </div>
+    <nav
+      class="group fixed z-30 inset-y-0 left-xs w-full p-md pt-xl bg-transparant-white ease-linear duration-100 translate-y-[-20px] opacity-0 invisible md:visible md:opacity-100 md:top-md md:right-md md:bottom-auto md:left-auto md:w-auto md:p-0 md:pt-md md:text-right"
+      data-testid="menu"
+    >
+      <h2
+        class="my-xs uppercase text-xs text-grey/80 cursor-default"
+      >
+        Projects
+      </h2>
+      <ul
+        class="leading-5 md:ease-linear md:duration-100 md:translate-y-[-20px] md:invisible md:group-hover:visible md:group-hover:translate-y-0"
+      >
+        <li
+          class="text-xs"
+        >
+          <a
+            class="hover:underline"
+            href="/work/my-first-project/01"
+          >
+            My First Project
+          </a>
+        </li>
+        <li
+          class="text-xs underline"
+        >
+          <a
+            class="hover:underline"
+            href="/work/no-statement/01"
+          >
+            Project without a statement
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a
+      class="absolute z-20 bottom-md right-md text-xs text-grey/80 uppercase hover:underline"
+      href="https://instagram.com/t.zengerink"
+    >
+      Instagram
+    </a>
+  </aside>
+</div>
+`;
+
+exports[`Navigation renders correctly when on homepage 1`] = `
+<div>
+  <aside>
+    <a
+      href="/"
+    >
+      <h1
+        class="fixed z-40 top-[6px] left-md pt-4 font-medium uppercase hover:underline"
+      >
+        My Homepage
+      </h1>
+    </a>
+    <div
+      class="fixed block z-40 top-md right-md cursor-pointer"
+      data-testid="hamburger"
+    >
+      <span
+        class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 md:hidden"
+      />
+      <span
+        class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 md:hidden"
+      />
+      <span
+        class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 md:hidden"
+      />
+    </div>
+    <nav
+      class="group fixed z-30 inset-y-0 left-xs w-full p-md pt-xl bg-transparant-white ease-linear duration-100 translate-y-[-20px] opacity-0 invisible md:visible md:opacity-100 md:top-md md:right-md md:bottom-auto md:left-auto md:w-auto md:p-0 md:pt-md md:text-right"
+      data-testid="menu"
+    >
+      <h2
+        class="my-xs uppercase text-xs text-grey/80 cursor-default"
+      >
+        Projects
+      </h2>
+      <ul
+        class="leading-5 md:ease-linear md:duration-100 md:translate-y-[-20px] md:invisible md:group-hover:visible md:group-hover:translate-y-0"
+      >
+        <li
+          class="text-xs"
+        >
+          <a
+            class="hover:underline"
+            href="/work/my-first-project/01"
+          >
+            My First Project
+          </a>
+        </li>
+        <li
+          class="text-xs"
+        >
+          <a
+            class="hover:underline"
+            href="/work/no-statement/01"
+          >
+            Project without a statement
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a
+      class="absolute z-20 bottom-md right-md text-xs text-grey/80 uppercase hover:underline"
+      href="https://instagram.com/t.zengerink"
+    >
+      Instagram
+    </a>
+  </aside>
+</div>
+`;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hamburger renders correctly when closed 1`] = `
+<div>
+  <div
+    class="fixed block z-40 top-md right-md cursor-pointer"
+    data-testid="hamburger"
+  >
+    <span
+      class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 md:hidden"
+    />
+    <span
+      class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 md:hidden"
+    />
+    <span
+      class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 md:hidden"
+    />
+  </div>
+</div>
+`;
+
+exports[`Hamburger renders correctly when open 1`] = `
+<div>
+  <div
+    class="fixed block z-40 top-md right-md cursor-pointer"
+    data-testid="hamburger"
+  >
+    <span
+      class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 translate-y-[8px] rotate-45 md:hidden"
+    />
+    <span
+      class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 opacity-0 md:hidden"
+    />
+    <span
+      class="block w-[24px] h-[3px] mx-auto my-[4px] bg-grey ease-linear duration-100 translate-y-[-6px] rotate-[-45deg] md:hidden"
+    />
+  </div>
+</div>
+`;

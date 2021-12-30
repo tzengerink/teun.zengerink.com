@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
 import mockProjects from '../../__mocks__/projects'
-import Menu from './Menu'
+import Navigation from './Navigation'
 
 const mockRouter = jest.fn(() => ({ asPath: '/' }))
 jest.mock('next/router', () => ({ useRouter: () => mockRouter() }))
@@ -10,8 +10,8 @@ const defaultProps = { pageTitle: 'My Homepage', projects: mockProjects }
 
 beforeEach(jest.clearAllMocks)
 
-describe('Menu', () => {
-  const renderComponent = (props = defaultProps) => render(<Menu {...props} />)
+describe('Navigation', () => {
+  const renderComponent = (props = defaultProps) => render(<Navigation {...props} />)
 
   it('renders correctly when on homepage', () => {
     const { container } = renderComponent()
@@ -25,7 +25,7 @@ describe('Menu', () => {
   })
 
   it.each(mockProjects.map(({ title, isArchived }) => ({ title, isArchived })))(
-    'only renders menu item for $title if not archived',
+    'only renders item for $title if not archived',
     ({ title, isArchived }) => {
       const { queryByText } = renderComponent()
       const anchor = queryByText(title)
@@ -38,10 +38,13 @@ describe('Menu', () => {
     const { getByTestId } = renderComponent()
     const menu = getByTestId('menu')
     const hamburger = getByTestId('hamburger')
-    expect(menu.classList.contains('open')).toBe(false)
+    expect(menu.classList.contains('visible')).toBe(false)
+    expect(menu.classList.contains('invisible')).toBe(true)
     fireEvent.click(hamburger)
-    expect(menu.classList.contains('open')).toBe(true)
+    expect(menu.classList.contains('visible')).toBe(true)
+    expect(menu.classList.contains('invisible')).toBe(false)
     fireEvent.click(hamburger)
-    expect(menu.classList.contains('open')).toBe(false)
+    expect(menu.classList.contains('visible')).toBe(false)
+    expect(menu.classList.contains('invisible')).toBe(true)
   })
 })
