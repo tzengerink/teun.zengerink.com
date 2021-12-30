@@ -3,13 +3,13 @@ import React from 'react'
 import projects from '../../__mocks__/projects'
 import Layout from './Layout'
 
-jest.mock('../Menu/Menu', () => ({
+jest.mock('../Navigation/Navigation', () => ({
   __esModule: true,
-  default: () => <div>[MENU]</div>,
+  default: () => <div>[NAVIGATION]</div>,
 }))
 
 describe('Layout', () => {
-  it('renders a loader when initializing', () => {
+  it('renders nothing when initializing', () => {
     const { container } = render(<Layout projects={null} />)
     expect(container).toMatchSnapshot()
   })

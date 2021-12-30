@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Statement renders correctly 1`] = `
+<div>
+  <div
+    class="group text-grey/80 select-none"
+  >
+    <h2
+      class="fixed left-md bottom-md z-20 text-xs uppercase cursor-help"
+    >
+      Statement
+    </h2>
+    <div
+      class="fixed left-0 bottom-md z-10 right-0 mb-md p-md bg-transparant-white invisible opacity-0 ease-linear duration-100 translate-y-[50px] group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 md:w-[500px]"
+    >
+      <h3
+        class="mb-sm text-sm"
+      >
+        Hello World!
+      </h3>
+      <div
+        class="space-y-sm text-xs text-justify"
+      >
+        <p>
+          This is a 
+          <em>
+            message
+          </em>
+           for the 
+          <strong>
+            entire world
+          </strong>
+           to see
+        </p>
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+`;

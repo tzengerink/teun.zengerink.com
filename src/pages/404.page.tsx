@@ -6,7 +6,7 @@ const ERROR = 'Page Not Found'
 
 const Error: React.FC<Props> = ({ projects }): React.ReactElement => (
   <Layout title={ERROR} projects={projects}>
-    <h2 className="error">{ERROR}</h2>
+    <h2 className="md:absolute md:inset-20 text-center">{ERROR}</h2>
   </Layout>
 )
 

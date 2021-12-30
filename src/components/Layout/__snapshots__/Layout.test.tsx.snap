@@ -1,18 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Layout renders a loader when initializing 1`] = `
+exports[`Layout renders nothing when initializing 1`] = `
 <div>
   <div>
     <div>
-      [MENU]
+      [NAVIGATION]
     </div>
     <main
-      class="main"
-    >
-      <div
-        class="loader"
-      />
-    </main>
+      class="relative mt-xl mx-md mb-md md:absolute md:m-0 md:inset-0"
+    />
   </div>
 </div>
 `;
@@ -21,10 +17,10 @@ exports[`Layout renders the children when initialized 1`] = `
 <div>
   <div>
     <div>
-      [MENU]
+      [NAVIGATION]
     </div>
     <main
-      class="main"
+      class="relative mt-xl mx-md mb-md md:absolute md:m-0 md:inset-0"
     >
       <div>
         Hello World!

@@ -1,7 +1,6 @@
+import classNames from 'classnames'
 import React from 'react'
-import { Photo as PhotoInterface, Width, MAX_WIDTHS } from '../../lib/projects'
-
-import styles from './Photo.module.scss'
+import { MAX_WIDTHS, Photo as PhotoInterface, Width } from '../../lib/projects'
 
 interface Props {
   className?: string
@@ -20,7 +19,7 @@ const Photo: React.FC<Props> = ({ className, photo, alt }) => {
 
   return (
     <img
-      className={`${styles.photo}${className ? ` ${className}` : ''}`}
+      className={classNames('w-auto', 'h-auto', 'md:max-w-[70vw]', 'md:max-h-[90vh]', { [className]: !!className })}
       alt={alt}
       src={findExport(Width.Desktop).url}
       sizes={`${firstWidths.map((width) => `(max-width: ${width - 1}px) ${width}px`).join(', ')}, ${lastWidth}px`}
