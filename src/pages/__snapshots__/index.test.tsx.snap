@@ -63,7 +63,7 @@ exports[`Home renders correctly 1`] = `
       </nav>
       <a
         class="absolute z-20 bottom-md right-md text-xs text-grey/80 uppercase hover:underline"
-        href="https://instagram.com/t.zengerink"
+        href="https://www.instagram.com/t.zengerink/"
       >
         Instagram
       </a>
