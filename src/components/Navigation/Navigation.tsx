@@ -119,7 +119,7 @@ const Navigation: React.FC<NavigationProps> = ({ pageTitle, projects }): React.R
           'uppercase',
           'hover:underline',
         )}
-        href="https://instagram.com/t.zengerink"
+        href="https://www.instagram.com/t.zengerink/"
       >
         Instagram
       </a>
