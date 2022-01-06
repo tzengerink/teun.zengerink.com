@@ -1,12 +1,10 @@
 import { render } from '@testing-library/react'
 import React from 'react'
+import mockLink from '../../__mocks__/nextLink'
 import projects from '../../__mocks__/projects'
 import ProjectLink from './ProjectLink'
 
-jest.mock('next/link', () => ({
-  __esModule: true,
-  default: ({ href, children }) => <a href={href}>{children}</a>,
-}))
+jest.mock('next/link', () => mockLink)
 
 describe('SinglePhoto', () => {
   it('renders correctly for projects with a statement', () => {

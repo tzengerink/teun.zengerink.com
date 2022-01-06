@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuItem renders correctly 1`] = `
+<div>
+  <li
+    class="text-xs"
+  >
+    <a
+      class="hover:underline"
+      href="/work/my-first-project/01"
+    >
+      My First Project
+    </a>
+  </li>
+</div>
+`;
+
+exports[`MenuItem renders correctly if project is active 1`] = `
+<div>
+  <li
+    class="text-xs underline"
+  >
+    <a
+      class="hover:underline"
+      href="/work/my-first-project/01"
+    >
+      My First Project
+    </a>
+  </li>
+</div>
+`;
