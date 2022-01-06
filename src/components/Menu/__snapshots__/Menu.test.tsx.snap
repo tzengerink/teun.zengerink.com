@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu renders correctly 1`] = `
+<div>
+  <nav
+    class="group fixed z-30 inset-y-0 left-xs w-full p-md pt-xl bg-transparant-white ease-linear duration-100 translate-y-[-20px] opacity-0 invisible md:visible md:opacity-100 md:top-md md:right-md md:bottom-auto md:left-auto md:w-auto md:p-0 md:pt-md md:text-right"
+    data-testid="menu"
+  >
+    <h2
+      class="my-xs uppercase text-xs text-grey/80 cursor-default"
+    >
+      Projects
+    </h2>
+    <ul
+      class="leading-5 md:ease-linear md:duration-100 md:translate-y-[-20px] md:invisible md:group-hover:visible md:group-hover:translate-y-0"
+    >
+      <a>
+        My First Project
+      </a>
+      <a>
+        Project without a statement
+      </a>
+      <a>
+        Archived project
+      </a>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Menu renders correctly when open 1`] = `
+<div>
+  <nav
+    class="group fixed z-30 inset-y-0 left-xs w-full p-md pt-xl bg-transparant-white ease-linear duration-100 translate-y-0 opacity-100 visible md:visible md:opacity-100 md:top-md md:right-md md:bottom-auto md:left-auto md:w-auto md:p-0 md:pt-md md:text-right"
+    data-testid="menu"
+  >
+    <h2
+      class="my-xs uppercase text-xs text-grey/80 cursor-default"
+    >
+      Projects
+    </h2>
+    <ul
+      class="leading-5 md:ease-linear md:duration-100 md:translate-y-[-20px] md:invisible md:group-hover:visible md:group-hover:translate-y-0"
+    >
+      <a>
+        My First Project
+      </a>
+      <a>
+        Project without a statement
+      </a>
+      <a>
+        Archived project
+      </a>
+    </ul>
+  </nav>
+</div>
+`;

@@ -1,0 +1,32 @@
+import { fireEvent, render } from '@testing-library/react'
+import mockProjects from '../../__mocks__/projects'
+import Menu from './Menu'
+
+jest.mock('../MenuItem/MenuItem', () => ({
+  __esModule: true,
+  default: ({ project, onClick }) => <a onClick={onClick}>{project.title}</a>,
+}))
+
+describe('Menu', () => {
+  const onItemClick = jest.fn()
+  const renderComponent = (isOpen = false) =>
+    render(<Menu projects={mockProjects} isOpen={isOpen} onItemClick={onItemClick} />)
+
+  beforeEach(jest.clearAllMocks)
+
+  it('renders correctly', () => {
+    const { container } = renderComponent()
+    expect(container).toMatchSnapshot()
+  })
+
+  it('renders correctly when open', () => {
+    const { container } = renderComponent(true)
+    expect(container).toMatchSnapshot()
+  })
+
+  it('handles clicks on menu items', () => {
+    const { getByText } = renderComponent(true)
+    fireEvent.click(getByText(mockProjects[0].title))
+    expect(onItemClick).toHaveBeenCalled()
+  })
+})

@@ -6,6 +6,21 @@ import Navigation from './Navigation'
 const mockRouter = jest.fn(() => ({ asPath: '/' }))
 jest.mock('next/router', () => ({ useRouter: () => mockRouter() }))
 
+jest.mock('../Menu/Menu', () => ({ projects, isOpen, onItemClick }) => (
+  <button onClick={onItemClick}>
+    <div>{isOpen ? '[Menu open]' : '[Menu closed]'}</div>
+    <ul>
+      {projects.map((project) => (
+        <li key={project.slug}>{project.isArchived ? '[Archived project]' : '[Project]'}</li>
+      ))}
+    </ul>
+  </button>
+))
+
+jest.mock('../Hamburger/Hamburger', () => ({ isOpen, onClick }) => (
+  <button onClick={onClick}>{isOpen ? '[Hamburger open]' : '[Hamburger closed]'}</button>
+))
+
 const defaultProps = { pageTitle: 'My Homepage', projects: mockProjects }
 
 beforeEach(jest.clearAllMocks)
@@ -13,38 +28,31 @@ beforeEach(jest.clearAllMocks)
 describe('Navigation', () => {
   const renderComponent = (props = defaultProps) => render(<Navigation {...props} />)
 
-  it('renders correctly when on homepage', () => {
+  it('renders correctly', () => {
     const { container } = renderComponent()
     expect(container).toMatchSnapshot()
   })
 
-  it('renders correctly when on a project page', () => {
-    mockRouter.mockImplementation(() => ({ asPath: `${mockProjects[1].slug}` }))
-    const { container } = renderComponent()
-    expect(container).toMatchSnapshot()
+  it('filters out archived projects', () => {
+    const { queryByText } = renderComponent()
+    const found = queryByText('[Archived project]')
+    expect(found).toBeNull()
   })
-
-  it.each(mockProjects.map(({ title, isArchived }) => ({ title, isArchived })))(
-    'only renders item for $title if not archived',
-    ({ title, isArchived }) => {
-      const { queryByText } = renderComponent()
-      const anchor = queryByText(title)
-      if (isArchived) return expect(anchor).toBe(null)
-      expect(anchor).toBeInstanceOf(HTMLAnchorElement)
-    },
-  )
 
   it('toggles the menu when the hamburger is clicked', () => {
-    const { getByTestId } = renderComponent()
-    const menu = getByTestId('menu')
-    const hamburger = getByTestId('hamburger')
-    expect(menu.classList.contains('visible')).toBe(false)
-    expect(menu.classList.contains('invisible')).toBe(true)
-    fireEvent.click(hamburger)
-    expect(menu.classList.contains('visible')).toBe(true)
-    expect(menu.classList.contains('invisible')).toBe(false)
-    fireEvent.click(hamburger)
-    expect(menu.classList.contains('visible')).toBe(false)
-    expect(menu.classList.contains('invisible')).toBe(true)
+    const { getByText } = renderComponent()
+    expect(getByText('[Menu closed]')).toBeDefined()
+    fireEvent.click(getByText('[Hamburger closed]'))
+    expect(getByText('[Menu open]')).toBeDefined()
+    fireEvent.click(getByText('[Hamburger open]'))
+    expect(getByText('[Menu closed]')).toBeDefined()
+  })
+
+  it('closes the menu when an item is clicked', () => {
+    const { getByText } = renderComponent()
+    fireEvent.click(getByText('[Hamburger closed]'))
+    expect(getByText('[Menu open]')).toBeDefined()
+    fireEvent.click(getByText('[Menu open]'))
+    expect(getByText('[Menu closed]')).toBeDefined()
   })
 })
