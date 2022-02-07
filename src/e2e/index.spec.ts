@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test'
+import { expect, test } from '@playwright/test'
 import { getActiveProjects, titleDiv, titleRoot } from './helpers'
 
 test.beforeEach(async ({ page }) => {
