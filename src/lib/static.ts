@@ -1,4 +1,4 @@
-import { getProjects, Project } from './projects'
+import { createGetProjects, Project } from './projects'
 
 interface Path {
   params: { slug: string[] }
@@ -7,6 +7,8 @@ interface Path {
 export interface Props {
   projects: Project[]
 }
+
+const getProjects = createGetProjects()
 
 export const getStaticPaths = async (): Promise<{ paths: Path[]; fallback: boolean }> => {
   const projects = await getProjects()

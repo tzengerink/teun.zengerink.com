@@ -70,7 +70,7 @@ const generateProjects = (item: ConfigItem[]): Project[] => {
   })
 }
 
-export const getProjects = async (): Promise<Project[]> => {
+const getProjects = async (): Promise<Project[]> => {
   let projects: Project[] = []
 
   try {
@@ -82,4 +82,13 @@ export const getProjects = async (): Promise<Project[]> => {
   }
 
   return projects
+}
+
+export const createGetProjects = (): (() => Promise<Project[]>) => {
+  let memoizedProjects: Project[] = []
+
+  return async () => {
+    if (!memoizedProjects.length) memoizedProjects = await getProjects()
+    return memoizedProjects
+  }
 }

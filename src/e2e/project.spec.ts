@@ -1,6 +1,6 @@
-import { test, expect, Page } from '@playwright/test'
-import { getProjects, Photo, Project } from '../lib/projects'
-import { getActiveProjects, titleDiv, titleRoot } from './helpers'
+import { expect, Page, test } from '@playwright/test'
+import { Photo, Project } from '../lib/projects'
+import { getActiveProjects, getProjects, titleDiv, titleRoot } from './helpers'
 
 const open = async (page: Page, project: Project = null, photo: Photo = null) => {
   const projects = await getActiveProjects()
