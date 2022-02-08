@@ -1,0 +1,11 @@
+import { Photo, Project } from '../../lib/projects'
+import { Page } from './page'
+
+export class ProjectPage extends Page {
+  async open(project: Project, photo: Photo = null) {
+    const selectedPhoto = photo ? photo : project.photos[0]
+    await this.page.goto(`/work/${project.slug}/${selectedPhoto.key}`)
+    await this.expectUrl(`/work/${project.slug}/${selectedPhoto.key}`)
+    await this.expectTitle(project.title)
+  }
+}
