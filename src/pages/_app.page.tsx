@@ -2,7 +2,7 @@ import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { trackPageView } from '../lib/googleAnalytics'
-import '../styles/globals.scss'
+import '../styles/globals.css'
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
