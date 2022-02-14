@@ -21,9 +21,11 @@ describe('trackPageView', () => {
     expect(window.gtag).toHaveBeenCalledWith('config', trackingId, { page_path: url })
   })
 
-  test('skips tracking when tracking id not set', () => {
+  test('logs to the console when tracking id not set', () => {
+    jest.spyOn(console, 'info').mockImplementationOnce(() => undefined)
     process.env.NEXT_PUBLIC_TRACKING_ID = ''
     trackPageView(url)
+    expect(console.info).toHaveBeenCalled()
     expect(window.gtag).not.toHaveBeenCalled()
   })
 })
