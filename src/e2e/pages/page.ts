@@ -6,24 +6,24 @@ export abstract class Page {
 
   constructor(protected page: PlaywrightPage) {}
 
-  async click(selector: string) {
+  async click(selector: string): Promise<void> {
     await this.page.click(selector)
   }
 
-  async hover(selector: string) {
+  async hover(selector: string): Promise<void> {
     await this.page.hover(selector)
   }
 
-  async expectTitle(title: string = null) {
+  async expectTitle(title: string = null): Promise<void> {
     const expected = title ? `${this.titleRoot} ${this.titleDiv} ${title}` : this.titleRoot
     await expect(this.page).toHaveTitle(expected)
   }
 
-  async expectUrl(url: string | RegExp) {
+  async expectUrl(url: string | RegExp): Promise<void> {
     await expect(this.page).toHaveURL(url)
   }
 
-  async expectVisibility(selector: string, isVisible: boolean) {
+  async expectVisibility(selector: string, isVisible: boolean): Promise<void> {
     await expect(this.page.locator(selector))[isVisible ? 'toBeVisible' : 'toBeHidden']()
   }
 }
