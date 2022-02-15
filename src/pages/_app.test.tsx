@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react'
 import { Router } from 'next/router'
 import React from 'react'
+import { trackPageView } from '../lib/googleAnalytics'
 import App from './_app.page'
 
 describe('App', () => {
@@ -12,10 +13,10 @@ describe('App', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('starts and stops page view tracking', () => {
+  it('registers page view tracking', () => {
     const { unmount } = render(<App Component={Component} router={router} pageProps={{}} />)
-    expect(router.events.on).toHaveBeenCalledWith('routeChangeComplete', expect.any(Function))
+    expect(router.events.on).toHaveBeenCalledWith('routeChangeComplete', trackPageView)
     unmount()
-    expect(router.events.off).toHaveBeenCalledWith('routeChangeComplete', expect.any(Function))
+    expect(router.events.off).toHaveBeenCalledWith('routeChangeComplete', trackPageView)
   })
 })
