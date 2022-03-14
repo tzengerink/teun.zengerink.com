@@ -23,7 +23,7 @@
     "next-build-id": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "sharp": "^0.30.2",
+    "sharp": "^0.30.3",
     "slugify": "^1.6.5"
   },
   "devDependencies": {
