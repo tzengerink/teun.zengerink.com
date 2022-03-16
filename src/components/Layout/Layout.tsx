@@ -22,11 +22,6 @@ const Layout: React.FC<LayoutProps> = ({ title, projects, children }) => {
         <meta charSet="utf-8" />
         <meta name="description" content={pageTitle}></meta>
         <title>{pageTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,300&display=swap"
-          rel="stylesheet"
-        ></link>
       </Head>
       <Navigation pageTitle={TITLE_ROOT} projects={projects} />
       <main className={classNames('relative', 'mt-xl', 'mx-md', 'mb-md', 'md:absolute', 'md:m-0', 'md:inset-0')}>

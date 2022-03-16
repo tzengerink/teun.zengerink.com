@@ -25,15 +25,15 @@ describe('Document', () => {
     process.env = ENV
   })
 
-  it('renders script tags when tracking id is set', () => {
+  it('renders correctly', () => {
+    process.env.NEXT_PUBLIC_TRACKING_ID = ''
     const dom = new JSDOM()
     const props = {} as DocumentProps
     const { container } = render(<Document {...props} />, { container: dom.window.document })
     expect(container.documentElement).toMatchSnapshot()
   })
 
-  it('renders empty head when tracking id not set', () => {
-    process.env.NEXT_PUBLIC_TRACKING_ID = ''
+  it('renders script tags when tracking id is set', () => {
     const dom = new JSDOM()
     const props = {} as DocumentProps
     const { container } = render(<Document {...props} />, { container: dom.window.document })
