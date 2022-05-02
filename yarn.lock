@@ -1291,27 +1291,6 @@
     jest-haste-map "^28.0.2"
     slash "^3.0.0"
 
-"@jest/transform@^28.0.2", "@jest/transform@^28.0.3":
-  version "28.0.3"
-  resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-28.0.3.tgz#591fb5ebc1d84db5c5f21e1225c7406c35f5eb1e"
-  integrity sha512-+Y0ikI7SwoW/YbK8t9oKwC70h4X2Gd0OVuz5tctRvSV/EDQU00AAkoqevXgPSSFimUmp/sp7Yl8s/1bExDqOIg==
-  dependencies:
-    "@babel/core" "^7.11.6"
-    "@jest/types" "^28.0.2"
-    "@jridgewell/trace-mapping" "^0.3.7"
-    babel-plugin-istanbul "^6.1.1"
-    chalk "^4.0.0"
-    convert-source-map "^1.4.0"
-    fast-json-stable-stringify "^2.0.0"
-    graceful-fs "^4.2.9"
-    jest-haste-map "^28.0.2"
-    jest-regex-util "^28.0.2"
-    jest-util "^28.0.2"
-    micromatch "^4.0.4"
-    pirates "^4.0.4"
-    slash "^3.0.0"
-    write-file-atomic "^4.0.1"
-
 "@jest/transform@^28.0.3":
   version "28.0.3"
   resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-28.0.3.tgz#591fb5ebc1d84db5c5f21e1225c7406c35f5eb1e"
@@ -2121,19 +2100,6 @@ axobject-query@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
   integrity sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==
-
-babel-jest@^28.0.2, babel-jest@^28.0.3:
-  version "28.0.3"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-28.0.3.tgz#843dc170da5b9671d4054ada9fdcd28f85f92a6e"
-  integrity sha512-S0ADyYdcrt5fp9YldRYWCUHdk1BKt9AkvBkLWBoNAEV9NoWZPIj5+MYhPcGgTS65mfv3a+Ymf2UqgWoAVd41cA==
-  dependencies:
-    "@jest/transform" "^28.0.3"
-    "@types/babel__core" "^7.1.14"
-    babel-plugin-istanbul "^6.1.1"
-    babel-preset-jest "^28.0.2"
-    chalk "^4.0.0"
-    graceful-fs "^4.2.9"
-    slash "^3.0.0"
 
 babel-jest@^28.0.3:
   version "28.0.3"
@@ -4543,10 +4509,10 @@ makeerror@1.0.x:
   dependencies:
     tmpl "1.0.x"
 
-marked@^4.0.14:
-  version "4.0.14"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.14.tgz#7a3a5fa5c80580bac78c1ed2e3b84d7bd6fc3870"
-  integrity sha512-HL5sSPE/LP6U9qKgngIIPTthuxC0jrfxpYMZ3LdGDD3vTnLs59m2Z7r6+LNDR3ToqEQdkKd6YaaEfJhodJmijQ==
+marked@^4.0.15:
+  version "4.0.15"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.15.tgz#0216b7c9d5fcf6ac5042343c41d81a8b1b5e1b4a"
+  integrity sha512-esX5lPdTfG4p8LDkv+obbRCyOKzB+820ZZyMOXJZygZBHrH9b3xXR64X4kT3sPe9Nx8qQXbmcz6kFSMt4Nfk6Q==
 
 merge-stream@^2.0.0:
   version "2.0.0"
