@@ -3,9 +3,7 @@ import { PiwikProScript } from './PiwikProScript'
 
 describe('PiwikProScript', () => {
   it('renders a Piwik Pro script tag', () => {
-    const { container } = render(
-      <PiwikProScript host={process.env.NEXT_PUBLIC_PIWIK_HOST} appId={process.env.NEXT_PUBLIC_PIWIK_APP_ID} />,
-    )
+    const { container } = render(<PiwikProScript host={process.env.NEXT_PUBLIC_PIWIK_HOST} appId="some-piwik-app-id" />)
     expect(container).toMatchSnapshot()
   })
 
