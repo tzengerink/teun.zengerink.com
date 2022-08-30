@@ -7,7 +7,7 @@ exports[`SinglePhoto renders correctly for projects with a statement 1`] = `
     href="/work/my-first-project/02"
   >
     <div
-      class="absolute inset-0 top-1/2 opacity-0 group-hover:opacity-100 text-center text-white z-20 after:content-[\\"\\"] after:absolute after:top-[-100%] after:bottom-0 after:left-0 after:right-0 after:bg-black/40 after:z-10"
+      class="absolute inset-0 top-1/2 opacity-0 group-hover:opacity-100 text-center text-white z-20 after:content-[""] after:absolute after:top-[-100%] after:bottom-0 after:left-0 after:right-0 after:bg-black/40 after:z-10"
     >
       My First Project
     </div>
@@ -29,7 +29,7 @@ exports[`SinglePhoto renders correctly for projects without a statement 1`] = `
     href="/work/no-statement/02"
   >
     <div
-      class="absolute inset-0 top-1/2 opacity-0 group-hover:opacity-100 text-center text-white z-20 after:content-[\\"\\"] after:absolute after:top-[-100%] after:bottom-0 after:left-0 after:right-0 after:bg-black/40 after:z-10"
+      class="absolute inset-0 top-1/2 opacity-0 group-hover:opacity-100 text-center text-white z-20 after:content-[""] after:absolute after:top-[-100%] after:bottom-0 after:left-0 after:right-0 after:bg-black/40 after:z-10"
     >
       Project without a statement
     </div>
