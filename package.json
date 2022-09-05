@@ -36,7 +36,7 @@
     "@types/image-size": "^0.8.0",
     "@types/jest": "^29.0.0",
     "@types/marked": "^4.0.6",
-    "@types/node": "^18.7.14",
+    "@types/node": "^18.7.15",
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
