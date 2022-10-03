@@ -17,6 +17,7 @@ const Photo: React.FC<Props> = ({ className, photo, alt }) => {
   const findExport = (width: Width) => photo.exports.find((value) => value.width === width)
   const toSrcSetStr = (srcSet: SrcSet[]): string => srcSet.map(([url, width]) => `${url} ${width}w`).join(', ')
 
+  /* eslint-disable @next/next/no-img-element */
   return (
     <img
       className={classNames('w-auto', 'h-auto', 'md:max-w-[70vw]', 'md:max-h-[90vh]', { [className]: !!className })}
