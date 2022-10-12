@@ -10,10 +10,11 @@
     "lint": "yarn lint:ts && yarn lint:types",
     "postinstall": "husky install && playwright install",
     "start": "next start",
-    "test:ci": "yarn lint && jest --ci --collectCoverage && yarn test:e2e",
     "test:e2e": "playwright test src/e2e",
     "test:smoke": "export $(grep -v '^#' .env | xargs) && curl -v --silent $NEXT_PUBLIC_PROTO://$NEXT_PUBLIC_HOST/ 2>&1 | grep -q $(git rev-parse HEAD)",
-    "test": "jest --watch"
+    "test:unit": "jest --ci --collectCoverage",
+    "test:watch": "jest --watch",
+    "test": "yarn lint && yarn test:unit && yarn test:e2e"
   },
   "dependencies": {
     "classnames": "^2.3.2",
