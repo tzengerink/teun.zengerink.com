@@ -14,10 +14,12 @@ const MenuItem: React.FC<MenuItemProps> = ({ project, onClick }) => {
 
   return (
     <li key={project.slug} className={classNames('text-xs', { underline: isActive })}>
-      <Link href={`/work/${project.slug}/${project.photos[0].key}`}>
-        <a className={classNames('hover:underline')} onClick={onClick}>
-          {project.title}
-        </a>
+      <Link
+        href={`/work/${project.slug}/${project.photos[0].key}`}
+        className={classNames('hover:underline')}
+        onClick={onClick}
+      >
+        {project.title}
       </Link>
     </li>
   )
