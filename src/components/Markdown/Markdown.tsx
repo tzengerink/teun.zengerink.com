@@ -10,7 +10,7 @@ const toInnerHtml = (
   markdown: string,
 ): {
   __html: string
-} => ({ __html: marked.parse(markdown) })
+} => ({ __html: marked.parse(markdown, { mangle: false, headerIds: false }) })
 
 const Markdown: React.FC<Props> = ({ children }) => {
   return (
