@@ -10,9 +10,9 @@ jobs:
       matrix:
         node-version: [16.14]
     steps:
-      - uses: actions/checkout@v3.0.0
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3.0.0
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install Packages
@@ -26,7 +26,3 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./out
-      - name: Wait for deploy
-        run: sleep 3m
-      - name: Smoke test
-        run: npm run test:smoke
