@@ -19,7 +19,7 @@
   "dependencies": {
     "classnames": "^2.3.2",
     "js-yaml": "^4.1.0",
-    "marked": "^6.0.0",
+    "marked": "^7.0.2",
     "next": "^13.4.13",
     "next-build-id": "^3.0.0",
     "react": "^18.2.0",
