@@ -1,6 +1,5 @@
 import React from 'react'
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
-import { PiwikProScript } from '../components/PiwikProScript/PiwikProScript'
 
 class Document extends NextDocument {
   render(): React.ReactElement {
@@ -12,7 +11,6 @@ class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,300&display=swap"
             rel="stylesheet"
           ></link>
-          <PiwikProScript host={process.env.NEXT_PUBLIC_PIWIK_HOST} appId={process.env.NEXT_PUBLIC_PIWIK_APP_ID} />
         </Head>
         <body className="bg-white m-0">
           <Main />
