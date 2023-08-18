@@ -1,9 +1,5 @@
-name: Push and Pull
+name: Pull Request
 on:
-  push:
-    branches:
-      - '*'
-      - '!main'
   pull_request:
     branches:
       - '*'
