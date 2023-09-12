@@ -33,7 +33,7 @@
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.22.15",
     "@next/eslint-plugin-next": "^13.4.19",
-    "@playwright/test": "^1.36.2",
+    "@playwright/test": "^1.37.1",
     "@testing-library/react": "^14.0.0",
     "@types/image-size": "^0.8.0",
     "@types/jest": "^29.5.4",
