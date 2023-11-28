@@ -31,7 +31,7 @@
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
     "@babel/preset-react": "^7.23.3",
-    "@babel/preset-typescript": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.3",
     "@next/eslint-plugin-next": "^14.0.3",
     "@playwright/test": "^1.40.0",
     "@testing-library/react": "^14.1.2",
