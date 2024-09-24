@@ -30,7 +30,7 @@
     "@next/eslint-plugin-next": "^14.2.7",
     "@playwright/test": "^1.47.0",
     "@testing-library/react": "^15.0.7",
-    "@types/jest": "^29.5.12",
+    "@types/jest": "^29.5.13",
     "@types/node": "^22.6.1",
     "@types/react": "^18.3.6",
     "@types/react-dom": "^18.3.0",
