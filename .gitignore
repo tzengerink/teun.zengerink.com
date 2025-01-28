@@ -3,11 +3,9 @@ tsconfig.tsbuildinfo
 .next
 out/
 
-# Dependency directories
 node_modules/
-
-# Test coverage
 coverage/
+test-results/
 
 # Logs
 npm-debug.log*
