@@ -1,3 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --spacing-xs: 2px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-xl: 75px;
+
+  --color-grey: rgba(60, 60, 60);
+  --color-transparant-white: rgba(255, 255, 255, 0.85);
+
+  --font-mono: 'Roboto Mono', sans-serif;
+
+  --text-xs: 0.8rem;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+}
