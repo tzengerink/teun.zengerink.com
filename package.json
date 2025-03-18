@@ -40,7 +40,7 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.1.7",
-    "eslint-config-prettier": "^10.0.2",
+    "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "5.2.3",
     "husky": "^9.1.7",
     "identity-obj-proxy": "^3.0.0",
