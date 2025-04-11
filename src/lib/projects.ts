@@ -45,7 +45,7 @@ const generatePhotos = (slug: string, captions: ConfigCaption[]): Photo[] => {
   const fileNames = fs.readdirSync(photosDirectory)
 
   return fileNames.map((filename) => {
-    const key = path.basename(filename, '.jpg')
+    const key = path.basename(filename, path.extname(filename))
     const caption = captions?.find((c) => c.key == key)
 
     return {
@@ -56,7 +56,7 @@ const generatePhotos = (slug: string, captions: ConfigCaption[]): Photo[] => {
   })
 }
 
-const generateProjects = (item: ConfigItem[]): Project[] => {
+const generateProjects = async (item: ConfigItem[]): Promise<Project[]> => {
   return item.map((project) => {
     const slug = slugify(project.title, { lower: true })
 
@@ -75,7 +75,7 @@ const getProjects = async (): Promise<Project[]> => {
 
   try {
     const file = path.join(process.cwd(), 'src', 'config.yml')
-    const config = yaml.load(fs.readFileSync(file, 'utf-8'))
+    const config = yaml.load(fs.readFileSync(file, 'utf-8')) as ConfigItem[]
     projects = await generateProjects(config)
   } catch (e) {
     console.error(e)

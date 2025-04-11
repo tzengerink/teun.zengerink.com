@@ -3,69 +3,73 @@
 exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = `
 <div>
   <div
-    class="absolute md:top-1/2 md:left-1/2 md:translate-x-[-50%] md:translate-y-[-50%]"
+    class="relative h-[calc(100vh-150px)] md:h-[100vh]"
   >
     <div
-      class="absolute top-0 bottom-0 left-0 right-1/2 cursor-w-resize"
-      data-testid="left-side"
-    />
-    <div
-      class="absolute top-0 bottom-0 right-0 left-1/2 cursor-e-resize"
-      data-testid="right-side"
-    />
-    <img
-      alt="My First Project - 01"
-      class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] text-center hidden"
-      sizes="(max-width: 767px) 768px, 1280px"
-      src="/photos/my-first-project/1280w/01.jpg"
-      srcset="/photos/my-first-project/768w/01.jpg 768w, /photos/my-first-project/1280w/01.jpg 1280w"
-    />
-    <img
-      alt="My First Project - 02"
-      class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] text-center hidden"
-      sizes="(max-width: 767px) 768px, 1280px"
-      src="/photos/my-first-project/1280w/02.jpg"
-      srcset="/photos/my-first-project/768w/02.jpg 768w, /photos/my-first-project/1280w/02.jpg 1280w"
-    />
-    <img
-      alt="My First Project - 03"
-      class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] text-center block"
-      sizes="(max-width: 767px) 768px, 1280px"
-      src="/photos/my-first-project/1280w/03.jpg"
-      srcset="/photos/my-first-project/768w/03.jpg 768w, /photos/my-first-project/1280w/03.jpg 1280w"
-    />
-  </div>
-  <div
-    class="group text-grey/80 select-none"
-  >
-    <h2
-      class="fixed left-md bottom-md z-20 text-xs uppercase cursor-help"
+      class="absolute top-1/2 translate-y-[-50%] sm:left-1/2 sm:translate-x-[-50%]"
     >
-      Statement
-    </h2>
-    <div
-      class="fixed left-0 bottom-md z-10 right-0 mb-md p-md bg-transparant-white invisible opacity-0 ease-linear duration-100 translate-y-[50px] group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 md:w-[500px]"
-    >
-      <h3
-        class="mb-sm text-sm"
-      >
-        My First Project
-      </h3>
       <div
-        class="space-y-sm text-xs text-justify"
+        class="absolute top-0 bottom-0 left-0 right-1/2 cursor-w-resize"
+        data-testid="left-side"
+      />
+      <div
+        class="absolute top-0 bottom-0 right-0 left-1/2 cursor-e-resize"
+        data-testid="right-side"
+      />
+      <img
+        alt="My First Project - 01"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/my-first-project/1280w/01.jpg"
+        srcset="/photos/my-first-project/768w/01.jpg 768w, /photos/my-first-project/1280w/01.jpg 1280w"
+      />
+      <img
+        alt="My First Project - 02"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/my-first-project/1280w/02.jpg"
+        srcset="/photos/my-first-project/768w/02.jpg 768w, /photos/my-first-project/1280w/02.jpg 1280w"
+      />
+      <img
+        alt="My First Project - 03"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center block"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/my-first-project/1280w/03.jpg"
+        srcset="/photos/my-first-project/768w/03.jpg 768w, /photos/my-first-project/1280w/03.jpg 1280w"
+      />
+    </div>
+    <div
+      class="group text-grey/80 select-none"
+    >
+      <h2
+        class="fixed left-md bottom-md z-20 text-xs uppercase cursor-help"
       >
-        <p>
-          The 
-          <em>
-            statement
-          </em>
-           for the 
-          <em>
-            project
-          </em>
-        </p>
-        
+        Statement
+      </h2>
+      <div
+        class="fixed left-0 bottom-md z-10 right-0 mb-md p-md bg-transparant-white invisible opacity-0 ease-linear duration-100 translate-y-[50px] group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 md:w-[500px]"
+      >
+        <h3
+          class="mb-sm text-sm"
+        >
+          My First Project
+        </h3>
+        <div
+          class="space-y-sm text-xs text-justify"
+        >
+          <p>
+            The 
+            <em>
+              statement
+            </em>
+             for the 
+            <em>
+              project
+            </em>
+          </p>
+          
 
+        </div>
       </div>
     </div>
   </div>
@@ -75,44 +79,48 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
 exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
 <div>
   <div
-    class="absolute md:top-1/2 md:left-1/2 md:translate-x-[-50%] md:translate-y-[-50%]"
+    class="relative h-[calc(100vh-150px)] md:h-[100vh]"
   >
     <div
-      class="absolute top-0 bottom-0 left-0 right-1/2 cursor-w-resize"
-      data-testid="left-side"
-    />
-    <div
-      class="absolute top-0 bottom-0 right-0 left-1/2 cursor-e-resize"
-      data-testid="right-side"
-    />
-    <img
-      alt="Project without a statement - 01"
-      class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] text-center hidden"
-      sizes="(max-width: 767px) 768px, 1280px"
-      src="/photos/no-statement/1280w/01.jpg"
-      srcset="/photos/no-statement/768w/01.jpg 768w, /photos/no-statement/1280w/01.jpg 1280w"
-    />
-    <img
-      alt="Project without a statement - 02"
-      class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] text-center hidden"
-      sizes="(max-width: 767px) 768px, 1280px"
-      src="/photos/no-statement/1280w/02.jpg"
-      srcset="/photos/no-statement/768w/02.jpg 768w, /photos/no-statement/1280w/02.jpg 1280w"
-    />
-    <img
-      alt="Project without a statement - 03"
-      class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] text-center block"
-      sizes="(max-width: 767px) 768px, 1280px"
-      src="/photos/no-statement/1280w/03.jpg"
-      srcset="/photos/no-statement/768w/03.jpg 768w, /photos/no-statement/1280w/03.jpg 1280w"
-    />
-    <img
-      alt="Project without a statement - 04"
-      class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] text-center hidden"
-      sizes="(max-width: 767px) 768px, 1280px"
-      src="/photos/no-statement/1280w/04.jpg"
-      srcset="/photos/no-statement/768w/04.jpg 768w, /photos/no-statement/1280w/04.jpg 1280w"
-    />
+      class="absolute top-1/2 translate-y-[-50%] sm:left-1/2 sm:translate-x-[-50%]"
+    >
+      <div
+        class="absolute top-0 bottom-0 left-0 right-1/2 cursor-w-resize"
+        data-testid="left-side"
+      />
+      <div
+        class="absolute top-0 bottom-0 right-0 left-1/2 cursor-e-resize"
+        data-testid="right-side"
+      />
+      <img
+        alt="Project without a statement - 01"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/no-statement/1280w/01.jpg"
+        srcset="/photos/no-statement/768w/01.jpg 768w, /photos/no-statement/1280w/01.jpg 1280w"
+      />
+      <img
+        alt="Project without a statement - 02"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/no-statement/1280w/02.jpg"
+        srcset="/photos/no-statement/768w/02.jpg 768w, /photos/no-statement/1280w/02.jpg 1280w"
+      />
+      <img
+        alt="Project without a statement - 03"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center block"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/no-statement/1280w/03.jpg"
+        srcset="/photos/no-statement/768w/03.jpg 768w, /photos/no-statement/1280w/03.jpg 1280w"
+      />
+      <img
+        alt="Project without a statement - 04"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/no-statement/1280w/04.jpg"
+        srcset="/photos/no-statement/768w/04.jpg 768w, /photos/no-statement/1280w/04.jpg 1280w"
+      />
+    </div>
   </div>
 </div>
 `;

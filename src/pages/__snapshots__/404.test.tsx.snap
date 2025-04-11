@@ -28,7 +28,7 @@ exports[`Error renders correctly 1`] = `
         />
       </div>
       <nav
-        class="group fixed z-30 inset-y-0 left-xs w-full p-md pt-xl bg-transparant-white ease-linear duration-100 translate-y-[-20px] opacity-0 invisible md:visible md:opacity-100 md:top-md md:right-md md:bottom-auto md:left-auto md:w-auto md:p-0 md:pt-md md:text-right"
+        class="group fixed z-30 inset-y-0 left-xs w-full p-md pt-xl bg-transparant-white ease-linear duration-100 translate-y-[-20px] opacity-0 invisible md:translate-y-0 md:translate-y-[-20px] md:visible md:opacity-100 md:top-md md:right-md md:bottom-auto md:left-auto md:w-auto md:p-0 md:pt-md md:text-right"
         data-testid="menu"
       >
         <h2
@@ -37,7 +37,7 @@ exports[`Error renders correctly 1`] = `
           Projects
         </h2>
         <ul
-          class="leading-5 md:ease-linear md:duration-100 md:translate-y-[-20px] md:invisible md:group-hover:visible md:group-hover:translate-y-0"
+          class="leading-5 invisible ease-linear duration-100 translate-y-[-20px] group-hover:visible group-hover:translate-y-0"
         >
           <li
             class="text-xs"

@@ -8,9 +8,10 @@ jest.mock('../MenuItem/MenuItem', () => ({
 }))
 
 describe('Menu', () => {
+  const onOpen = jest.fn()
   const onItemClick = jest.fn()
   const renderComponent = (isOpen = false) =>
-    render(<Menu projects={mockProjects} isOpen={isOpen} onItemClick={onItemClick} />)
+    render(<Menu projects={mockProjects} isOpen={isOpen} onOpen={onOpen} onItemClick={onItemClick} />)
 
   beforeEach(jest.clearAllMocks)
 

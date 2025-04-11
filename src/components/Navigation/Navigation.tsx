@@ -32,7 +32,12 @@ const Navigation: React.FC<NavigationProps> = ({ pageTitle, projects }): React.R
         </h1>
       </a>
       <Hamburger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-      <Menu projects={filteredProjects} isOpen={isOpen} onItemClick={() => setIsOpen(false)} />
+      <Menu
+        projects={filteredProjects}
+        isOpen={isOpen}
+        onOpen={() => setIsOpen(!isOpen)}
+        onItemClick={() => setIsOpen(false)}
+      />
       <a
         className={classNames(
           'absolute',
