@@ -15,6 +15,7 @@ const config: PlaywrightTestConfig = {
     port: PORT,
   },
   retries: 2,
+  reporter: 'dot',
 }
 
 export default config

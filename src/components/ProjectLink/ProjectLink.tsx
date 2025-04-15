@@ -10,8 +10,8 @@ interface ProjectLink {
 
 const ProjectLink: React.FC<ProjectLink> = ({ project }) => {
   return (
-    <Link href={`/work/${project?.slug}/${project?.photos[1].key}`}>
-      <div className={classNames('h-[calc(100vh-150px)]', 'md:h-[100vh]')}>
+    <div className={classNames('h-[calc(100vh-150px)]', 'md:h-[100vh]')}>
+      <Link href={`/work/${project?.slug}/${project?.photos[1].key}`}>
         <div
           className={classNames(
             'group',
@@ -49,8 +49,8 @@ const ProjectLink: React.FC<ProjectLink> = ({ project }) => {
           </div>
           <Photo photo={project?.photos[0]} alt={project?.title} />
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 

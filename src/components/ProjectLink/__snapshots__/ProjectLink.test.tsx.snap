@@ -2,11 +2,11 @@
 
 exports[`SinglePhoto renders correctly for projects with a statement 1`] = `
 <div>
-  <a
-    href="/work/my-first-project/02"
+  <div
+    class="h-[calc(100vh-150px)] md:h-[100vh]"
   >
-    <div
-      class="h-[calc(100vh-150px)] md:h-[100vh]"
+    <a
+      href="/work/my-first-project/02"
     >
       <div
         class="group relative inline-block leading-[0px] cursor-pointer top-1/2 translate-y-[-50%] md:left-1/2 md:translate-x-[-50%]"
@@ -24,18 +24,18 @@ exports[`SinglePhoto renders correctly for projects with a statement 1`] = `
           srcset="/photos/my-first-project/768w/01.jpg 768w, /photos/my-first-project/1280w/01.jpg 1280w"
         />
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </div>
 `;
 
 exports[`SinglePhoto renders correctly for projects without a statement 1`] = `
 <div>
-  <a
-    href="/work/no-statement/02"
+  <div
+    class="h-[calc(100vh-150px)] md:h-[100vh]"
   >
-    <div
-      class="h-[calc(100vh-150px)] md:h-[100vh]"
+    <a
+      href="/work/no-statement/02"
     >
       <div
         class="group relative inline-block leading-[0px] cursor-pointer top-1/2 translate-y-[-50%] md:left-1/2 md:translate-x-[-50%]"
@@ -53,7 +53,7 @@ exports[`SinglePhoto renders correctly for projects without a statement 1`] = `
           srcset="/photos/no-statement/768w/01.jpg 768w, /photos/no-statement/1280w/01.jpg 1280w"
         />
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </div>
 `;
