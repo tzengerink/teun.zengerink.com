@@ -1,17 +1,14 @@
 import classNames from 'classnames'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { Project } from '../../lib/projects'
 
 interface MenuItemProps {
+  isActive?: boolean
   project: Project
   onClick: () => void
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ project, onClick }) => {
-  const router = useRouter()
-  const isActive = router.asPath.includes(project.slug)
-
+const MenuItem: React.FC<MenuItemProps> = ({ project, onClick, isActive = false }) => {
   return (
     <li key={project.slug} className={classNames('text-xs', { underline: isActive })}>
       <Link

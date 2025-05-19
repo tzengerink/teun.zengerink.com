@@ -18,7 +18,8 @@ jest.mock('../../lib/useProject', () => ({
 describe('ProjectSlideshow', () => {
   afterEach(() => jest.clearAllMocks())
 
-  const renderComponent = (project = mockProject) => render(<ProjectSlideshow project={project} />)
+  const renderComponent = (project = mockProject, index = '01') =>
+    render(<ProjectSlideshow project={project} index={index} />)
 
   it('renders correctly for projects with a statement', () => {
     const { container } = renderComponent()

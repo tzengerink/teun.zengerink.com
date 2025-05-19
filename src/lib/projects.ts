@@ -65,12 +65,12 @@ const generateProjects = async (item: ConfigItem[]): Promise<Project[]> => {
       title: project.title,
       statement: project.statement ?? '',
       isArchived: project.isArchived ?? false,
-      photos: generatePhotos(slug, project.captions),
+      photos: generatePhotos(slug, project.captions || []),
     }
   })
 }
 
-const getProjects = async (): Promise<Project[]> => {
+export const getProjects = async (): Promise<Project[]> => {
   let projects: Project[] = []
 
   try {
@@ -82,13 +82,4 @@ const getProjects = async (): Promise<Project[]> => {
   }
 
   return projects
-}
-
-export const createGetProjects = (): (() => Promise<Project[]>) => {
-  let memoizedProjects: Project[] = []
-
-  return async () => {
-    if (!memoizedProjects.length) memoizedProjects = await getProjects()
-    return memoizedProjects
-  }
 }

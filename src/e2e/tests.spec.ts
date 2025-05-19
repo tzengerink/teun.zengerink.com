@@ -1,10 +1,9 @@
 import { test } from '@playwright/test'
-import { createGetProjects, Project } from '../lib/projects'
+import { getProjects, Project } from '../lib/projects'
 import { IndexPage } from './pages/index.page'
 import { ProjectPage } from './pages/project.page'
 
 let projects: Project[]
-const getProjects = createGetProjects()
 const filterActive = (project: Project) => !project.isArchived
 
 test.beforeAll(async () => {

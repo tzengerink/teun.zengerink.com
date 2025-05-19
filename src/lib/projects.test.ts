@@ -1,5 +1,5 @@
 import slugify from 'slugify'
-import { MAX_WIDTHS, createGetProjects } from './projects'
+import { MAX_WIDTHS, getProjects } from './projects'
 
 const mockPhotos = Array.from(Array(5).keys()).map((item) => `${item}.jpg`)
 
@@ -32,9 +32,8 @@ jest.mock('fs', () => ({
 
 beforeEach(jest.clearAllMocks)
 
-describe('createGetProjects', () => {
+describe('getProjects', () => {
   it('creates a function to get the projects asynchronously', async () => {
-    const getProjects = createGetProjects()
     const projects = await getProjects()
     expect(projects).toEqual(
       mockConfig.map((item) => ({
@@ -54,22 +53,12 @@ describe('createGetProjects', () => {
     )
   })
 
-  it('memoizes the projects for future calls', async () => {
-    const getProjects = createGetProjects()
-    const firstResult = await getProjects()
-    expect(mockReadFileSync).toHaveBeenCalledTimes(1)
-    const secondResult = await getProjects()
-    expect(secondResult).toBe(firstResult)
-    expect(mockReadFileSync).toHaveBeenCalledTimes(1)
-  })
-
   it('logs errors to the console', async () => {
     const spy = jest.spyOn(console, 'error').mockImplementation()
     const error = new Error('Not working')
     mockReadFileSync.mockImplementation(() => {
       throw error
     })
-    const getProjects = createGetProjects()
     const projects = await getProjects()
     expect(projects).toEqual([])
     expect(spy).toHaveBeenCalledWith(error)

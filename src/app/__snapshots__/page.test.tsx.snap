@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page renders a project link 1`] = `
+<div>
+  <div
+    class="h-[calc(100vh-150px)] md:h-[100vh]"
+  >
+    <a
+      href="/work/orderdisorder/02"
+    >
+      <div
+        class="group relative inline-block leading-[0px] cursor-pointer top-1/2 translate-y-[-50%] md:left-1/2 md:translate-x-[-50%]"
+      >
+        <div
+          class="absolute inset-0 top-1/2 opacity-0 group-hover:opacity-100 text-center text-white z-20 after:content-[""] after:absolute after:top-[-100%] after:bottom-0 after:left-0 after:right-0 after:bg-black/40 after:z-10"
+        >
+          Order/Disorder
+        </div>
+        <img
+          alt="Order/Disorder"
+          class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
+          sizes="(max-width: 767px) 768px, 1280px"
+          src="/photos/orderdisorder/1280w/01.png"
+          srcset="/photos/orderdisorder/768w/01.png 768w, /photos/orderdisorder/1280w/01.png 1280w"
+        />
+      </div>
+    </a>
+  </div>
+</div>
+`;

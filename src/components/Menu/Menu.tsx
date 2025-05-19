@@ -1,5 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
+import { useParams } from 'next/navigation'
+
 import { Project } from '../../lib/projects'
 import MenuItem from '../MenuItem/MenuItem'
 
@@ -11,6 +13,8 @@ interface MenuProps {
 }
 
 const Menu: React.FC<MenuProps> = ({ projects, isOpen, onOpen, onItemClick }) => {
+  const params = useParams()
+
   return (
     <nav
       data-testid="menu"
@@ -57,7 +61,12 @@ const Menu: React.FC<MenuProps> = ({ projects, isOpen, onOpen, onItemClick }) =>
         )}
       >
         {projects.map((project) => (
-          <MenuItem key={project.slug} project={project} onClick={onItemClick} />
+          <MenuItem
+            key={project.slug}
+            isActive={project.slug === params?.slug}
+            project={project}
+            onClick={onItemClick}
+          />
         ))}
       </ul>
     </nav>

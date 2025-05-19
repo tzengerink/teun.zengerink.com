@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page renders a page not found message 1`] = `
+<div>
+  <div
+    class="md:absolute md:inset-20 text-center"
+  >
+    <h2>
+      Page not found
+    </h2>
+    <a
+      class="underline"
+      href="/"
+    >
+      Go to homepage
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Page renders a project slideshow 1`] = `
+<div>
+  <div
+    class="relative h-[calc(100vh-150px)] md:h-[100vh]"
+  >
+    <div
+      class="absolute top-1/2 translate-y-[-50%] sm:left-1/2 sm:translate-x-[-50%]"
+    >
+      <div
+        class="absolute top-0 bottom-0 left-0 right-1/2 cursor-w-resize"
+        data-testid="left-side"
+      />
+      <div
+        class="absolute top-0 bottom-0 right-0 left-1/2 cursor-e-resize"
+        data-testid="right-side"
+      />
+      <img
+        alt="Order/Disorder - 01"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center block"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/01.png"
+        srcset="/photos/orderdisorder/768w/01.png 768w, /photos/orderdisorder/1280w/01.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 02"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/02.png"
+        srcset="/photos/orderdisorder/768w/02.png 768w, /photos/orderdisorder/1280w/02.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 03"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/03.png"
+        srcset="/photos/orderdisorder/768w/03.png 768w, /photos/orderdisorder/1280w/03.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 04"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/04.png"
+        srcset="/photos/orderdisorder/768w/04.png 768w, /photos/orderdisorder/1280w/04.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 05"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/05.png"
+        srcset="/photos/orderdisorder/768w/05.png 768w, /photos/orderdisorder/1280w/05.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 06"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/06.png"
+        srcset="/photos/orderdisorder/768w/06.png 768w, /photos/orderdisorder/1280w/06.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 07"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/07.png"
+        srcset="/photos/orderdisorder/768w/07.png 768w, /photos/orderdisorder/1280w/07.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 08"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/08.png"
+        srcset="/photos/orderdisorder/768w/08.png 768w, /photos/orderdisorder/1280w/08.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 09"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/09.png"
+        srcset="/photos/orderdisorder/768w/09.png 768w, /photos/orderdisorder/1280w/09.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 10"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/10.png"
+        srcset="/photos/orderdisorder/768w/10.png 768w, /photos/orderdisorder/1280w/10.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 11"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/11.png"
+        srcset="/photos/orderdisorder/768w/11.png 768w, /photos/orderdisorder/1280w/11.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 12"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/12.png"
+        srcset="/photos/orderdisorder/768w/12.png 768w, /photos/orderdisorder/1280w/12.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 13"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/13.png"
+        srcset="/photos/orderdisorder/768w/13.png 768w, /photos/orderdisorder/1280w/13.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 14"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/14.png"
+        srcset="/photos/orderdisorder/768w/14.png 768w, /photos/orderdisorder/1280w/14.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 15"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/15.png"
+        srcset="/photos/orderdisorder/768w/15.png 768w, /photos/orderdisorder/1280w/15.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 16"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/16.png"
+        srcset="/photos/orderdisorder/768w/16.png 768w, /photos/orderdisorder/1280w/16.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 17"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/17.png"
+        srcset="/photos/orderdisorder/768w/17.png 768w, /photos/orderdisorder/1280w/17.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 18"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/18.png"
+        srcset="/photos/orderdisorder/768w/18.png 768w, /photos/orderdisorder/1280w/18.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 19"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/19.png"
+        srcset="/photos/orderdisorder/768w/19.png 768w, /photos/orderdisorder/1280w/19.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 20"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/20.png"
+        srcset="/photos/orderdisorder/768w/20.png 768w, /photos/orderdisorder/1280w/20.png 1280w"
+      />
+      <img
+        alt="Order/Disorder - 21"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        sizes="(max-width: 767px) 768px, 1280px"
+        src="/photos/orderdisorder/1280w/21.png"
+        srcset="/photos/orderdisorder/768w/21.png 768w, /photos/orderdisorder/1280w/21.png 1280w"
+      />
+    </div>
+  </div>
+</div>
+`;

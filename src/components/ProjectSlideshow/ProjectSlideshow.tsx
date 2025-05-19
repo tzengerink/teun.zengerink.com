@@ -1,3 +1,5 @@
+'use client'
+
 import classNames from 'classnames'
 import React, { useEffect } from 'react'
 import { Project } from '../../lib/projects'
@@ -12,11 +14,12 @@ enum Key {
 
 interface ProjectSlideshowProps {
   project: Project
+  index: string
 }
 
-const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
-  let touchStartX: number
-  const { activeKey, previous, next } = useProject(project)
+const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project, index }) => {
+  let touchStartX: number | null = null
+  const { previous, next } = useProject(project, index)
 
   useEffect(() => {
     const keyUpHandler = ({ key }: KeyboardEvent) => {
@@ -66,8 +69,8 @@ const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
           <Photo
             key={`${project.slug}--slide-${photo.key}`}
             className={classNames('max-h-[calc(100vh-150px)]', 'sm:max-h-[100vh]', 'text-center', {
-              block: photo.key === activeKey,
-              hidden: photo.key !== activeKey,
+              block: photo.key === index,
+              hidden: photo.key !== index,
             })}
             photo={photo}
             alt={`${project?.title} - ${photo.key}`}
