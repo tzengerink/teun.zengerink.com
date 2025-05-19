@@ -16,7 +16,7 @@ const Markdown: React.FC<Props> = ({ children }) => {
   return (
     <div
       className={classNames('space-y-sm', 'text-xs', 'text-justify')}
-      dangerouslySetInnerHTML={toInnerHtml(children.toString())}
+      dangerouslySetInnerHTML={toInnerHtml(children ? children.toString() : '')}
     />
   )
 }

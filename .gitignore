@@ -1,6 +1,7 @@
 # next.js build output
 tsconfig.tsbuildinfo
 .next
+.vercel
 out/
 
 node_modules/

@@ -1,5 +1,9 @@
+'use client'
+
 import classNames from 'classnames'
 import React, { useState } from 'react'
+import Link from 'next/link'
+
 import { Project } from '../../lib/projects'
 import Hamburger from '../Hamburger/Hamburger'
 import Menu from '../Menu/Menu'
@@ -15,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = ({ pageTitle, projects }): React.R
 
   return (
     <aside>
-      <a href="/">
+      <Link href="/">
         <h1
           className={classNames(
             'fixed',
@@ -30,7 +34,7 @@ const Navigation: React.FC<NavigationProps> = ({ pageTitle, projects }): React.R
         >
           {pageTitle}
         </h1>
-      </a>
+      </Link>
       <Hamburger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       <Menu
         projects={filteredProjects}
@@ -38,7 +42,7 @@ const Navigation: React.FC<NavigationProps> = ({ pageTitle, projects }): React.R
         onOpen={() => setIsOpen(!isOpen)}
         onItemClick={() => setIsOpen(false)}
       />
-      <a
+      <Link
         className={classNames(
           'absolute',
           'z-20',
@@ -52,7 +56,7 @@ const Navigation: React.FC<NavigationProps> = ({ pageTitle, projects }): React.R
         href="https://www.instagram.com/t.zengerink/"
       >
         Instagram
-      </a>
+      </Link>
     </aside>
   )
 }

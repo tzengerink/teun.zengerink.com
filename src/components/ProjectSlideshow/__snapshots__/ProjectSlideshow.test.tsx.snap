@@ -18,7 +18,7 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
       />
       <img
         alt="My First Project - 01"
-        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center block"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/my-first-project/1280w/01.jpg"
         srcset="/photos/my-first-project/768w/01.jpg 768w, /photos/my-first-project/1280w/01.jpg 1280w"
@@ -32,7 +32,7 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
       />
       <img
         alt="My First Project - 03"
-        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center block"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/my-first-project/1280w/03.jpg"
         srcset="/photos/my-first-project/768w/03.jpg 768w, /photos/my-first-project/1280w/03.jpg 1280w"
@@ -94,7 +94,7 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
       />
       <img
         alt="Project without a statement - 01"
-        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center block"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/no-statement/1280w/01.jpg"
         srcset="/photos/no-statement/768w/01.jpg 768w, /photos/no-statement/1280w/01.jpg 1280w"
@@ -108,7 +108,7 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
       />
       <img
         alt="Project without a statement - 03"
-        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center block"
+        class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh] max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden"
         sizes="(max-width: 767px) 768px, 1280px"
         src="/photos/no-statement/1280w/03.jpg"
         srcset="/photos/no-statement/768w/03.jpg 768w, /photos/no-statement/1280w/03.jpg 1280w"

@@ -7,14 +7,14 @@
     "dev": "next dev",
     "lint:eslint": "eslint src/",
     "lint:tsc": "tsc --noEmit",
-    "lint": "yarn lint:eslint && yarn lint:tsc",
+    "lint": "npm run lint:eslint && npm run lint:tsc",
     "postinstall": "husky && playwright install",
     "start": "next start",
     "test:e2e": "playwright test src/e2e",
     "test:smoke": "export $(grep -v '^#' .env | xargs) && curl -v --silent $NEXT_PUBLIC_PROTO://$NEXT_PUBLIC_HOST/ 2>&1 | grep -q $(git rev-parse HEAD)",
     "test:unit": "jest --ci --collectCoverage",
     "test:watch": "jest --watch",
-    "test": "yarn lint && yarn test:unit && yarn test:e2e"
+    "test": "npm run lint && npm run test:unit && npm run test:e2e"
   },
   "dependencies": {
     "classnames": "^2.5.1",
