@@ -20,11 +20,11 @@ const Photo: React.FC<Props> = ({ className, photo, alt }) => {
   /* eslint-disable @next/next/no-img-element */
   return (
     <img
-      className={classNames('w-auto', 'h-auto', 'md:max-w-[70vw]', 'md:max-h-[90vh]', { [className]: !!className })}
+      className={classNames('w-auto', 'h-auto', 'md:max-w-[70vw]', 'md:max-h-[90vh]', className)}
       alt={alt}
-      src={findExport(Width.Desktop).url}
+      src={findExport(Width.Desktop)?.url}
       sizes={`${firstWidths.map((width) => `(max-width: ${width - 1}px) ${width}px`).join(', ')}, ${lastWidth}px`}
-      srcSet={toSrcSetStr(MAX_WIDTHS.map((width) => [findExport(width).url, width]))}
+      srcSet={toSrcSetStr(MAX_WIDTHS.map((width) => [findExport(width)?.url || '', width]))}
     />
   )
 }

@@ -5,7 +5,7 @@ import mockProjects from '../../__mocks__/projects'
 import MenuItem from './MenuItem'
 
 const mockRouter = jest.fn(() => ({ asPath: `/` }))
-jest.mock('next/router', () => ({ useRouter: () => mockRouter() }))
+jest.mock('next/navigation', () => ({ useRouter: () => mockRouter() }))
 
 jest.mock('next/link', () => mockLink)
 
