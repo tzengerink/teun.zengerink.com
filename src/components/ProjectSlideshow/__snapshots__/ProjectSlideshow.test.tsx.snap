@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = `
 <div>
@@ -67,8 +67,6 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
               project
             </em>
           </p>
-          
-
         </div>
       </div>
     </div>

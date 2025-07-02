@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Statement renders correctly 1`] = `
 <div>
@@ -32,8 +32,6 @@ exports[`Statement renders correctly 1`] = `
           </strong>
            to see
         </p>
-        
-
       </div>
     </div>
   </div>
