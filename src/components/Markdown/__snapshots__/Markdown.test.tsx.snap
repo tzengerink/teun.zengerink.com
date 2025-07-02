@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Markdown renders correctly 1`] = `
 <div>
@@ -15,11 +15,8 @@ exports[`Markdown renders correctly 1`] = `
         some
       </em>
        markdown.
-    </p>
     
-
-    <p>
-      It also supports 
+It also supports 
       <a
         href="http://teun.zengerink.com/"
       >
@@ -27,8 +24,6 @@ exports[`Markdown renders correctly 1`] = `
       </a>
        paragraphs.
     </p>
-    
-
   </div>
 </div>
 `;

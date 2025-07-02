@@ -7,6 +7,8 @@ const mockProject = projects[0]
 const mockNext = jest.fn()
 const mockPrevious = jest.fn()
 
+jest.mock('marked')
+
 jest.mock('../../lib/useProject', () => ({
   useProject: () => ({
     activeKey: mockProject.photos[2].key,

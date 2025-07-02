@@ -1,6 +1,8 @@
 import { render } from '@testing-library/react'
 import Statement from './Statement'
 
+jest.mock('marked')
+
 describe('Statement', () => {
   it('renders correctly', () => {
     const { container } = render(
