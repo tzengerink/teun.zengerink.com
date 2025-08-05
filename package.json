@@ -28,7 +28,7 @@
     "slugify": "^1.6.6"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.3.4",
+    "@next/eslint-plugin-next": "^15.4.5",
     "@playwright/test": "^1.54.2",
     "@tailwindcss/postcss": "^4.1.11",
     "@testing-library/react": "^15.0.7",
