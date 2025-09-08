@@ -4,6 +4,8 @@ import { TITLE_ROOT } from '../lib/constants'
 import '../styles/globals.css'
 import { getProjects } from '../lib/projects'
 
+export const runtime = 'edge'
+
 export const generateMetadata = async () => ({
   charset: 'utf-8',
   title: TITLE_ROOT,

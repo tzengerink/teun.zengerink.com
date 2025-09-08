@@ -8,6 +8,8 @@ import { getProjects } from '../../../lib/projects'
 type Params = { slug: string[] }
 type Props = { params: Promise<Params> }
 
+export const runtime = 'edge'
+
 export const generateMetadata = async ({ params }) => {
   const { slug } = await params
   const projects = await getProjects()
@@ -17,7 +19,7 @@ export const generateMetadata = async ({ params }) => {
   return { title, description: title }
 }
 
-const Page: React.FC<Props> = async ({ params }) => {
+const Page = async ({ params }: Props) => {
   const { slug } = await params
   const projects = await getProjects()
   const project = projects?.find((project) => project.slug === slug[0])
