@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import React, { useState } from 'react'
-import { Project } from '../../lib/projects'
+import { Project } from '../../lib/types'
 import Hamburger from '../Hamburger/Hamburger'
 import Menu from '../Menu/Menu'
 

@@ -1,5 +1,6 @@
 import { test } from '@playwright/test'
-import { createGetProjects, Project } from '../lib/projects'
+import { Project } from '../lib/types'
+import { createGetProjects } from '../lib/projects'
 import { IndexPage } from './pages/index.page'
 import { ProjectPage } from './pages/project.page'
 

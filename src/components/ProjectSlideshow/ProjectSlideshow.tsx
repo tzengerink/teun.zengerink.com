@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import React, { useEffect } from 'react'
-import { Project } from '../../lib/projects'
+import { Project } from '../../lib/types'
 import { useProject } from '../../lib/useProject'
 import Photo from '../Photo/Photo'
 import Statement from '../Statement/Statement'

@@ -1,4 +1,4 @@
-import { Photo, Project } from './projects'
+import { Photo, Project } from './types'
 import { useRouter } from 'next/router'
 
 interface UseProject {

@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import React from 'react'
-import { MAX_WIDTHS, Photo as PhotoInterface, Width } from '../../lib/projects'
+import { MAX_WIDTHS, Photo as PhotoInterface, Width } from '../../lib/types'
 
 interface Props {
   className?: string

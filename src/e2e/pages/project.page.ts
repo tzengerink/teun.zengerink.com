@@ -1,4 +1,4 @@
-import { Photo, Project } from '../../lib/projects'
+import { Photo, Project } from '../../lib/types'
 import { Page } from './page'
 
 export class ProjectPage extends Page {

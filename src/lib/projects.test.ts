@@ -1,5 +1,6 @@
 import slugify from 'slugify'
-import { MAX_WIDTHS, createGetProjects } from './projects'
+import { createGetProjects } from './projects'
+import { MAX_WIDTHS } from './types'
 
 const mockPhotos = Array.from(Array(5).keys()).map((item) => `${item}.jpg`)
 
