@@ -1,4 +1,5 @@
-import { createGetProjects, Project } from './projects'
+import { createGetProjects } from './projects'
+import { Project } from './types'
 
 interface Path {
   params: { slug: string[] }

@@ -3,40 +3,7 @@ import path from 'path'
 import slugify from 'slugify'
 import yaml from 'js-yaml'
 
-export enum Width {
-  Mobile = 768,
-  Desktop = 1280,
-}
-
-interface ConfigCaption {
-  key: string
-  caption: string
-}
-
-interface ConfigItem {
-  title: string
-  statement?: string
-  isArchived?: boolean
-  captions?: ConfigCaption[]
-}
-
-export interface Export {
-  width: Width
-  url: string
-}
-
-export interface Photo {
-  key: string
-  caption?: string
-  exports: Export[]
-}
-export interface Project {
-  title: string
-  slug: string
-  photos: Photo[]
-  statement?: string
-  isArchived?: boolean
-}
+import { Width, ConfigCaption, ConfigItem, Photo, Project } from './types'
 
 export const MAX_WIDTHS = [Width.Mobile, Width.Desktop]
 

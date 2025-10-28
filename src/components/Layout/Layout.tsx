@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import Head from 'next/head'
 import React from 'react'
-import { Project } from '../../lib/projects'
+import { Project } from '../../lib/types'
 import Navigation from '../Navigation/Navigation'
 
 const TITLE_ROOT = 'Teun Zengerink'
