@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Project } from '../../lib/types'
 import { useProject } from '../../lib/useProject'
 import Photo from '../Photo/Photo'
@@ -15,8 +15,8 @@ interface ProjectSlideshowProps {
 }
 
 const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
-  let touchStartX: number
   const { activeKey, previous, next } = useProject(project)
+  const [touchStartX, setTouchStartX] = useState(null)
 
   useEffect(() => {
     const keyUpHandler = ({ key }: KeyboardEvent) => {
@@ -34,7 +34,7 @@ const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
   })
 
   const touchStartHandler = ({ touches }: React.TouchEvent) => {
-    touchStartX = touches[0].clientX
+    setTouchStartX(touches[0].clientX)
   }
 
   const touchMoveHandler = ({ touches }: React.TouchEvent) => {
@@ -42,7 +42,7 @@ const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
     const difference = touchStartX - touches[0].clientX
     if (difference < 0) previous()
     if (difference > 0) next()
-    touchStartX = null
+    setTouchStartX(null)
   }
 
   return (

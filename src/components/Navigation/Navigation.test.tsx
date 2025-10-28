@@ -1,25 +1,34 @@
-import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
+import { fireEvent, render } from '@testing-library/react'
 import mockProjects from '../../__mocks__/projects'
 import Navigation from './Navigation'
+import { Project } from '../../lib/types'
 
 const mockRouter = jest.fn(() => ({ asPath: '/' }))
 jest.mock('next/router', () => ({ useRouter: () => mockRouter() }))
 
-jest.mock('../Menu/Menu', () => ({ projects, isOpen, onItemClick }) => (
-  <button onClick={onItemClick}>
-    <div>{isOpen ? '[Menu open]' : '[Menu closed]'}</div>
-    <ul>
-      {projects.map((project) => (
-        <li key={project.slug}>{project.isArchived ? '[Archived project]' : '[Project]'}</li>
-      ))}
-    </ul>
-  </button>
-))
+jest.mock('../Menu/Menu', () => {
+  const Mock = ({ projects, isOpen, onItemClick }) => (
+    <button onClick={onItemClick}>
+      <div>{isOpen ? '[Menu open]' : '[Menu closed]'}</div>
+      <ul>
+        {projects.map((project: Project) => (
+          <li key={project.slug}>{project.isArchived ? '[Archived project]' : '[Project]'}</li>
+        ))}
+      </ul>
+    </button>
+  )
+  Mock.displayName = 'Menu'
+  return Mock
+})
 
-jest.mock('../Hamburger/Hamburger', () => ({ isOpen, onClick }) => (
-  <button onClick={onClick}>{isOpen ? '[Hamburger open]' : '[Hamburger closed]'}</button>
-))
+jest.mock('../Hamburger/Hamburger', () => {
+  const Mock = ({ isOpen, onClick }) => (
+    <button onClick={onClick}>{isOpen ? '[Hamburger open]' : '[Hamburger closed]'}</button>
+  )
+  Mock.displayName = 'Hamburger'
+  return Mock
+})
 
 const defaultProps = { pageTitle: 'My Homepage', projects: mockProjects }
 
