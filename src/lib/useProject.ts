@@ -10,9 +10,9 @@ interface UseProject {
 const NOOP = () => false
 
 export const useProject = (project: Project): UseProject => {
-  if (!project?.photos?.length) return { activeKey: undefined, previous: NOOP, next: NOOP }
-
   const router = useRouter()
+
+  if (!project?.photos?.length) return { activeKey: undefined, previous: NOOP, next: NOOP }
 
   const activeKey = router?.query?.slug?.length > 1 ? router.query?.slug[1] : project.photos[0].key
   const slideIndex = project.photos.findIndex((photo) => photo.key === activeKey)
