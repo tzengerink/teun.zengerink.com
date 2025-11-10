@@ -30,7 +30,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^16.0.0",
     "@playwright/test": "^1.56.1",
-    "@tailwindcss/postcss": "^4.1.16",
+    "@tailwindcss/postcss": "^4.1.17",
     "@testing-library/react": "^15.0.7",
     "@types/jest": "^30.0.0",
     "@types/js-yaml": "^4.0.9",
