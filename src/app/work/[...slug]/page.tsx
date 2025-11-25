@@ -44,9 +44,15 @@ const Work: React.FC<WorkProps> = ({ projects, slug }): React.ReactElement => {
     return <Layout projects={[]}><div>No project found</div></Layout>
   }
 
+  const activeProject = projects.find((p) => p.slug === slug[0])
+  
+  if (!activeProject) {
+    return <Layout projects={[]}><div>No project found</div></Layout>
+  }
+
   return (
-    <Layout title={projects[0]?.title} projects={projects}>
-      <ProjectSlideshow project={projects[0]} slug={slug} />
+    <Layout title={activeProject.title} projects={projects}>
+      <ProjectSlideshow project={activeProject} slug={slug} />
     </Layout>
   )
 }
@@ -60,5 +66,5 @@ export default async function Page({ params }: PageProps) {
     notFound()
   }
 
-  return <Work projects={[project]} slug={slug} />
+  return <Work projects={projects} slug={slug} />
 }
