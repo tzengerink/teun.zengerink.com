@@ -10,7 +10,7 @@ jest.mock('../Navigation/Navigation', () => ({
 
 describe('Layout', () => {
   it('renders nothing when initializing', () => {
-    const { container } = render(<Layout projects={null} />)
+    const { container } = render(<Layout projects={[]} />)
     expect(container).toMatchSnapshot()
   })
 

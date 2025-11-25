@@ -4,8 +4,8 @@ import mockLink from '../../__mocks__/nextLink'
 import mockProjects from '../../__mocks__/projects'
 import MenuItem from './MenuItem'
 
-const mockRouter = jest.fn(() => ({ asPath: `/` }))
-jest.mock('next/router', () => ({ useRouter: () => mockRouter() }))
+const mockPathname = jest.fn(() => `/`)
+jest.mock('next/navigation', () => ({ usePathname: () => mockPathname() }))
 
 jest.mock('next/link', () => mockLink)
 
@@ -22,7 +22,7 @@ describe('MenuItem', () => {
   })
 
   it('renders correctly if project is active', () => {
-    mockRouter.mockReturnValueOnce({ asPath: `/work/${project.slug}` })
+    mockPathname.mockReturnValueOnce(`/work/${project.slug}`)
     const { container } = renderComponent()
     expect(container).toMatchSnapshot()
   })
