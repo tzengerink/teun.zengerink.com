@@ -3,7 +3,10 @@ import { Metadata } from 'next'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'Teun Zengerink',
+  title: {
+    default: 'Teun Zengerink',
+    template: 'Teun Zengerink - %s',
+  },
   icons: {
     icon: '/favicon.ico',
   },
