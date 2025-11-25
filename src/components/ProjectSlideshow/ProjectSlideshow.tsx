@@ -1,3 +1,5 @@
+'use client'
+
 import classNames from 'classnames'
 import React, { useEffect, useState } from 'react'
 import { Project } from '../../lib/types'
@@ -12,11 +14,12 @@ enum Key {
 
 interface ProjectSlideshowProps {
   project: Project
+  slug?: string[]
 }
 
-const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project }) => {
-  const { activeKey, previous, next } = useProject(project)
-  const [touchStartX, setTouchStartX] = useState(null)
+const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project, slug }) => {
+  const { activeKey, previous, next } = useProject(project, slug)
+  const [touchStartX, setTouchStartX] = useState<number | null>(null)
 
   useEffect(() => {
     const keyUpHandler = ({ key }: KeyboardEvent) => {

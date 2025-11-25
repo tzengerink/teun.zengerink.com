@@ -1,5 +1,6 @@
+'use client'
+
 import classNames from 'classnames'
-import Head from 'next/head'
 import React from 'react'
 import { Project } from '../../lib/types'
 import Navigation from '../Navigation/Navigation'
@@ -18,11 +19,6 @@ const Layout: React.FC<LayoutProps> = ({ title, projects, children }) => {
 
   return (
     <div>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="description" content={pageTitle}></meta>
-        <title>{pageTitle}</title>
-      </Head>
       <Navigation pageTitle={TITLE_ROOT} projects={projects} />
       <main className={classNames('relative', 'mt-xl', 'mx-md', 'mb-md', 'md:absolute', 'md:m-0', 'md:inset-0')}>
         {projects?.length ? children : null}

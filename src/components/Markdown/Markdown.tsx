@@ -13,10 +13,11 @@ const toInnerHtml = (
 } => ({ __html: marked.parse(markdown) as string })
 
 const Markdown: React.FC<Props> = ({ children }) => {
+  const childString = typeof children === 'string' ? children : children?.toString() ?? ''
   return (
     <div
       className={classNames('space-y-sm', 'text-xs', 'text-justify')}
-      dangerouslySetInnerHTML={toInnerHtml(children.toString())}
+      dangerouslySetInnerHTML={toInnerHtml(childString)}
     />
   )
 }

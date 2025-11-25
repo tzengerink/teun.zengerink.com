@@ -14,7 +14,7 @@ export abstract class Page {
     await this.page.hover(selector)
   }
 
-  async expectTitle(title: string = null): Promise<void> {
+  async expectTitle(title?: string | null): Promise<void> {
     const expected = title ? `${this.titleRoot} ${this.titleDiv} ${title}` : this.titleRoot
     await expect(this.page).toHaveTitle(expected)
   }
