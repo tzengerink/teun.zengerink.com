@@ -32,7 +32,7 @@ const generateProjects = async (item: ConfigItem[]): Promise<Project[]> => {
       title: project.title,
       statement: project.statement ?? '',
       isArchived: project.isArchived ?? false,
-      photos: generatePhotos(slug, project.captions),
+      photos: generatePhotos(slug, project.captions ?? []),
     }
   })
 }

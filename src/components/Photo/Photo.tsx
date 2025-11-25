@@ -17,14 +17,22 @@ const Photo: React.FC<Props> = ({ className, photo, alt }) => {
   const findExport = (width: Width) => photo.exports.find((value) => value.width === width)
   const toSrcSetStr = (srcSet: SrcSet[]): string => srcSet.map(([url, width]) => `${url} ${width}w`).join(', ')
 
+  const classNameObj = className ? { [className]: true } : {}
+  const desktopExport = findExport(Width.Desktop)
+  
+  if (!desktopExport) return null
+
   /* eslint-disable @next/next/no-img-element */
   return (
     <img
-      className={classNames('w-auto', 'h-auto', 'md:max-w-[70vw]', 'md:max-h-[90vh]', { [className]: !!className })}
+      className={classNames('w-auto', 'h-auto', 'md:max-w-[70vw]', 'md:max-h-[90vh]', classNameObj)}
       alt={alt}
-      src={findExport(Width.Desktop).url}
+      src={desktopExport.url}
       sizes={`${firstWidths.map((width) => `(max-width: ${width - 1}px) ${width}px`).join(', ')}, ${lastWidth}px`}
-      srcSet={toSrcSetStr(MAX_WIDTHS.map((width) => [findExport(width).url, width]))}
+      srcSet={toSrcSetStr(MAX_WIDTHS.map((width) => {
+        const exp = findExport(width)
+        return exp ? [exp.url, width] as SrcSet : ['', width] as SrcSet
+      }).filter(([url]) => url))}
     />
   )
 }

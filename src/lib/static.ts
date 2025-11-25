@@ -9,7 +9,7 @@ export interface Props {
   projects: Project[]
 }
 
-const getProjects = createGetProjects()
+export const getProjects = createGetProjects()
 
 export const getStaticPaths = async (): Promise<{ paths: Path[]; fallback: boolean }> => {
   const projects = await getProjects()
