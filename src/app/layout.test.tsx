@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { AUTHOR_NAME, TITLE_SEPARATOR } from '../../src/lib/constants'
+import RootLayout from './layout'
 
 jest.mock('../styles/globals.css', () => ({}))
 jest.mock('next/font/google', () => ({
@@ -11,19 +12,16 @@ jest.mock('next/font/google', () => ({
 
 describe('RootLayout', () => {
   it('exports a default function', () => {
-    const RootLayout = require('./layout').default
     expect(typeof RootLayout).toBe('function')
   })
 
   it('renders HTML element with lang attribute', () => {
-    const RootLayout = require('./layout').default
     const result = RootLayout({ children: <div>content</div> })
     expect(result.type).toBe('html')
     expect(result.props.lang).toBe('en')
   })
 
   it('renders HTML with correct CSS classes', () => {
-    const RootLayout = require('./layout').default
     const result = RootLayout({ children: <div>content</div> })
     const classNames = String(result.props.className || '')
     expect(classNames).toContain('font-light')
@@ -40,11 +38,8 @@ describe('RootLayout', () => {
   })
 
   it('passes children to body', () => {
-    const RootLayout = require('./layout').default
     const testContent = <div>test</div>
     const result = RootLayout({ children: testContent })
-    // With the new layout, children are passed directly to body
-    // body.props.children will be the testContent
     expect(result.props.children).toBeDefined()
     const children = Array.isArray(result.props.children) ? result.props.children : [result.props.children]
     const body = children.find((child: any) => child?.type === 'body')
@@ -52,7 +47,6 @@ describe('RootLayout', () => {
   })
 
   it('renders body with correct CSS classes', () => {
-    const RootLayout = require('./layout').default
     const result = RootLayout({ children: <div>content</div> })
     const children = Array.isArray(result.props.children) ? result.props.children : [result.props.children]
     const body = children.find((child: any) => child?.type === 'body')
@@ -62,16 +56,14 @@ describe('RootLayout', () => {
   })
 
   it('does not use head element for fonts', () => {
-    const RootLayout = require('./layout').default
     const result = RootLayout({ children: <div>content</div> })
-    // With next/font, fonts are applied via className and there's no head element with link tags
     const children = Array.isArray(result.props.children) ? result.props.children : [result.props.children]
     const hasHeadChild = children.some((child: any) => child?.type === 'head')
     expect(hasHeadChild).toBe(false)
   })
 
   it('exports metadata object', () => {
-    const metadata = require('./layout').metadata
+    const metadata = RootLayout.metadata
     expect(metadata).toBeDefined()
     expect(metadata.title).toBeDefined()
     expect(metadata.title.default).toBe(AUTHOR_NAME)
@@ -81,7 +73,7 @@ describe('RootLayout', () => {
   })
 
   it('metadata title template includes format specifier', () => {
-    const metadata = require('./layout').metadata
+    const metadata = RootLayout.metadata
     expect(metadata.title.template).toContain('%s')
   })
 })
