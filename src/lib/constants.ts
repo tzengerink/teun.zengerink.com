@@ -1,2 +1,2 @@
-export const AUTHOR_NAME = 'Teun Zengerink';
-export const TITLE_SEPARATOR = ' - ';
+export const AUTHOR_NAME = 'Teun Zengerink'
+export const TITLE_SEPARATOR = ' - '
