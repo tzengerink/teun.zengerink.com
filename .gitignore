@@ -1,4 +1,5 @@
 # next.js build output
+next-env.d.ts
 tsconfig.tsbuildinfo
 .next
 .vercel
