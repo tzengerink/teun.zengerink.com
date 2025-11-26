@@ -1,9 +1,9 @@
 import { notFound } from 'next/navigation'
 import React from 'react'
-import PageLayout from '../../../components/PageLayout/PageLayout'
-import ProjectSlideshow from '../../../components/ProjectSlideshow/ProjectSlideshow'
-import { Props } from '../../../lib/static'
-import { getProjects } from '../../../lib/static'
+import PageLayout from '@components/PageLayout/PageLayout'
+import ProjectSlideshow from '@components/ProjectSlideshow/ProjectSlideshow'
+import { Props } from '@lib/static'
+import { getProjects } from '@lib/static'
 
 interface PageProps {
   params: Promise<{

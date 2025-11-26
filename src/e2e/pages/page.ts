@@ -1,5 +1,5 @@
 import { expect, Page as PlaywrightPage } from '@playwright/test'
-import { AUTHOR_NAME, TITLE_SEPARATOR } from '../../lib/constants'
+import { AUTHOR_NAME, TITLE_SEPARATOR } from '@lib/constants'
 
 export abstract class Page {
   protected titleRoot = AUTHOR_NAME

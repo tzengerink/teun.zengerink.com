@@ -1,8 +1,8 @@
 import { test } from '@playwright/test'
-import { Project } from '../lib/types'
-import { createGetProjects } from '../lib/projects'
-import { IndexPage } from './pages/index.page'
-import { ProjectPage } from './pages/project.page'
+import { Project } from '@lib/types'
+import { createGetProjects } from '@lib/projects'
+import { IndexPage } from '@e2e/pages/index.page'
+import { ProjectPage } from '@e2e/pages/project.page'
 
 let projects: Project[]
 const getProjects = createGetProjects()

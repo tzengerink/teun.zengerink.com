@@ -2,10 +2,10 @@
 
 import classNames from 'classnames'
 import React, { useEffect, useState } from 'react'
-import { Project } from '../../lib/types'
-import { useProject } from '../../lib/useProject'
-import Photo from '../Photo/Photo'
-import Statement from '../Statement/Statement'
+import { Project } from '@lib/types'
+import { useProject } from '@lib/useProject'
+import Photo from '@components/Photo/Photo'
+import Statement from '@components/Statement/Statement'
 
 enum Key {
   LEFT = 'ArrowLeft',

@@ -1,7 +1,7 @@
 'use client'
 
-import { Photo, Project } from '@lib/types'
 import { useRouter } from 'next/navigation'
+import { Photo, Project } from '@lib/types'
 
 interface UseProject {
   activeKey: string | undefined

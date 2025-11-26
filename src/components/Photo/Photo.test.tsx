@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react'
-import Photo from './Photo'
-
-import projects from '../../__mocks__/projects'
+import projects from '@mocks/projects'
+import Photo from '@components/Photo/Photo'
 
 describe('Photo', () => {
   it('renders correctly', () => {

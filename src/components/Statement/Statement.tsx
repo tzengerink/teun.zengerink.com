@@ -1,8 +1,8 @@
 'use client'
 
 import classNames from 'classnames'
-import Markdown from '../Markdown/Markdown'
 import { useState } from 'react'
+import Markdown from '@components/Markdown/Markdown'
 
 interface StatementProps {
   title: string

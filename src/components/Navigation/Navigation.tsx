@@ -3,9 +3,9 @@
 import classNames from 'classnames'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { Project } from '../../lib/types'
-import Hamburger from '../Hamburger/Hamburger'
-import Menu from '../Menu/Menu'
+import { Project } from '@lib/types'
+import Hamburger from '@components/Hamburger/Hamburger'
+import Menu from '@components/Menu/Menu'
 
 interface NavigationProps {
   projects: Project[]

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
-import projects from '../../__mocks__/projects'
-import PageLayout from './PageLayout'
+import projects from '@mocks/projects'
+import PageLayout from '@components/PageLayout/PageLayout'
 
 jest.mock('../Navigation/Navigation', () => ({
   __esModule: true,

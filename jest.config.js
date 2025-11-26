@@ -12,9 +12,11 @@ export default createJestConfig({
   transform: { '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest' },
   transformIgnorePatterns: ['/node_modules/'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@mocks/(.*)$': '<rootDir>/src/__mocks__/$1',
     '^@app/(.*)$': '<rootDir>/src/app/$1',
     '^@components/(.*)$': '<rootDir>/src/components/$1',
-    '^@lib/(.*)$': '<rootDir>/src/lib/$1'
-  }
+    '^@e2e/(.*)$': '<rootDir>/src/e2e/$1',
+    '^@lib/(.*)$': '<rootDir>/src/lib/$1',
+    '^@styles/(.*)$': '<rootDir>/src/styles/$1',
+  },
 })

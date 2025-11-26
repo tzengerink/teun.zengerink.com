@@ -1,8 +1,8 @@
 import classNames from 'classnames'
 import Link from 'next/link'
 import React from 'react'
-import { Project } from '../../lib/types'
-import Photo from '../Photo/Photo'
+import { Project } from '@lib/types'
+import Photo from '@components/Photo/Photo'
 
 interface ProjectLink {
   project: Project
