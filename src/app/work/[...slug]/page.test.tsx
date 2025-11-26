@@ -1,8 +1,6 @@
 import { render } from '@testing-library/react'
-import React from 'react'
 import mockProjects from '../../../__mocks__/projects'
 
-// Set up all mocks before importing the page module
 jest.mock('../../../components/Layout/Layout', () => {
   return function MockLayout({ children, projects, title }: any) {
     return (
@@ -31,7 +29,6 @@ jest.mock('next/navigation', () => ({
   notFound: jest.fn(),
 }))
 
-// Import after all mocks are set up
 import Page, { generateStaticParams, generateMetadata, Work } from './page'
 import { notFound as notFoundFn } from 'next/navigation'
 
