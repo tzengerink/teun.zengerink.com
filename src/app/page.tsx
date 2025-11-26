@@ -1,15 +1,15 @@
 import React from 'react'
-import Layout from '../components/Layout/Layout'
 import ProjectLink from '../components/ProjectLink/ProjectLink'
+import PageLayout from '../components/PageLayout/PageLayout'
 import { Props } from '../lib/static'
 import { getProjects } from '../lib/static'
 import { AUTHOR_NAME } from '../lib/constants'
 
 const Home: React.FC<Props> = ({ projects }): React.ReactElement => {
   return (
-    <Layout projects={projects}>
+    <PageLayout projects={projects}>
       <ProjectLink project={projects[0]} />
-    </Layout>
+    </PageLayout>
   )
 }
 

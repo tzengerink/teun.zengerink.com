@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import mockProjects from '../../../__mocks__/projects'
 
-jest.mock('../../../components/Layout/Layout', () => {
+jest.mock('../../../components/PageLayout/PageLayout', () => {
   return function MockLayout({ children, projects, title }: any) {
     return (
       <div data-testid="layout" data-title={title} data-projects-count={projects?.length || 0}>
@@ -192,7 +192,7 @@ describe('Work Page', () => {
       expect(slideshow.getAttribute('data-slug')).toBe([project.slug, project.photos[1].key].join(','))
     })
 
-    it('renders Layout component', async () => {
+    it('renders PageLayout component', async () => {
       const project = mockProjects[0]
       const { getByTestId } = render(
         await Page({

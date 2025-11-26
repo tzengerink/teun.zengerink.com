@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import React from 'react'
-import Layout from '../../../components/Layout/Layout'
+import PageLayout from '../../../components/PageLayout/PageLayout'
 import ProjectSlideshow from '../../../components/ProjectSlideshow/ProjectSlideshow'
 import { Props } from '../../../lib/static'
 import { getProjects } from '../../../lib/static'
@@ -51,9 +51,9 @@ export const Work: React.FC<WorkProps> = ({ projects, slug }): React.ReactElemen
   }
 
   return (
-    <Layout title={activeProject.title} projects={projects}>
+    <PageLayout title={activeProject.title} projects={projects}>
       <ProjectSlideshow project={activeProject} slug={slug} />
-    </Layout>
+    </PageLayout>
   )
 }
 

@@ -1,9 +1,8 @@
 import { render } from '@testing-library/react'
-import React from 'react'
 import Page from './page'
 import mockProjects from '../__mocks__/projects'
 
-jest.mock('../components/Layout/Layout', () => {
+jest.mock('../components/PageLayout/PageLayout', () => {
   return function MockLayout({ children, projects, title }: any) {
     return (
       <div data-testid="layout" data-projects-count={projects?.length || 0} data-title={title}>
@@ -57,7 +56,7 @@ describe('Home Page', () => {
     expect(getByTestId('layout')).toBeTruthy()
   })
 
-  it('renders with all projects in Layout', async () => {
+  it('renders with all projects in PageLayout', async () => {
     const { getByTestId } = render(await Page())
     const layout = getByTestId('layout')
     expect(layout.getAttribute('data-projects-count')).toBe(mockProjects.length.toString())
@@ -73,7 +72,7 @@ describe('Home Page', () => {
     expect(getByText(mockProjects[0].title)).toBeTruthy()
   })
 
-  it('renders Layout component with correct title', async () => {
+  it('renders PageLayout component with correct title', async () => {
     const { getByTestId } = render(await Page())
     const layout = getByTestId('layout')
     expect(layout).toBeTruthy()
