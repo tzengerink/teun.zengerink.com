@@ -8,6 +8,7 @@ out/
 node_modules/
 coverage/
 test-results/
+.open-next/
 
 # Logs
 npm-debug.log*
