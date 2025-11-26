@@ -1,7 +1,6 @@
 import { fireEvent, render } from '@testing-library/react'
-import React from 'react'
-import projects from '../../__mocks__/projects'
-import ProjectSlideshow from './ProjectSlideshow'
+import projects from '@mocks/projects'
+import ProjectSlideshow from '@components/ProjectSlideshow/ProjectSlideshow'
 
 const mockProject = projects[0]
 const mockNext = jest.fn()

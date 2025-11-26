@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test'
-import { Page } from './page'
+import { Page } from '@e2e/pages/page'
 
 export class IndexPage extends Page {
   async open(): Promise<void> {

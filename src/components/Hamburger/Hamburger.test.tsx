@@ -1,5 +1,5 @@
 import { fireEvent, render } from '@testing-library/react'
-import Hamburger from './Hamburger'
+import Hamburger from '@components/Hamburger/Hamburger'
 
 describe('Hamburger', () => {
   const onClick = jest.fn()

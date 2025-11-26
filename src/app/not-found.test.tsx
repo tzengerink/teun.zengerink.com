@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react'
-import NotFound from './not-found'
-import mockProjects from '../__mocks__/projects'
+import NotFound from '@app/not-found'
+import mockProjects from '@mocks/projects'
 
-jest.mock('../components/PageLayout/PageLayout')
+jest.mock('@components/PageLayout/PageLayout')
 
-jest.mock('../lib/static', () => ({
+jest.mock('@lib/static', () => ({
   getProjects: jest.fn(async () => mockProjects),
 }))
 

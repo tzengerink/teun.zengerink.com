@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
-import { Project } from '../../lib/types'
-import MenuItem from '../MenuItem/MenuItem'
+import { Project } from '@lib/types'
+import MenuItem from '@components/MenuItem/MenuItem'
 
 interface MenuProps {
   projects: Project[]

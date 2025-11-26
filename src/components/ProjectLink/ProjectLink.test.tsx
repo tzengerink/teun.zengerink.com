@@ -1,8 +1,7 @@
 import { render } from '@testing-library/react'
-import React from 'react'
-import mockLink from '../../__mocks__/nextLink'
-import projects from '../../__mocks__/projects'
-import ProjectLink from './ProjectLink'
+import mockLink from '@mocks/nextLink'
+import projects from '@mocks/projects'
+import ProjectLink from '@components/ProjectLink/ProjectLink'
 
 jest.mock('next/link', () => mockLink)
 

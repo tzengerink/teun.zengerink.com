@@ -1,9 +1,13 @@
 import { render } from '@testing-library/react'
-import mockProjects from '../../../__mocks__/projects'
+import mockProjects from '@mocks/projects'
 
-jest.mock('../../../components/PageLayout/PageLayout')
+jest.mock('next/navigation', () => ({
+  notFound: jest.fn(),
+}))
 
-jest.mock('../../../components/ProjectSlideshow/ProjectSlideshow', () => {
+jest.mock('@components/PageLayout/PageLayout')
+
+jest.mock('@components/ProjectSlideshow/ProjectSlideshow', () => {
   return function MockProjectSlideshow({ project, slug }: any) {
     return (
       <div data-testid="project-slideshow" data-slug={slug.join(',')}>
@@ -13,12 +17,8 @@ jest.mock('../../../components/ProjectSlideshow/ProjectSlideshow', () => {
   }
 })
 
-jest.mock('../../../lib/static', () => ({
+jest.mock('@lib/static', () => ({
   getProjects: jest.fn(async () => mockProjects),
-}))
-
-jest.mock('next/navigation', () => ({
-  notFound: jest.fn(),
 }))
 
 import Page, { generateStaticParams, generateMetadata, Work } from './page'

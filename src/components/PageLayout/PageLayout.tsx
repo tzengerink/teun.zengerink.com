@@ -2,9 +2,9 @@
 
 import classNames from 'classnames'
 import React from 'react'
-import { Project } from '../../lib/types'
-import Navigation from '../Navigation/Navigation'
-import { AUTHOR_NAME } from '../../lib/constants'
+import { Project } from '@lib/types'
+import Navigation from '@components/Navigation/Navigation'
+import { AUTHOR_NAME } from '@lib/constants'
 
 interface PageLayoutProps {
   title?: string

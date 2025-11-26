@@ -1,8 +1,7 @@
-import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
-import mockProjects from '../../__mocks__/projects'
-import Navigation from './Navigation'
-import { Project } from '../../lib/types'
+import mockProjects from '@mocks/projects'
+import { Project } from '@lib/types'
+import Navigation from '@components/Navigation/Navigation'
 
 const mockRouter = jest.fn(() => ({ asPath: '/' }))
 jest.mock('next/router', () => ({ useRouter: () => mockRouter() }))

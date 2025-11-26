@@ -1,8 +1,7 @@
 import { fireEvent, render } from '@testing-library/react'
-import React from 'react'
-import mockLink from '../../__mocks__/nextLink'
-import mockProjects from '../../__mocks__/projects'
-import MenuItem from './MenuItem'
+import mockLink from '@mocks/nextLink'
+import mockProjects from '@mocks/projects'
+import MenuItem from '@components/MenuItem/MenuItem'
 
 const mockPathname = jest.fn(() => `/`)
 jest.mock('next/navigation', () => ({ usePathname: () => mockPathname() }))

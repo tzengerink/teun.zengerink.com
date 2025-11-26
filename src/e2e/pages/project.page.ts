@@ -1,5 +1,5 @@
-import { Photo, Project } from '../../lib/types'
-import { Page } from './page'
+import { Photo, Project } from '@lib/types'
+import { Page } from '@e2e/pages/page'
 
 export class ProjectPage extends Page {
   async open(project: Project, photo: Photo | null = null): Promise<void> {

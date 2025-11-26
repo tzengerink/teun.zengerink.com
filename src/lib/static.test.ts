@@ -1,4 +1,4 @@
-import mockProjects from '@lib/__mocks__/projects'
+import mockProjects from '@mocks/projects'
 import { getStaticPaths, getStaticProps } from '@lib/static'
 
 jest.mock('@lib/projects', () => ({

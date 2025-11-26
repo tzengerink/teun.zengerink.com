@@ -1,13 +1,14 @@
 import { DefaultTemplateString, Icons } from 'next/dist/lib/metadata/types/metadata-types'
-import { AUTHOR_NAME, TITLE_SEPARATOR } from '../../src/lib/constants'
-import RootLayout, { metadata } from './layout'
+import { AUTHOR_NAME, TITLE_SEPARATOR } from '@lib/constants'
+import RootLayout, { metadata } from '@app/layout'
 
-jest.mock('../styles/globals.css', () => ({}))
 jest.mock('next/font/google', () => ({
   Roboto_Mono: jest.fn(() => ({
     className: 'font-mono',
   })),
 }))
+
+jest.mock('@styles/globals.css', () => ({}))
 
 describe('RootLayout', () => {
   it('exports a default function', () => {

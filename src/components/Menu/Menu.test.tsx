@@ -1,8 +1,8 @@
 import { fireEvent, render } from '@testing-library/react'
-import mockProjects from '../../__mocks__/projects'
-import Menu from './Menu'
+import mockProjects from '@mocks/projects'
+import Menu from '@components/Menu/Menu'
 
-jest.mock('../MenuItem/MenuItem', () => ({
+jest.mock('@components/MenuItem/MenuItem', () => ({
   __esModule: true,
   default: ({ project, onClick }) => <a onClick={onClick}>{project.title}</a>,
 }))

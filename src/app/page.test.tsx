@@ -1,16 +1,16 @@
 import { render } from '@testing-library/react'
-import Page from './page'
-import mockProjects from '../__mocks__/projects'
+import Page from '@app/page'
+import mockProjects from '@mocks/projects'
 
-jest.mock('../components/PageLayout/PageLayout')
+jest.mock('@components/PageLayout/PageLayout')
 
-jest.mock('../components/ProjectLink/ProjectLink', () => {
+jest.mock('@components/ProjectLink/ProjectLink', () => {
   return function MockProjectLink({ project }: any) {
     return <div data-testid="project-link">{project.title}</div>
   }
 })
 
-jest.mock('../lib/static', () => ({
+jest.mock('@lib/static', () => ({
   getProjects: jest.fn(async () => mockProjects),
 }))
 

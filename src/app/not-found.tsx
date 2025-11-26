@@ -1,7 +1,7 @@
 import React from 'react'
-import PageLayout from '../components/PageLayout/PageLayout'
-import { Props } from '../lib/static'
-import { getProjects } from '../lib/static'
+import PageLayout from '@components/PageLayout/PageLayout'
+import { Props } from '@lib/static'
+import { getProjects } from '@lib/static'
 
 const ERROR = 'Page Not Found'
 

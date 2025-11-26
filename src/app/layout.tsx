@@ -1,8 +1,7 @@
 import { Metadata } from 'next'
 import { Roboto_Mono } from 'next/font/google'
-import '../styles/globals.css'
-
-import { AUTHOR_NAME, TITLE_SEPARATOR } from '../lib/constants'
+import { AUTHOR_NAME, TITLE_SEPARATOR } from '@lib/constants'
+import '@styles/globals.css'
 
 const robotoMono = Roboto_Mono({
   weight: ['300', '500'],
@@ -20,16 +19,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${robotoMono.className} font-light text-grey/90`}>
-      <body className="bg-white m-0">
-        {children}
-      </body>
+      <body className="bg-white m-0">{children}</body>
     </html>
   )
 }

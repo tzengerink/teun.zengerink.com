@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import Markdown from './Markdown'
+import Markdown from '@components/Markdown/Markdown'
 
 jest.mock('marked')
 

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import Statement from './Statement'
+import Statement from '@components/Statement/Statement'
 
 jest.mock('marked')
 
