@@ -1,5 +1,5 @@
-import projects from '../__mocks__/projects'
-import { useProject } from './useProject'
+import projects from '@lib/__mocks__/projects'
+import { useProject } from '@lib/useProject'
 
 let mockPush: jest.Mock
 

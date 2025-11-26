@@ -3,7 +3,7 @@ import path from 'path'
 import slugify from 'slugify'
 import yaml from 'js-yaml'
 
-import { Width, ConfigCaption, ConfigItem, Photo, Project } from './types'
+import { Width, ConfigCaption, ConfigItem, Photo, Project } from '@lib/types'
 
 export const MAX_WIDTHS = [Width.Mobile, Width.Desktop]
 

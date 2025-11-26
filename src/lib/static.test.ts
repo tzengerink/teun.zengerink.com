@@ -1,7 +1,7 @@
-import mockProjects from '../__mocks__/projects'
-import { getStaticPaths, getStaticProps } from './static'
+import mockProjects from '@lib/__mocks__/projects'
+import { getStaticPaths, getStaticProps } from '@lib/static'
 
-jest.mock('./projects', () => ({
+jest.mock('@lib/projects', () => ({
   createGetProjects: () => () => Promise.resolve(mockProjects),
 }))
 
