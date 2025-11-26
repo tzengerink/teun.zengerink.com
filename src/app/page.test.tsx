@@ -2,15 +2,7 @@ import { render } from '@testing-library/react'
 import Page from './page'
 import mockProjects from '../__mocks__/projects'
 
-jest.mock('../components/PageLayout/PageLayout', () => {
-  return function MockLayout({ children, projects, title }: any) {
-    return (
-      <div data-testid="layout" data-projects-count={projects?.length || 0} data-title={title}>
-        {children}
-      </div>
-    )
-  }
-})
+jest.mock('../components/PageLayout/PageLayout')
 
 jest.mock('../components/ProjectLink/ProjectLink', () => {
   return function MockProjectLink({ project }: any) {
