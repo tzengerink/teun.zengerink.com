@@ -110,13 +110,17 @@ describe('Work Page', () => {
 
   describe('Work Component', () => {
     it('calls notFound when projects array is empty', () => {
+      const spy = jest.spyOn(console, 'error').mockImplementation()
       expect(() => render(<Work projects={[]} slug={['any-project']} />)).toThrow()
       expect(mockNotFound).toHaveBeenCalled()
+      spy.mockRestore()
     })
 
     it('calls notFound when active project is not found', () => {
+      const spy = jest.spyOn(console, 'error').mockImplementation()
       expect(() => render(<Work projects={mockProjects} slug={['non-existent-project']} />)).toThrow()
       expect(mockNotFound).toHaveBeenCalled()
+      spy.mockRestore()
     })
   })
 

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { AUTHOR_NAME, TITLE_SEPARATOR } from '../../src/lib/constants'
+
 jest.mock('../styles/globals.css', () => ({}))
 jest.mock('next/font/google', () => ({
   Roboto_Mono: jest.fn(() => ({
@@ -72,8 +74,8 @@ describe('RootLayout', () => {
     const metadata = require('./layout').metadata
     expect(metadata).toBeDefined()
     expect(metadata.title).toBeDefined()
-    expect(metadata.title.default).toBe('Teun Zengerink')
-    expect(metadata.title.template).toContain('Teun Zengerink')
+    expect(metadata.title.default).toBe(AUTHOR_NAME)
+    expect(metadata.title.template).toContain(`${AUTHOR_NAME}${TITLE_SEPARATOR}%s`)
     expect(metadata.icons).toBeDefined()
     expect(metadata.icons.icon).toBe('/favicon.ico')
   })
