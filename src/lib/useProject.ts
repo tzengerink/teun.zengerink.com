@@ -1,6 +1,6 @@
 'use client'
 
-import { Photo, Project } from './types'
+import { Photo, Project } from '@lib/types'
 import { useRouter } from 'next/navigation'
 
 interface UseProject {
@@ -20,9 +20,9 @@ export const useProject = (project: Project, initialSlug?: string[]): UseProject
   const slideIndex = project.photos.findIndex((photo) => photo.key === activeKey)
   const firstPhoto = project.photos[0]
   const lastPhoto = [...project.photos].pop()
-  
+
   if (!lastPhoto) return { activeKey, previous: NOOP, next: NOOP }
-  
+
   const nextPhoto = project.photos[slideIndex + 1]
   const previousPhoto = project.photos[slideIndex - 1]
   const isLast = activeKey === lastPhoto.key
