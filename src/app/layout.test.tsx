@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { AUTHOR_NAME, TITLE_SEPARATOR } from '../../src/lib/constants'
 import RootLayout from './layout'
 
