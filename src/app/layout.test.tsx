@@ -1,5 +1,6 @@
+import React from 'react'
 import { AUTHOR_NAME, TITLE_SEPARATOR } from '../../src/lib/constants'
-import RootLayout from './layout'
+import RootLayout, { type Metadata } from './layout'
 
 jest.mock('../styles/globals.css', () => ({}))
 jest.mock('next/font/google', () => ({
