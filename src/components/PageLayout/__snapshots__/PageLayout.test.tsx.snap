@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Layout renders nothing when initializing 1`] = `
+exports[`PageLayout renders nothing when initializing 1`] = `
 <div>
   <div>
     <div>
@@ -13,7 +13,7 @@ exports[`Layout renders nothing when initializing 1`] = `
 </div>
 `;
 
-exports[`Layout renders the children when initialized 1`] = `
+exports[`PageLayout renders the children when initialized 1`] = `
 <div>
   <div>
     <div>

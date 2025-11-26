@@ -1,14 +1,14 @@
 import React from 'react'
-import Layout from '../components/Layout/Layout'
+import PageLayout from '../components/PageLayout/PageLayout'
 import { Props } from '../lib/static'
 import { getProjects } from '../lib/static'
 
 const ERROR = 'Page Not Found'
 
 const Error: React.FC<Props> = ({ projects }): React.ReactElement => (
-  <Layout title={ERROR} projects={projects}>
+  <PageLayout title={ERROR} projects={projects}>
     <h2 className="md:absolute md:inset-20 text-center">{ERROR}</h2>
-  </Layout>
+  </PageLayout>
 )
 
 export default async function NotFound() {

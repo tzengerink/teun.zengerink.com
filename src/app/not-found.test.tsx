@@ -1,9 +1,8 @@
 import { render } from '@testing-library/react'
-import React from 'react'
 import NotFound from './not-found'
 import mockProjects from '../__mocks__/projects'
 
-jest.mock('../components/Layout/Layout', () => {
+jest.mock('../components/PageLayout/PageLayout', () => {
   return function MockLayout({ children, projects, title }: any) {
     return (
       <div data-testid="layout" data-projects-count={projects?.length || 0} data-title={title}>
@@ -23,12 +22,12 @@ describe('NotFound', () => {
     expect(getByText('Page Not Found')).toBeTruthy()
   })
 
-  it('renders with Layout component', async () => {
+  it('renders with PageLayout component', async () => {
     const { getByTestId } = render(await NotFound())
     expect(getByTestId('layout')).toBeTruthy()
   })
 
-  it('passes all projects to Layout', async () => {
+  it('passes all projects to PageLayout', async () => {
     const { getByTestId } = render(await NotFound())
     const layout = getByTestId('layout')
     expect(layout.getAttribute('data-projects-count')).toBe(mockProjects.length.toString())
