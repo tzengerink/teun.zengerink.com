@@ -13,7 +13,7 @@ interface PageProps {
 
 export async function generateStaticParams() {
   const projects = await getProjects()
-  
+
   return projects.flatMap((project) => {
     const paths = project.photos.map((photo) => ({
       slug: [project.slug, photo.key],
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params
   const projects = await getProjects()
   const project = projects.find((p) => p.slug === slug[0])
-  
+
   return {
     title: project?.title || 'Work',
   }
@@ -39,15 +39,15 @@ interface WorkProps extends Props {
   slug: string[]
 }
 
-const Work: React.FC<WorkProps> = ({ projects, slug }): React.ReactElement => {
+export const Work: React.FC<WorkProps> = ({ projects, slug }): React.ReactElement => {
   if (!projects || projects.length === 0) {
-    return <Layout projects={[]}><div>No project found</div></Layout>
+    notFound()
   }
 
   const activeProject = projects.find((p) => p.slug === slug[0])
-  
+
   if (!activeProject) {
-    return <Layout projects={[]}><div>No project found</div></Layout>
+    notFound()
   }
 
   return (
