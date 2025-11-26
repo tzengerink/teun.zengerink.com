@@ -23,7 +23,14 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@components/*": ["src/components/*"],
+      "@lib/*": ["src/lib/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
