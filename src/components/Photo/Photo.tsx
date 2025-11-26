@@ -14,25 +14,17 @@ const Photo: React.FC<Props> = ({ className, photo, alt }) => {
   const firstWidths = MAX_WIDTHS.slice(0, -1)
   const lastWidth = MAX_WIDTHS.slice(-1)[0]
 
-  const findExport = (width: Width) => photo.exports.find((value) => value.width === width)
+  const findExport = (width: Width) => photo.exports.find((value) => value.width === width) || { url: '' }
   const toSrcSetStr = (srcSet: SrcSet[]): string => srcSet.map(([url, width]) => `${url} ${width}w`).join(', ')
-
-  const classNameObj = className ? { [className]: true } : {}
-  const desktopExport = findExport(Width.Desktop)
-  
-  if (!desktopExport) return null
 
   /* eslint-disable @next/next/no-img-element */
   return (
     <img
-      className={classNames('w-auto', 'h-auto', 'md:max-w-[70vw]', 'md:max-h-[90vh]', classNameObj)}
+      className={classNames(className, 'w-auto', 'h-auto', 'md:max-w-[70vw]', 'md:max-h-[90vh]')}
       alt={alt}
-      src={desktopExport.url}
+      src={findExport(Width.Desktop).url}
       sizes={`${firstWidths.map((width) => `(max-width: ${width - 1}px) ${width}px`).join(', ')}, ${lastWidth}px`}
-      srcSet={toSrcSetStr(MAX_WIDTHS.map((width) => {
-        const exp = findExport(width)
-        return exp ? [exp.url, width] as SrcSet : ['', width] as SrcSet
-      }).filter(([url]) => url))}
+      srcSet={toSrcSetStr(MAX_WIDTHS.map((width) => [findExport(width).url, width]))}
     />
   )
 }
