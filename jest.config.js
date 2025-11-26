@@ -11,4 +11,10 @@ export default createJestConfig({
   testPathIgnorePatterns: ['/node_modules/', '/.next/', '/src/e2e/'],
   transform: { '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest' },
   transformIgnorePatterns: ['/node_modules/'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@app/(.*)$': '<rootDir>/src/app/$1',
+    '^@components/(.*)$': '<rootDir>/src/components/$1',
+    '^@lib/(.*)$': '<rootDir>/src/lib/$1'
+  }
 })
