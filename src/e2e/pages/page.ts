@@ -1,8 +1,9 @@
 import { expect, Page as PlaywrightPage } from '@playwright/test'
+import { AUTHOR_NAME, TITLE_SEPARATOR } from '../../lib/constants'
 
 export abstract class Page {
-  protected titleRoot = 'Teun Zengerink'
-  protected titleDiv = '-'
+  protected titleRoot = AUTHOR_NAME
+  protected titleDiv = TITLE_SEPARATOR
 
   constructor(protected page: PlaywrightPage) {}
 
@@ -15,7 +16,7 @@ export abstract class Page {
   }
 
   async expectTitle(title?: string | null): Promise<void> {
-    const expected = title ? `${this.titleRoot} ${this.titleDiv} ${title}` : this.titleRoot
+    const expected = title ? `${this.titleRoot}${this.titleDiv}${title}` : this.titleRoot
     await expect(this.page).toHaveTitle(expected)
   }
 
