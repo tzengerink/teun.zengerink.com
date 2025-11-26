@@ -7,7 +7,7 @@ import { Width, ConfigCaption, ConfigItem, Photo, Project } from './types'
 
 export const MAX_WIDTHS = [Width.Mobile, Width.Desktop]
 
-const generatePhotos = (slug: string, captions: ConfigCaption[]): Photo[] => {
+const generatePhotos = (slug: string, captions: ConfigCaption[] = []): Photo[] => {
   const photosDirectory = path.join(process.cwd(), 'public/photos', slug, `${Width.Mobile}w`)
   const fileNames = fs.readdirSync(photosDirectory)
 
@@ -32,7 +32,7 @@ const generateProjects = async (item: ConfigItem[]): Promise<Project[]> => {
       title: project.title,
       statement: project.statement ?? '',
       isArchived: project.isArchived ?? false,
-      photos: generatePhotos(slug, project.captions ?? []),
+      photos: generatePhotos(slug, project.captions),
     }
   })
 }
