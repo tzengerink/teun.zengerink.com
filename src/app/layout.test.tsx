@@ -1,6 +1,6 @@
-import React from 'react'
+import { DefaultTemplateString, Icons } from 'next/dist/lib/metadata/types/metadata-types'
 import { AUTHOR_NAME, TITLE_SEPARATOR } from '../../src/lib/constants'
-import RootLayout, { type Metadata } from './layout'
+import RootLayout, { metadata } from './layout'
 
 jest.mock('../styles/globals.css', () => ({}))
 jest.mock('next/font/google', () => ({
@@ -62,17 +62,18 @@ describe('RootLayout', () => {
   })
 
   it('exports metadata object', () => {
-    const metadata = RootLayout.metadata
+    const title = metadata.title as DefaultTemplateString
+    const icons = metadata.icons as Icons
     expect(metadata).toBeDefined()
-    expect(metadata.title).toBeDefined()
-    expect(metadata.title.default).toBe(AUTHOR_NAME)
-    expect(metadata.title.template).toContain(`${AUTHOR_NAME}${TITLE_SEPARATOR}%s`)
-    expect(metadata.icons).toBeDefined()
-    expect(metadata.icons.icon).toBe('/favicon.ico')
+    expect(title).toBeDefined()
+    expect(title.default).toBe(AUTHOR_NAME)
+    expect(title.template).toContain(`${AUTHOR_NAME}${TITLE_SEPARATOR}%s`)
+    expect(icons).toBeDefined()
+    expect(icons.icon).toBe('/favicon.ico')
   })
 
   it('metadata title template includes format specifier', () => {
-    const metadata = RootLayout.metadata
-    expect(metadata.title.template).toContain('%s')
+    const title = metadata.title as DefaultTemplateString
+    expect(title.template).toContain('%s')
   })
 })
