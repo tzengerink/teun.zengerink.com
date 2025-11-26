@@ -32,7 +32,7 @@ jest.mock('next/navigation', () => ({
 }))
 
 // Import after all mocks are set up
-import Page, { generateStaticParams, generateMetadata } from './page'
+import Page, { generateStaticParams, generateMetadata, Work } from './page'
 import { notFound as notFoundFn } from 'next/navigation'
 
 const mockNotFound = notFoundFn as any as jest.Mock
@@ -61,8 +61,7 @@ describe('Work Page', () => {
       const projectWithStatement = mockProjects.find((p) => p.statement)
       if (projectWithStatement) {
         const hasStatementRoute = params.some(
-          (p: any) =>
-            p.slug[0] === projectWithStatement.slug && p.slug.length === 1
+          (p: any) => p.slug[0] === projectWithStatement.slug && p.slug.length === 1,
         )
         expect(hasStatementRoute).toBe(true)
       }
@@ -71,9 +70,7 @@ describe('Work Page', () => {
     it('includes photo routes for each project', async () => {
       const params = await generateStaticParams()
       const firstProject = mockProjects[0]
-      const photoRoutes = params.filter(
-        (p: any) => p.slug[0] === firstProject.slug && p.slug.length === 2
-      )
+      const photoRoutes = params.filter((p: any) => p.slug[0] === firstProject.slug && p.slug.length === 2)
       expect(photoRoutes.length).toBe(firstProject.photos.length)
     })
 
@@ -111,13 +108,25 @@ describe('Work Page', () => {
     })
   })
 
+  describe('Work Component', () => {
+    it('calls notFound when projects array is empty', () => {
+      expect(() => render(<Work projects={[]} slug={['any-project']} />)).toThrow()
+      expect(mockNotFound).toHaveBeenCalled()
+    })
+
+    it('calls notFound when active project is not found', () => {
+      expect(() => render(<Work projects={mockProjects} slug={['non-existent-project']} />)).toThrow()
+      expect(mockNotFound).toHaveBeenCalled()
+    })
+  })
+
   describe('Page Component', () => {
     it('renders layout with all projects', async () => {
       const project = mockProjects[0]
       const { getByTestId } = render(
         await Page({
           params: Promise.resolve({ slug: [project.slug, '01'] }),
-        })
+        }),
       )
       const layout = getByTestId('layout')
       expect(layout.getAttribute('data-projects-count')).toBe(mockProjects.length.toString())
@@ -128,7 +137,7 @@ describe('Work Page', () => {
       const { getByTestId } = render(
         await Page({
           params: Promise.resolve({ slug: [project.slug, '01'] }),
-        })
+        }),
       )
       const layout = getByTestId('layout')
       expect(layout.getAttribute('data-title')).toBe(project.title)
@@ -139,7 +148,7 @@ describe('Work Page', () => {
       const { getByTestId } = render(
         await Page({
           params: Promise.resolve({ slug: [project.slug, '01'] }),
-        })
+        }),
       )
       expect(getByTestId('project-slideshow')).toBeTruthy()
     })
@@ -150,7 +159,7 @@ describe('Work Page', () => {
       const { getByTestId } = render(
         await Page({
           params: Promise.resolve({ slug }),
-        })
+        }),
       )
       const slideshow = getByTestId('project-slideshow')
       expect(slideshow.getAttribute('data-slug')).toBe(slug.join(','))
@@ -176,12 +185,10 @@ describe('Work Page', () => {
       const { getByTestId } = render(
         await Page({
           params: Promise.resolve({ slug: [project.slug, project.photos[1].key] }),
-        })
+        }),
       )
       const slideshow = getByTestId('project-slideshow')
-      expect(slideshow.getAttribute('data-slug')).toBe(
-        [project.slug, project.photos[1].key].join(',')
-      )
+      expect(slideshow.getAttribute('data-slug')).toBe([project.slug, project.photos[1].key].join(','))
     })
 
     it('renders Layout component', async () => {
@@ -189,7 +196,7 @@ describe('Work Page', () => {
       const { getByTestId } = render(
         await Page({
           params: Promise.resolve({ slug: [project.slug, '01'] }),
-        })
+        }),
       )
       expect(getByTestId('layout')).toBeTruthy()
     })
@@ -201,22 +208,11 @@ describe('Work Page', () => {
       const { getByTestId } = render(
         await Page({
           params: Promise.resolve({ slug }),
-        })
+        }),
       )
       const slideshow = getByTestId('project-slideshow')
       expect(slideshow.textContent).toContain(project.title)
       expect(slideshow.getAttribute('data-slug')).toBe(slug.join(','))
-    })
-
-    it('handles edge case with empty projects array', async () => {
-      // Mock getProjects to return empty array for this specific test
-      const { getProjects } = require('../../../lib/static')
-      getProjects.mockResolvedValueOnce([])
-
-      await Page({
-        params: Promise.resolve({ slug: ['any-project', '01'] }),
-      })
-      expect(mockNotFound).toHaveBeenCalled()
     })
   })
 })
