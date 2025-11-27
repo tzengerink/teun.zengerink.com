@@ -47,7 +47,7 @@ const ProjectLink: React.FC<ProjectLink> = ({ project }) => {
           >
             {project?.title}
           </div>
-          <Photo photo={project?.photos[0]} alt={project?.title} />
+          <Photo hasPriority photo={project?.photos[0]} alt={project?.title} />
         </div>
       </Link>
     </div>

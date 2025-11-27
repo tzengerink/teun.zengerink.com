@@ -51,7 +51,7 @@ const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project, slug }) =>
   return (
     <div className={classNames('relative', 'h-[calc(100vh-150px)]', 'md:h-[100vh]')}>
       <div
-        className={classNames('absolute', 'top-1/2', 'translate-y-[-50%]', 'sm:left-1/2', 'sm:translate-x-[-50%]')}
+        className={classNames('absolute', 'top-1/2', 'translate-y-[-50%]', 'md:left-1/2', 'md:translate-x-[-50%]')}
         onTouchStart={(e) => touchStartHandler(e)}
         onTouchMove={(e) => touchMoveHandler(e)}
       >
@@ -67,6 +67,7 @@ const ProjectSlideshow: React.FC<ProjectSlideshowProps> = ({ project, slug }) =>
         />
         {project?.photos.map((photo) => (
           <Photo
+            hasPriority={photo.key === activeKey}
             key={`${project.slug}--slide-${photo.key}`}
             className={classNames('max-h-[calc(100vh-150px)]', 'sm:max-h-[100vh]', 'text-center', {
               block: photo.key === activeKey,

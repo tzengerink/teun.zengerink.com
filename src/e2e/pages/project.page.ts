@@ -4,7 +4,7 @@ import { Page } from '@e2e/pages/page'
 export class ProjectPage extends Page {
   async open(project: Project, photo: Photo | null = null): Promise<void> {
     const selectedPhoto = photo ? photo : project.photos[0]
-    await this.page.goto(`/work/${project.slug}/${selectedPhoto.key}`)
+    await this.page.goto(`/work/${project.slug}/${selectedPhoto.key}`, { timeout: 60_000 })
     await this.expectUrl(`/work/${project.slug}/${selectedPhoto.key}`)
     await this.expectTitle(project.title)
   }

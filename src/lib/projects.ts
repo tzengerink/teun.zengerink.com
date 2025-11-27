@@ -3,9 +3,7 @@ import path from 'path'
 import slugify from 'slugify'
 import yaml from 'js-yaml'
 
-import { Width, ConfigCaption, ConfigItem, Photo, Project } from '@lib/types'
-
-export const MAX_WIDTHS = [Width.Mobile, Width.Desktop]
+import { Width, ConfigCaption, ConfigItem, Photo, Project, MAX_WIDTHS } from '@lib/types'
 
 const generatePhotos = (slug: string, captions: ConfigCaption[] = []): Photo[] => {
   const photosDirectory = path.join(process.cwd(), 'public/photos', slug, `${Width.Mobile}w`)

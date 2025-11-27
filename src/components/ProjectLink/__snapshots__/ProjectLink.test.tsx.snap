@@ -19,9 +19,14 @@ exports[`SinglePhoto renders correctly for projects with a statement 1`] = `
         <img
           alt="My First Project"
           class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-          sizes="(max-width: 767px) 768px, 1280px"
-          src="/photos/my-first-project/1280w/01.jpg"
-          srcset="/photos/my-first-project/768w/01.jpg 768w, /photos/my-first-project/1280w/01.jpg 1280w"
+          data-nimg="1"
+          decoding="async"
+          fetchpriority="high"
+          height="2560"
+          src="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F01.jpg&w=3840&q=75"
+          srcset="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F01.jpg&w=3840&q=75 1x"
+          style="color: transparent;"
+          width="2560"
         />
       </div>
     </a>
@@ -48,9 +53,14 @@ exports[`SinglePhoto renders correctly for projects without a statement 1`] = `
         <img
           alt="Project without a statement"
           class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-          sizes="(max-width: 767px) 768px, 1280px"
-          src="/photos/no-statement/1280w/01.jpg"
-          srcset="/photos/no-statement/768w/01.jpg 768w, /photos/no-statement/1280w/01.jpg 1280w"
+          data-nimg="1"
+          decoding="async"
+          fetchpriority="high"
+          height="2560"
+          src="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F01.jpg&w=3840&q=75"
+          srcset="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F01.jpg&w=3840&q=75 1x"
+          style="color: transparent;"
+          width="2560"
         />
       </div>
     </a>
