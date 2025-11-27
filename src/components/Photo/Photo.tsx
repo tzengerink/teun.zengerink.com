@@ -1,30 +1,27 @@
+import Image from 'next/image'
 import classNames from 'classnames'
 import React from 'react'
-import { MAX_WIDTHS, Photo as PhotoInterface, Width } from '@lib/types'
+import { Photo as PhotoInterface, Width } from '@lib/types'
 
 interface Props {
   className?: string
   photo: PhotoInterface
   alt: string
+  hasPriority?: boolean
 }
 
-type SrcSet = [url: string, width: Width]
-
-const Photo: React.FC<Props> = ({ className, photo, alt }) => {
-  const firstWidths = MAX_WIDTHS.slice(0, -1)
-  const lastWidth = MAX_WIDTHS.slice(-1)[0]
-
+const Photo: React.FC<Props> = ({ className, photo, alt, hasPriority = false }) => {
   const findExport = (width: Width) => photo.exports.find((value) => value.width === width) || { url: '' }
-  const toSrcSetStr = (srcSet: SrcSet[]): string => srcSet.map(([url, width]) => `${url} ${width}w`).join(', ')
 
-  /* eslint-disable @next/next/no-img-element */
   return (
-    <img
+    <Image
       className={classNames(className, 'w-auto', 'h-auto', 'md:max-w-[70vw]', 'md:max-h-[90vh]')}
+      preload
+      fetchPriority={hasPriority ? 'high' : 'low'}
+      width={Width.Desktop * 2}
+      height={Width.Desktop * 2}
       alt={alt}
       src={findExport(Width.Desktop).url}
-      sizes={`${firstWidths.map((width) => `(max-width: ${width - 1}px) ${width}px`).join(', ')}, ${lastWidth}px`}
-      srcSet={toSrcSetStr(MAX_WIDTHS.map((width) => [findExport(width).url, width]))}
     />
   )
 }

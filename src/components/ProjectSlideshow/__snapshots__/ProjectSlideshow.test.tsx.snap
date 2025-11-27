@@ -6,7 +6,7 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
     class="relative h-[calc(100vh-150px)] md:h-[100vh]"
   >
     <div
-      class="absolute top-1/2 translate-y-[-50%] sm:left-1/2 sm:translate-x-[-50%]"
+      class="absolute top-1/2 translate-y-[-50%] md:left-1/2 md:translate-x-[-50%]"
     >
       <div
         class="absolute top-0 bottom-0 left-0 right-1/2 cursor-w-resize"
@@ -19,23 +19,38 @@ exports[`ProjectSlideshow renders correctly for projects with a statement 1`] = 
       <img
         alt="My First Project - 01"
         class="max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-        sizes="(max-width: 767px) 768px, 1280px"
-        src="/photos/my-first-project/1280w/01.jpg"
-        srcset="/photos/my-first-project/768w/01.jpg 768w, /photos/my-first-project/1280w/01.jpg 1280w"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="low"
+        height="2560"
+        src="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F01.jpg&w=3840&q=75"
+        srcset="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F01.jpg&w=3840&q=75 1x"
+        style="color: transparent;"
+        width="2560"
       />
       <img
         alt="My First Project - 02"
         class="max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-        sizes="(max-width: 767px) 768px, 1280px"
-        src="/photos/my-first-project/1280w/02.jpg"
-        srcset="/photos/my-first-project/768w/02.jpg 768w, /photos/my-first-project/1280w/02.jpg 1280w"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="low"
+        height="2560"
+        src="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F02.jpg&w=3840&q=75"
+        srcset="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F02.jpg&w=3840&q=75 1x"
+        style="color: transparent;"
+        width="2560"
       />
       <img
         alt="My First Project - 03"
         class="max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center block w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-        sizes="(max-width: 767px) 768px, 1280px"
-        src="/photos/my-first-project/1280w/03.jpg"
-        srcset="/photos/my-first-project/768w/03.jpg 768w, /photos/my-first-project/1280w/03.jpg 1280w"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="high"
+        height="2560"
+        src="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F03.jpg&w=3840&q=75"
+        srcset="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F03.jpg&w=3840&q=75 1x"
+        style="color: transparent;"
+        width="2560"
       />
     </div>
     <div
@@ -80,7 +95,7 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
     class="relative h-[calc(100vh-150px)] md:h-[100vh]"
   >
     <div
-      class="absolute top-1/2 translate-y-[-50%] sm:left-1/2 sm:translate-x-[-50%]"
+      class="absolute top-1/2 translate-y-[-50%] md:left-1/2 md:translate-x-[-50%]"
     >
       <div
         class="absolute top-0 bottom-0 left-0 right-1/2 cursor-w-resize"
@@ -93,30 +108,50 @@ exports[`ProjectSlideshow renders correctly for projects with captions 1`] = `
       <img
         alt="Project without a statement - 01"
         class="max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-        sizes="(max-width: 767px) 768px, 1280px"
-        src="/photos/no-statement/1280w/01.jpg"
-        srcset="/photos/no-statement/768w/01.jpg 768w, /photos/no-statement/1280w/01.jpg 1280w"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="low"
+        height="2560"
+        src="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F01.jpg&w=3840&q=75"
+        srcset="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F01.jpg&w=3840&q=75 1x"
+        style="color: transparent;"
+        width="2560"
       />
       <img
         alt="Project without a statement - 02"
         class="max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-        sizes="(max-width: 767px) 768px, 1280px"
-        src="/photos/no-statement/1280w/02.jpg"
-        srcset="/photos/no-statement/768w/02.jpg 768w, /photos/no-statement/1280w/02.jpg 1280w"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="low"
+        height="2560"
+        src="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F02.jpg&w=3840&q=75"
+        srcset="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F02.jpg&w=3840&q=75 1x"
+        style="color: transparent;"
+        width="2560"
       />
       <img
         alt="Project without a statement - 03"
         class="max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center block w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-        sizes="(max-width: 767px) 768px, 1280px"
-        src="/photos/no-statement/1280w/03.jpg"
-        srcset="/photos/no-statement/768w/03.jpg 768w, /photos/no-statement/1280w/03.jpg 1280w"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="high"
+        height="2560"
+        src="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F03.jpg&w=3840&q=75"
+        srcset="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F03.jpg&w=3840&q=75 1x"
+        style="color: transparent;"
+        width="2560"
       />
       <img
         alt="Project without a statement - 04"
         class="max-h-[calc(100vh-150px)] sm:max-h-[100vh] text-center hidden w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-        sizes="(max-width: 767px) 768px, 1280px"
-        src="/photos/no-statement/1280w/04.jpg"
-        srcset="/photos/no-statement/768w/04.jpg 768w, /photos/no-statement/1280w/04.jpg 1280w"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="low"
+        height="2560"
+        src="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F04.jpg&w=3840&q=75"
+        srcset="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F04.jpg&w=3840&q=75 1x"
+        style="color: transparent;"
+        width="2560"
       />
     </div>
   </div>
