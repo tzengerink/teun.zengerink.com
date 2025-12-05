@@ -1,3 +1,5 @@
+- title: Hikari
+
 - title: Order/Disorder
 
 - title: New Horizons
@@ -23,9 +25,6 @@
 
     Using Google Street View locations were visited where the online map ends dead. What is it that these locations have in common? What makes these locations unsuitable for visualisation in the largest digital network of streets? What can be found over that border, past the ending, for an unknown experience?
 
-- title: Under Your Nose
-  statement: Just swallow. You walk your dog there. Bring your kids for soccer. Sniff, while taking a detour, the fresh air. Everyday, under influence of the underworld. The shadow side unfolds itself in daylight. Under your nose.
-
 - title: Fortress
   statement: |
     Wind. Outside. Sand. Inside. Rain. Outside. Cover. Inside. Bullets whistle. Outside. Whisper. Inside. Concrete. Outside?
@@ -35,6 +34,10 @@
     Happy. Inside. Insecurity. Outside. Private space. Inside. Oppressive.
 
 - title: Untitled
+
+- title: Under Your Nose
+  statement: Just swallow. You walk your dog there. Bring your kids for soccer. Sniff, while taking a detour, the fresh air. Everyday, under influence of the underworld. The shadow side unfolds itself in daylight. Under your nose.
+  isArchived: true
 
 - title: Symbiosis
   statement: Humans and nature are mutually dependant on each other and their cohabitation is visible within the urban landscape. When designing spaces, nature gets assigned a strictly defined area. Green is crossing the boundaries, taking the territory humans intended to use for themselves. Humans and nature are intertwined, they interact in a field of tension.
