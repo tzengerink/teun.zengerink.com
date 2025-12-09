@@ -2693,10 +2693,10 @@
   resolved "https://registry.yarnpkg.com/@nolyfill/is-core-module/-/is-core-module-1.0.39.tgz#3dc35ba0f1e66b403c00b39344f870298ebb1c8e"
   integrity sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==
 
-"@opennextjs/aws@3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@opennextjs/aws/-/aws-3.9.0.tgz#54fce1d0ead7f78c441af57d0ed859e3a09be398"
-  integrity sha512-04VpIbnKOJwBEoAdSUI1lbbDRWj482oEbRggXtAs+hXOCp54fxDRouNmonvXPoRq6Wbmry73PI1Ko6g3ygL2Hg==
+"@opennextjs/aws@3.9.4":
+  version "3.9.4"
+  resolved "https://registry.yarnpkg.com/@opennextjs/aws/-/aws-3.9.4.tgz#8477d23ff6b441525d8d4b53d707efba99215723"
+  integrity sha512-i5gWKSP7QQGz59z85ZjOGtIfXK1ZgRLEwbt7/dkmuujhTuMBWygQqrb2EGRf8vRZH1Xvp0fYENUZx7NjgvxsIg==
   dependencies:
     "@ast-grep/napi" "^0.40.0"
     "@aws-sdk/client-cloudfront" "3.398.0"
@@ -2716,14 +2716,14 @@
     urlpattern-polyfill "^10.1.0"
     yaml "^2.8.1"
 
-"@opennextjs/cloudflare@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@opennextjs/cloudflare/-/cloudflare-1.14.0.tgz#51aa71a0e98e588b3029fd431dbe1b36d7b2e809"
-  integrity sha512-syQYE1iGYvG7mFZAUJhKMES1i+Mx55r6yedWS+hiuS/RTHjTzYfss8e3dWy/qKLPuc7o/xruOYgqAU/BDsSVrA==
+"@opennextjs/cloudflare@^1.14.4":
+  version "1.14.4"
+  resolved "https://registry.yarnpkg.com/@opennextjs/cloudflare/-/cloudflare-1.14.4.tgz#e9da69a58df185eebd52501318f92a7892fd39d5"
+  integrity sha512-2dODhjsRsZog1VHxX9QwUkxq76aBwaEl+L67m8c47V6zZpIgAFODHMxtj5NPM3uz6pUiT4edYGNS5bR99ck3Jg==
   dependencies:
     "@ast-grep/napi" "0.40.0"
     "@dotenvx/dotenvx" "1.31.0"
-    "@opennextjs/aws" "3.9.0"
+    "@opennextjs/aws" "3.9.4"
     cloudflare "^4.4.1"
     enquirer "^2.4.1"
     glob "^12.0.0"
