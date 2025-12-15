@@ -26,8 +26,8 @@
     "marked": "^17.0.1",
     "next": "^16.0.10",
     "next-build-id": "^3.0.0",
-    "react": "^19.0.0-rc-69d4b800-20241021",
-    "react-dom": "^19.0.0-rc-69d4b800-20241021",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "slugify": "^1.6.6"
   },
   "devDependencies": {
