@@ -19,7 +19,7 @@
     "test": "yarn lint && yarn test:unit && yarn test:e2e"
   },
   "dependencies": {
-    "@opennextjs/cloudflare": "^1.14.4",
+    "@opennextjs/cloudflare": "^1.14.7",
     "@testing-library/dom": "^10.4.1",
     "classnames": "^2.5.1",
     "js-yaml": "^4.1.1",
