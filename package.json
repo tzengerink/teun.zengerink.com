@@ -42,7 +42,7 @@
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.22",
     "baseline-browser-mapping": "^2.8.32",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "eslint-config-next": "^16.1.1",
     "husky": "^9.1.7",
     "identity-obj-proxy": "^3.0.0",
