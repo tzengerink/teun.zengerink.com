@@ -2716,10 +2716,10 @@
     urlpattern-polyfill "^10.1.0"
     yaml "^2.8.1"
 
-"@opennextjs/cloudflare@^1.14.7":
-  version "1.14.7"
-  resolved "https://registry.yarnpkg.com/@opennextjs/cloudflare/-/cloudflare-1.14.7.tgz#ff790bdddb5d06a75724d8a2ed903f2007340a14"
-  integrity sha512-gHK1vx2nIYvr16IG71zRFVTq5diV8haYb6UV+DHw1JZTw1xrM5g6E+k7tDu5n8NX0u/9QH+cZIsJS7nmXUnc+A==
+"@opennextjs/cloudflare@^1.14.8":
+  version "1.14.8"
+  resolved "https://registry.yarnpkg.com/@opennextjs/cloudflare/-/cloudflare-1.14.8.tgz#942473d09b8faff095f618cf66e316c30428dbcf"
+  integrity sha512-7M6VezThyL7gg86MMuZnBvbzRtC08HWLSJWlvRaiHMUGlEoE94JOwtoC0YcoEnP7F4UsrdRnp+VpvMIVoqsO4w==
   dependencies:
     "@ast-grep/napi" "0.40.0"
     "@dotenvx/dotenvx" "1.31.0"
