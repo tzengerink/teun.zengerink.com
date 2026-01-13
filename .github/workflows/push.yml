@@ -18,7 +18,7 @@ jobs:
       - name: Install packages
         run: npm install
       - name: Audit packages
-        run: npm audit
+        run: npm audit --audit-level high
       - name: Run tests
         run: npm run test
       - name: Run build
