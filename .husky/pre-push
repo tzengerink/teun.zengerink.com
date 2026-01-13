@@ -1,2 +1,2 @@
-yarn audit
-yarn build
+npm audit --audit-level high
+npm run build
