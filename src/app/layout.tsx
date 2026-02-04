@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${robotoMono.className} font-light text-grey/90`}>
+      <meta name="build-id" content={process.env.NEXT_PUBLIC_BUILD_ID} />
       <body className="bg-white m-0">{children}</body>
     </html>
   )
