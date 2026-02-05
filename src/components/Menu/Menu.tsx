@@ -23,9 +23,9 @@ const Menu: React.FC<MenuProps> = ({ projects, isOpen, onOpen, onItemClick }) =>
         'w-full',
         'p-md',
         'pt-xl',
-        'bg-transparant-white',
         'ease-linear',
         'duration-100',
+        { 'bg-transparant-white': isOpen },
         { 'translate-y-0': isOpen, 'opacity-100': isOpen, visible: isOpen },
         { 'translate-y-[-20px]': !isOpen, 'opacity-0': !isOpen, invisible: !isOpen },
         'md:translate-y-0',
@@ -48,6 +48,7 @@ const Menu: React.FC<MenuProps> = ({ projects, isOpen, onOpen, onItemClick }) =>
       <ul
         className={classNames(
           'leading-5',
+          'group-hover:bg-transparant-white',
           { invisible: !isOpen },
           { 'ease-linear': !isOpen },
           { 'duration-100': !isOpen },

@@ -5,13 +5,10 @@ exports[`Photo renders correctly 1`] = `
   <img
     alt="The alt text"
     class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-    data-nimg="1"
-    decoding="async"
     fetchpriority="low"
     height="2560"
-    src="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F01.jpg&w=3840&q=75"
-    srcset="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F01.jpg&w=3840&q=75 1x"
-    style="color: transparent;"
+    loading="lazy"
+    src="/photos/my-first-project/1280w/01.jpg"
     width="2560"
   />
 </div>

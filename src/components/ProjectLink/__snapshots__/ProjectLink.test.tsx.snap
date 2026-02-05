@@ -19,13 +19,10 @@ exports[`SinglePhoto renders correctly for projects with a statement 1`] = `
         <img
           alt="My First Project"
           class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-          data-nimg="1"
-          decoding="async"
           fetchpriority="high"
           height="2560"
-          src="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F01.jpg&w=3840&q=75"
-          srcset="/_next/image?url=%2Fphotos%2Fmy-first-project%2F1280w%2F01.jpg&w=3840&q=75 1x"
-          style="color: transparent;"
+          loading="eager"
+          src="/photos/my-first-project/1280w/01.jpg"
           width="2560"
         />
       </div>
@@ -53,13 +50,10 @@ exports[`SinglePhoto renders correctly for projects without a statement 1`] = `
         <img
           alt="Project without a statement"
           class="w-auto h-auto md:max-w-[70vw] md:max-h-[90vh]"
-          data-nimg="1"
-          decoding="async"
           fetchpriority="high"
           height="2560"
-          src="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F01.jpg&w=3840&q=75"
-          srcset="/_next/image?url=%2Fphotos%2Fno-statement%2F1280w%2F01.jpg&w=3840&q=75 1x"
-          style="color: transparent;"
+          loading="eager"
+          src="/photos/no-statement/1280w/01.jpg"
           width="2560"
         />
       </div>
