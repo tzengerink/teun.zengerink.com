@@ -28,7 +28,7 @@
     "next": "^16.1.6",
     "next-build-id": "^3.0.0",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3",
+    "react-dom": "^19.2.4",
     "slugify": "^1.6.6",
     "typescript": "5.9.3"
   },
