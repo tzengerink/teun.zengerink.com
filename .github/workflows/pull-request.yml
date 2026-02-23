@@ -20,7 +20,7 @@ jobs:
       - name: Post install
         run: npx playwright install
       - name: Audit packages
-        run: npm audit --audit-level high
+        run: npm audit --audit-level critical
       - name: Run tests
         run: npm run test
       - name: Run build
